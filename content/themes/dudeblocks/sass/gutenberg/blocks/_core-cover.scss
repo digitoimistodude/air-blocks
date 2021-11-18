@@ -1,0 +1,9 @@
+// Core/cover block
+.wp-block-cover__inner-container {
+  padding-left: var(--padding-container-horizontal);
+  padding-right: var(--padding-container-horizontal);
+
+  p {
+    line-height: var(--line-height-core-heading);
+  }
+}

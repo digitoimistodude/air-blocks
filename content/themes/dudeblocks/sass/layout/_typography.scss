@@ -1,0 +1,137 @@
+// stylelint-disable declaration-property-unit-allowed-list, no-descending-specificity
+// Everything around fonts, font size definitions and typeset
+// presets. No modular scale, but a sophisticated viewport
+// based responsive mixin can be found in _helpers.scss
+
+// Set root size for rems
+:root {
+  font-size: 62.5%;
+}
+
+// Start typography settings
+body {
+  color: var(--color-paragraph);
+  font-family: var(--font-paragraph);
+  font-size: var(--font-size-default);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: var(--font-weight-paragraphs);
+  text-rendering: geometricPrecision;
+}
+
+// Defaults
+p,
+dd,
+dt,
+figcaption,
+hr,
+small,
+ol,
+ul,
+li,
+blockquote,
+kbd,
+pre,
+samp,
+code,
+th,
+td,
+table,
+tr,
+%default {
+  font-size: var(--font-size-paragraphs);
+  line-height: var(--line-height-paragraphs);
+}
+
+// Heading defaults
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-headings);
+  margin-bottom: var(--margin-between-paragraphs);
+  margin-top: var(--margin-between-paragraphs);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--line-height-headings);
+}
+
+// Define heading scales
+// Current: Perfect fourth: https://type-scale.com/
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+// Lists
+ul {
+  list-style: disc outside;
+  padding-left: 1.9rem;
+
+  li {
+    padding-left: 0;
+  }
+}
+
+ol {
+  padding-left: 1.9rem;
+}
+
+// Bold
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+// Italic
+em,
+i {
+  font-style: italic;
+}
+
+// Default paragraphs
+p {
+  margin-bottom: 2.9rem;
+  margin-top: 2.9rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

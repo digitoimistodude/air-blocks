@@ -1,0 +1,23 @@
+// Classic WordPress galleries
+// @source https://github.com/Automattic/_s/blob/50ce93c7cd478871c9ae7504f0ef4748f5de449f/sass/media/_galleries.scss
+.gallery {
+  display: grid;
+  grid-gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+@for $i from 2 through 9 {
+  .gallery-columns-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+.gallery-caption {
+  display: block;
+}

@@ -17,22 +17,32 @@
     }
   ],
   "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    "bedrock",
+    "roots",
+    "wordpress",
+    "stack",
+    "composer",
+    "vagrant",
+    "wp"
   ],
   "support": {
     "issues": "https://github.com/digitoimistodude/dudestack/issues"
   },
-   "config": {
+  "config": {
     "preferred-install": "dist",
     "generate-salts": true,
     "secure-http": true
   },
   "autoload": {
-    "psr-4": {"Roots\\Bedrock\\": "scripts/Roots/Bedrock"}
+    "psr-4": {
+      "Roots\\Bedrock\\": "scripts/Roots/Bedrock"
+    }
   },
   "scripts": {
-    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
-   },
+    "post-root-package-install": [
+      "Roots\\Bedrock\\Installer::addSalts"
+    ]
+  },
   "repositories": [
     {
       "type": "composer",
@@ -42,6 +52,26 @@
     {
       "type": "composer",
       "url": "https://wp-languages.github.io"
+    },
+    {
+      "type": "composer",
+      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "gravityforms/gravityforms",
+        "version": "2.5.14.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%WP_PLUGIN_GF_KEY}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "gotoandplay/gravityforms-composer-installer": "^2.3"
+        }
+      }
     }
   ],
   "require": {
@@ -56,14 +86,14 @@
     "roots/wp-config": "^1.0",
     "johnpbloch/wordpress": "5.8.2",
     "digitoimistodude/air-helper": "*",
-    "wpackagist-plugin/koko-analytics": "*",
     "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/simple-history": "*",
     "wpackagist-plugin/mailgun": "*",
     "wpackagist-plugin/worker": "*",
-    "wpackagist-plugin/autodescription": "*",
     "wpackagist-plugin/gravity-forms-wcag-20-form-fields": "*",
-    "wpackagist-plugin/disable-media-pages": "*"
+    "wpackagist-plugin/disable-media-pages": "*",
+    "gravityforms/gravityforms": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
   },
   "require-dev": {
     "rarst/wps": "*",
@@ -72,15 +102,26 @@
   },
   "extra": {
     "dropin-paths": {
-      "content/languages/": ["vendor:koodimonni-language"],
-      "content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-      "content/languages/themes/": ["vendor:koodimonni-theme-language"]
+      "content/languages/": [
+        "vendor:koodimonni-language"
+      ],
+      "content/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ],
+      "content/languages/themes/": [
+        "vendor:koodimonni-theme-language"
+      ]
     },
     "installer-paths": {
-      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"
+      "content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
       ],
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "wp"
   }
