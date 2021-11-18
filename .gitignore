@@ -1,0 +1,57 @@
+# Dotfiles and directories
+.DS_Store
+.env
+.env*
+!.env.example
+.htaccess
+.vagrant
+.sass-cache/
+.git/
+.DS_Store
+composer.lock
+.vscode/
+
+# Logs
+package-lock.json
+access.log
+error.log
+log/
+
+# Special git hooks
+!.githooks
+!.githooks/*
+
+# Composer and npm
+vendor/
+vendor/*
+!vendor/.gitkeep
+node_modules/
+
+# WordPress core
+wp/
+content/upgrade
+
+# Plugins and translations coming from composer
+content/plugins/*
+!content/plugins/.gitkeep
+content/mu-plugins/*
+!content/mu-plugins/register-theme-directory.php
+!content/mu-plugins/bedrock-autoloader.php
+content/languages
+
+# Dynamic content
+content/db.php
+content/uploads
+tiedostot
+media
+media/*
+
+# Misc
+*.codekit
+db-sync
+sql-dump-*.sql
+createproject.todo
+project.todo
+config/deploy/
+wp-cli.yml
+w3cErrors/

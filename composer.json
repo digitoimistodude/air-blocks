@@ -1,0 +1,87 @@
+{
+  "name": "digitoimistodude/dudestack",
+  "type": "project",
+  "license": "MIT",
+  "description": "A modern WordPress stack",
+  "homepage": "https://github.com/digitoimistodude/dudestack",
+  "authors": [
+    {
+      "name": "Roni Laukkarinen",
+      "email": "roni@dude.fi",
+      "homepage": "https://github.com/ronilaukkarinen"
+    },
+    {
+      "name": "Timi Wahalahti",
+      "email": "timi@dude.fi",
+      "homepage": "https://github.com/timiwahalahti"
+    }
+  ],
+  "keywords": [
+    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/digitoimistodude/dudestack/issues"
+  },
+   "config": {
+    "preferred-install": "dist",
+    "generate-salts": true,
+    "secure-http": true
+  },
+  "autoload": {
+    "psr-4": {"Roots\\Bedrock\\": "scripts/Roots/Bedrock"}
+  },
+  "scripts": {
+    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
+   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "minimum-stability": "dev"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    }
+  ],
+  "require": {
+    "koodimonni/composer-dropin-installer": "dev-master",
+    "php": ">=7.2",
+    "koodimonni-language/fi": "*",
+    "koodimonni-language/en_gb": "*",
+    "composer/installers": "^1.10.0",
+    "wp-cli/wp-cli-bundle": "*",
+    "vlucas/phpdotenv": "^5.3",
+    "oscarotero/env": "^2.1",
+    "roots/wp-config": "^1.0",
+    "johnpbloch/wordpress": "5.8.2",
+    "digitoimistodude/air-helper": "*",
+    "wpackagist-plugin/koko-analytics": "*",
+    "wpackagist-plugin/imagify": "*",
+    "wpackagist-plugin/simple-history": "*",
+    "wpackagist-plugin/mailgun": "*",
+    "wpackagist-plugin/worker": "*",
+    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/gravity-forms-wcag-20-form-fields": "*",
+    "wpackagist-plugin/disable-media-pages": "*"
+  },
+  "require-dev": {
+    "rarst/wps": "*",
+    "rarst/laps": "*",
+    "wpackagist-plugin/query-monitor": "*"
+  },
+  "extra": {
+    "dropin-paths": {
+      "content/languages/": ["vendor:koodimonni-language"],
+      "content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "content/languages/themes/": ["vendor:koodimonni-theme-language"]
+    },
+    "installer-paths": {
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"
+      ],
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "wp"
+  }
+}
