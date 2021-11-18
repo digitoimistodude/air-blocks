@@ -7,9 +7,9 @@ use Roots\WPConfig\Config;
 
 Config::define( 'SAVEQUERIES', true );
 Config::define( 'WP_DEBUG', true );
-Config::define( 'WP_DEBUG_DISPLAY', true );
+Config::define( 'WP_DEBUG_DISPLAY', false );
 Config::define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );
-Config::define( 'SCRIPT_DEBUG', true );
+Config::define( 'SCRIPT_DEBUG', false );
 Config::define( 'FS_METHOD', 'direct' );
 Config::define( 'PLL_CACHE_HOME_URL', false );
 

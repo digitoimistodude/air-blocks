@@ -14,6 +14,24 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
+// phpcs:disable Squiz.Commenting.InlineComment.SpacingBefore
+// This block depends on following:
+
+// Composer repositories (optional):
+// {
+//   "type": "vcs",
+//   "url": "https://github.com/digitoimistodude/breadcrumb-trail"
+// },
+
+// Composer require (optional):
+// "digitoimistodude/breadcrumb-trail": "dev-master",
+
+// Files (required):
+// ├── sass/components/_prefix.scss
+// ├── sass/gutenberg/blocks/_hero.scss
+// ├── svg/block-icons/hero.svg
+// └── svg/play.svg
+
 namespace Air_Light;
 
 if ( ! isset( $args ) ) {
@@ -22,6 +40,7 @@ if ( ! isset( $args ) ) {
   $content = get_field( 'content' );
   $button = get_field( 'button' );
   $bg_image = get_post_thumbnail_id( get_the_ID() );
+  $video = get_field( 'video' );
   if ( get_field( 'bg_image' ) ) {
     $bg_image = get_field( 'bg_image' );
   }
@@ -31,6 +50,7 @@ if ( ! isset( $args ) ) {
   $content = $args['content'];
   $button = $args['button'];
   $bg_image = $args['bg_image'];
+  $video = $args['video'];
 }
 
 $style = 'low';
@@ -50,8 +70,8 @@ if ( empty( $title ) ) {
 
   <?php vanilla_lazyload_div( $bg_image ); ?>
 
-    <?php if ( is_front_page() ) : ?>
-      <video src="<?php echo esc_url( get_template_directory_uri() ); ?>/demo.mp4" loop muted autoplay></video>
+    <?php if ( ! empty( $video ) ) : ?>
+      <video src="<?php echo esc_url( $video['url'] ); ?>" loop muted autoplay></video>
     <?php endif; ?>
 
     <div class="content">

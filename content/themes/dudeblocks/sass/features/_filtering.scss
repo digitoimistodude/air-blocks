@@ -1,4 +1,4 @@
-// stylelint-disable a11y/no-display-none
+// stylelint-disable a11y/no-display-none, declaration-no-important
 .hidden {
-  display: none;
+  display: none !important;
 }

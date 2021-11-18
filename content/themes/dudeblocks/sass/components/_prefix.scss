@@ -1,0 +1,10 @@
+@mixin prefix() {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.prefix {
+  @include prefix();
+}
