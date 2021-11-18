@@ -1,4 +1,10 @@
 /**
+ * @Author: Roni Laukkarinen
+ * @Date:   2021-11-18 15:12:35
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-18 21:33:53
+ */
+/**
  * Air theme JavaScript.
  */
 
@@ -31,6 +37,25 @@ styleExternalLinks();
 // Set non-lazyloaded figures width so captions in aligned images will be same width as image
 const figures = document.querySelectorAll('figure');
 setFigureWidths(figures);
+
+// Filter blocks
+var input = document.querySelector('#filter-dudeblocks');
+var items = document.querySelector('.dudeblocks-list').getElementsByTagName('section');
+
+input.addEventListener('keyup', function(ev) {
+  var text = ev.target.value;
+  var pat = new RegExp(text, 'i');
+  for (var i=0; i < items.length; i++) {
+    var item = items[i];
+    if (pat.test(item.classList)) {
+      item.classList.remove("hidden");
+    }
+    else {
+      item.classList.add("hidden");
+    }
+  }
+});
+
 
 // Init lazyload
 // Usage example on template side when air-helper enabled:

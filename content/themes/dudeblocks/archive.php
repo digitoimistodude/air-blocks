@@ -4,7 +4,7 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-17 10:17:20
+ * @Last Modified time: 2021-11-18 21:16:44
  *
  * @package dudeblocks
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -17,7 +17,7 @@ get_header(); ?>
 <main class="site-main">
   <div class="container">
 
-    <?php get_template_part( 'template-parts/hero', get_post_type() );
+    <?php
     if ( have_posts() ) : ?>
       <header class="entry-header">
         <?php

@@ -1,8 +1,16 @@
 <?php
 /**
- * Site branding & logo
+ * Branding
+ *
+ * Site branding.
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-11-18 15:12:34
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-18 21:02:45
  *
  * @package dudeblocks
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 namespace Air_Light;
@@ -14,8 +22,8 @@ $description = get_bloginfo( 'description', 'display' );
 
   <p class="site-title">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-      <span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span>
       <?php include get_theme_file_path( THEME_SETTINGS['logo'] ); ?>
+      <span>blocks</span>
     </a>
   </p>
 

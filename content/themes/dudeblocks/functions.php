@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-18 14:57:55
+ * @Last Modified time: 2021-11-18 21:17:09
  *
  * @package dudeblocks
  */
@@ -99,17 +99,10 @@ add_action( 'after_setup_theme', function() {
      */
     // Register custom ACF Blocks
     'acf_blocks' => [
-      // [
-      //   'name'           => 'block-file-slug',
-      //   'title'          => 'Block Visible Name',
-      //   // You can safely remove lines below if you find no use for them
-      //   'prevent_cache'  => false, // Defaults to false,
-      //   // Icon defaults to svg file inside svg/block-icons named after the block name,
-      //   // eg. svg/block-icons/block-file-slug.svg
-      //   //
-      //   // Icon setting defines the dashicon equivalent: https://developer.wordpress.org/resource/dashicons/#block-default
-      //   // 'icon'  => 'block-default',
-      // ],
+      [
+        'name'           => 'hero',
+        'title'          => 'Sivun yläosa',
+      ],
     ],
 
     // Custom ACF block default settings

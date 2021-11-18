@@ -38,20 +38,18 @@
 @import 'layout/forms';
 @import 'layout/blog';
 
-
 // Global features
 @import 'features/top';
 @import 'features/gallery';
 @import 'features/lazyload';
 @import 'features/pagination';
 @import 'features/gravity-forms';
-// @import 'features/sticky-nav';
+@import 'features/filtering';
 
 // Views
 @import 'views/front-page';
 @import 'views/search';
 @import 'views/404';
-
 
 // Gutenberg layout outside blocks
 @import 'gutenberg/layout/content';
