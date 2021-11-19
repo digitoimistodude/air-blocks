@@ -63,12 +63,12 @@ input.addEventListener('keyup', function(ev) {
 // Refer to documentation:
 // 1) https://github.com/digitoimistodude/air-helper#image-lazyloading-1
 // 2) https://github.com/verlok/vanilla-lazyload#-getting-started---html
-var air-blocks_LazyLoad = new LazyLoad({
+var airBlocks_LazyLoad = new LazyLoad({
   callback_loaded: (el) => setLazyLoadedFigureWidth, // Set lazyloaded figure width so captions in aligned images will be same width as image
 });
 
 // After your content has changed...
-air-blocks_LazyLoad.update();
+airBlocks_LazyLoad.update();
 
 // jQuery start
 (function ($) {

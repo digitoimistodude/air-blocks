@@ -2,7 +2,7 @@
 // The main layout for the website navigation, for a desktop devices only.
 
 // Disable some rules that are not needed here
-// stylelint-disable no-descending-specificity
+// stylelint-disable no-descending-specificity, a11y/no-display-none
 
 // Settings
 $absolute-navigation: true;
@@ -18,7 +18,7 @@ $use-dropdown-toggle-animation: true;
   --dropdown-toggle-size: 12px;
   --gap-dropdown: 1rem;
   --gap-between-dropdown-toggle: 1.5rem;
-  --gap-main-level-horizontal: 2.5rem;
+  --gap-main-level-horizontal: 1.8rem;
   --padding-main-level-horizontal: 0;
   --padding-main-level-vertical: .6rem;
   --padding-sub-menu-vertical: .6rem;
@@ -34,7 +34,7 @@ $use-dropdown-toggle-animation: true;
   --color-sub-menu: var(--color-valhalla);
   --color-hover-main-level: var(--color-white);
   --color-hover-sub-menu: var(--color-valhalla);
-  --color-main-level: var(--color-white);
+  --color-main-level: rgb(240 250 251 / .5);
   --color-current: var(--color-main);
 
   // Font styles
@@ -49,10 +49,42 @@ $use-dropdown-toggle-animation: true;
   list-style: none;
 }
 
+body:not(.home) {
+  .site-title a,
+  .site-title span,
+  .site-title a span,
+  .menu-items .menu-item a {
+    color: var(--color-darkgrey);
+  }
+
+  .site-title path {
+    fill: var(--color-darkgrey);
+  }
+}
+
 @media only screen and (min-width: $width-max-mobile) {
+  .menu-items a::after {
+    display: none;
+  }
+
+  .menu-items a > svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  .menu-items .menu-item {
+    align-items: center;
+    display: flex;
+  }
+
+  .menu-items .menu-item.social.separator-left a {
+    border-left: 1px solid var(--color-main-level);
+    padding-left: 21px;
+  }
+
   .nav-container {
     @if $absolute-navigation == false {
-      background-color: var(--color-background-nav-desktop);
+      background-color: var(--color-main-level);
       box-shadow: var(--box-shadow-navigation-static);
       position: relative;
       z-index: 222;
@@ -66,7 +98,6 @@ $use-dropdown-toggle-animation: true;
   }
 
   // Need to use display: none here to make sure mobile nav-toggle is visually hidden on desktop
-  // stylelint-disable-next-line a11y/no-display-none
   .nav-toggle {
     display: none;
   }
@@ -107,6 +138,7 @@ $use-dropdown-toggle-animation: true;
     padding-left: var(--padding-main-level-horizontal);
     padding-right: var(--padding-main-level-horizontal);
     padding-top: var(--padding-main-level-vertical);
+    transition: .22s;
     white-space: nowrap;
   }
 
@@ -299,7 +331,6 @@ $use-dropdown-toggle-animation: true;
 
   // Don't use gap filler in sub menu items
   // Acceptable use of display: none here, for visual/technical purposes
-  // stylelint-disable-next-line a11y/no-display-none
   .sub-menu .menu-item-has-children::after {
     display: none;
   }

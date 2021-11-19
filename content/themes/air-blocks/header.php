@@ -7,7 +7,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:17:32
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-18 21:03:48
+ * @Last Modified time: 2021-11-19 15:04:59
  *
  * @package air-blocks
  */
@@ -37,7 +37,7 @@ namespace Air_Light;
       <header class="site-header">
 
         <?php get_template_part( 'template-parts/header/branding' ); ?>
-        <?php // get_template_part( 'template-parts/header/navigation' ); ?>
+        <?php get_template_part( 'template-parts/header/navigation' ); ?>
 
       </header>
     </div><!-- .nav-container -->

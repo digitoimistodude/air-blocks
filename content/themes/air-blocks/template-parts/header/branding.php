@@ -7,7 +7,7 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-11-18 15:12:34
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-18 21:02:45
+ * @Last Modified time: 2021-11-19 15:00:15
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -21,9 +21,7 @@ $description = get_bloginfo( 'description', 'display' );
 <div class="site-branding">
 
   <p class="site-title">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-      <?php include get_theme_file_path( THEME_SETTINGS['logo'] ); ?>
-      <span>blocks</span>
+      <span class="label"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php include get_theme_file_path( '/svg/logo.svg' ); ?> Air Blocks</label></a> <span class="by">by</span> <a href="https://www.dude.fi"><span class="screen-reader-text">DUDE</span> <?php include get_theme_file_path( '/svg/logo-dude.svg' ); ?></a>
     </a>
   </p>
 

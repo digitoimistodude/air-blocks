@@ -168,7 +168,7 @@ add_action( 'after_setup_theme', function() {
     'my_custom_setting' => true,
   ];
 
-  $theme_settings = apply_filters( 'air-blocks_theme_settings', $theme_settings );
+  $theme_settings = apply_filters( 'airBlocks_theme_settings', $theme_settings );
 
   define( 'THEME_SETTINGS', $theme_settings );
 } ); // end action after_setup_theme

@@ -5,7 +5,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:22:26
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-09-01 12:26:25
+ * @Last Modified time: 2021-11-19 15:11:51
  *
  * @package air-blocks
  */
@@ -26,18 +26,15 @@ namespace Air_Light;
 
   <nav id="nav" class="nav-primary nav-menu" aria-label="<?php echo esc_html( get_default_localization( 'Main navigation' ) ); ?>">
 
-    <?php wp_nav_menu( array(
-      'theme_location' => 'primary',
-      'container'      => false,
-      'depth'          => 4,
-      'menu_class'     => 'menu-items',
-      'menu_id'        => 'main-menu',
-      'echo'           => true,
-      'fallback_cb'    => __NAMESPACE__ . '\Nav_Walker::fallback',
-      'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-      'has_dropdown'   => true,
-      'walker'         => new Nav_Walker(),
-    ) ); ?>
+    <ul class="menu-items">
+      <li class="menu-item"><a href="https://github.com/digitoimistodude/air-light/wiki/Creating-your-own-Gutenberg-blocks-with-Air-light-and-Advanced-Custom-Fields">Getting started</a></li>
+      <li class="menu-item social separator-left"><a href="https://www.linkedin.com/company/digitoimisto-dude-oy"><?php include get_theme_file_path( '/svg/linkedin.svg' ); ?><span class="screen-reader-text">LinkedIn</span></a></li>
+      <li class="menu-item social"><a href="https://profiles.wordpress.org/digitoimistodude/"><?php include get_theme_file_path( '/svg/wordpress.svg' ); ?><span class="screen-reader-text">WordPress</span></a></li>
+      <li class="menu-item social"><a href="https://www.facebook.com/digitoimistodude/"><?php include get_theme_file_path( '/svg/facebook.svg' ); ?><span class="screen-reader-text">Facebook</span></a></li>
+      <li class="menu-item social"><a href="https://twitter.com/dudetoimisto"><?php include get_theme_file_path( '/svg/twitter.svg' ); ?><span class="screen-reader-text">Twitter</span></a></li>
+      <li class="menu-item social"><a href="https://www.instagram.com/digitoimistodude/"><?php include get_theme_file_path( '/svg/instagram.svg' ); ?><span class="screen-reader-text">Instagram</span></a></li>
+      <li class="menu-item social"><a href="https://github.com/digitoimistodude"><?php include get_theme_file_path( '/svg/github.svg' ); ?><span class="screen-reader-text">GitHub</span></a></li>
+    </ul>
 
   </nav><!-- #nav -->
 </div>

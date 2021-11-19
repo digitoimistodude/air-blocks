@@ -1,9 +1,11 @@
+// Site header
+//
 // The very top of the site, element that usually includes
 // the site navigation and search for example.
 .site-header {
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   max-width: $width-grid-base;
@@ -13,15 +15,96 @@
   padding-top: var(--padding-site-header-vertical);
   position: relative;
   z-index: 15;
+
+  @media (max-width: $width-max-mobile) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .site-title {
+  color: var(--color-white);
   line-height: 0;
   margin: 0;
 
+  /* stylelint-disable a11y/no-display-none */
+  a::after {
+    display: none;
+  }
+
   a {
     align-items: center;
+    color: var(--color-white);
     display: flex;
+    white-space: nowrap;
+
+    .solid {
+      opacity: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+    }
+
+    &:hover .solid,
+    &:focus .solid {
+      opacity: 1;
+    }
+  }
+
+  span {
+    align-items: center;
+    display: inline-flex;
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .label {
+    font-size: var(--font-size-14);
+    font-weight: 700;
+
+    @media (max-width: $width-max-mobile) {
+      align-items: center;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .by {
+    font-size: var(--font-size-14);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    opacity: .5;
+  }
+
+  .logo-air {
+    color: var(--color-cyan-bright);
+    margin-right: 1rem;
+
+    @media (max-width: 450px) {
+      height: 26px;
+      width: 26px;
+    }
+  }
+
+  .logo-dude {
+    height: 15px;
+    width: 70px;
+
+    @media (max-width: 450px) {
+      height: 11.78px;
+      width: 55px;
+    }
   }
 }
 
