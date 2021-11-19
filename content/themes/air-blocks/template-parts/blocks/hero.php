@@ -26,12 +26,6 @@
 // Composer require (optional):
 // "digitoimistodude/breadcrumb-trail": "dev-master",
 
-// JS files (optional):
-// js/src/modules/lightbox.js
-
-// JS to front-end.js (optional):
-//
-
 // Files (required):
 // ├── sass/components/_prefix.scss
 // ├── sass/gutenberg/blocks/_hero.scss
@@ -110,13 +104,6 @@ if ( empty( $title ) ) {
             <a class="button button-large<?php if ( str_contains( $button['url'], '#' ) ) echo ' js-trigger'; ?>" href="<?php echo esc_url( $button['url'] ); ?>">
               <?php echo esc_html( $button['title'] ); ?>
             </a>
-
-            <?php if ( is_front_page() ) : ?>
-              <button data-gallery="hero-video" class="open-video-fullscreen no-external-link-indicator play-video" type="button" data-video-url="https://player.vimeo.com/video/327180404?background=1&autoplay=1&loop=1&byline=0&title=0">
-                <?php include get_theme_file_path( '/svg/play.svg' ); ?>
-                <?php echo esc_html( ask__( 'Yleinen: Katso video' ) ); ?>
-              </button>
-            <?php endif; ?>
           </p>
         <?php endif; ?>
       </div>
