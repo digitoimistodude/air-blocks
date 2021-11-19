@@ -2,7 +2,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-18 21:33:53
+ * @Last Modified time: 2021-11-19 15:32:36
  */
 /**
  * Air theme JavaScript.
@@ -23,6 +23,9 @@ import 'what-input';
 
 // Navigation
 import './modules/navigation.js';
+
+// 100vh for mobile
+import './modules/100vh.js';
 
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');

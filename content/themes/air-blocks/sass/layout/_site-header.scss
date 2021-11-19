@@ -18,6 +18,7 @@
 
   @media (max-width: $width-max-mobile) {
     flex-wrap: wrap;
+    height: var(--height-navigation-mobile);
     justify-content: center;
   }
 }

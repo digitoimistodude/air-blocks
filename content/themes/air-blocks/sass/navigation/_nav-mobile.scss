@@ -77,7 +77,8 @@ $nav-open-from-direction: top;
 // Let's ensure site-header loads properly and doesn't leave empty spaces
 @media (max-width: $width-max-mobile) {
   .nav-container {
-    background-color: var(--color-background-nav-mobile-header);
+    // background-color: var(--color-background-nav-mobile-header);
+    background-color: transparent;
 
     @if $absolute-navigation-mobile == false {
       position: relative;
@@ -93,9 +94,9 @@ $nav-open-from-direction: top;
   }
 
   @if $absolute-navigation-mobile == true {
-    .site {
-      padding-top: var(--height-navigation-mobile);
-    }
+    // .site {
+    //   padding-top: var(--height-navigation-mobile);
+    // }
   }
 }
 
@@ -295,11 +296,15 @@ $nav-open-from-direction: top;
   color: var(--color-hamburger-active);
 }
 
+/* stylelint-disable declaration-no-important, a11y/no-display-none */
 .nav-toggle {
   background-color: transparent;
   border: 0;
   color: var(--color-hamburger);
   cursor: pointer;
+
+  // Don't show mobile nav in this theme
+  display: none !important;
   font-weight: var(--font-weight-semibold);
   margin: 0;
   overflow: visible;
@@ -356,7 +361,6 @@ $nav-open-from-direction: top;
   // We already have aria-label for button
   // But we want to show nav-toggle visually for seeing users
   // So we'll add has-visible-label to nav-toggle in header.php
-  // stylelint-disable-next-line a11y/no-display-none
   &:not(.has-visible-label) .nav-toggle-label {
     display: none;
   }

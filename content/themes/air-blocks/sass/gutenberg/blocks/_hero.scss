@@ -12,7 +12,15 @@
 
 .block-hero {
   display: flex;
-  height: 750px;
+  height: calc(var(--vh, 1vh) * 100);
+
+  &.block-hero-low {
+    height: auto;
+  }
+
+  &.block-hero-high {
+    min-height: fill-available;
+  }
 
   video {
     height: 100%;
@@ -33,12 +41,16 @@
     width: 100%;
   }
 
-  &.block-hero-low {
+  @media (min-width: $container-mobile) {
     height: 750px;
-  }
 
-  &.block-hero-high {
-    height: 965px;
+    &.block-hero-low {
+      height: 750px;
+    }
+
+    &.block-hero-high {
+      height: 965px;
+    }
   }
 }
 
