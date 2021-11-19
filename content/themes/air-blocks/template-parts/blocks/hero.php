@@ -26,6 +26,9 @@
 // Composer require (optional):
 // "digitoimistodude/breadcrumb-trail": "dev-master",
 
+// JS (required):
+// └── js/src/modules/100vh.js
+
 // Files (required):
 // ├── sass/components/_prefix.scss
 // ├── sass/gutenberg/blocks/_hero.scss
