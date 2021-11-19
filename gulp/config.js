@@ -1,4 +1,4 @@
-const themeDir = 'content/themes/dudeblocks/';
+const themeDir = 'content/themes/air-blocks/';
 
 module.exports = {
   cleancss: {
@@ -48,7 +48,7 @@ module.exports = {
     opts: {
       logLevel: 'debug',
       injectChanges: true,
-      proxy: 'https://dudeblocks.test',
+      proxy: 'https://air-blocks.test',
       browser: 'Google Chrome',
       open: false,
       notify: true,

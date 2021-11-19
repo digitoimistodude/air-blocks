@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: ['content/themes/dudeblocks/js/dist/*.js', 'content/themes/dudeblocks/node_modules/**/*.js', 'temp.js', 'content/themes/dudeblocks/js/src/front-end.js', '**/gulp/**/*.js', '**/gulp/*.js', 'gulpfile.js'],
+  ignorePatterns: ['content/themes/air-blocks/js/dist/*.js', 'content/themes/air-blocks/node_modules/**/*.js', 'temp.js', 'content/themes/air-blocks/js/src/front-end.js', '**/gulp/**/*.js', '**/gulp/*.js', 'gulpfile.js'],
   parser: 'babel-eslint',
   extends: 'eslint-config-airbnb/base',
   rules: {

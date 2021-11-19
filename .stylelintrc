@@ -134,7 +134,7 @@
       true,
       {
         "importFrom": [
-          "content/themes/dudeblocks/css/dev/global.css"
+          "content/themes/air-blocks/css/dev/global.css"
         ]
       }
     ],

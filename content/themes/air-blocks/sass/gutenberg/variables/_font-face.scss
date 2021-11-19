@@ -1,0 +1,4 @@
+// Font family settings for Gutenberg
+@include fontFace('Inter', '../../../../../content/themes/air-blocks/fonts/Inter-Regular', 400);
+@include fontFace('Inter', '../../../../../content/themes/air-blocks/fonts/Inter-Italic', 400, italic);
+@include fontFace('Inter', '../../../../../content/themes/air-blocks/fonts/Inter-Bold', 700);
