@@ -1,8 +1,9 @@
+/* eslint-disable no-underscore-dangle, no-param-reassign, func-names, no-plusplus, no-unused-vars, camelcase, no-plusplus, max-len, consistent-return */
 /**
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 18:01:20
+ * @Last Modified time: 2021-11-22 18:54:45
  */
 /**
  * Air theme JavaScript.
@@ -22,10 +23,10 @@ import 'what-input';
 // import slick from 'slick-carousel';
 
 // Navigation
-import './modules/navigation.js';
+import './modules/navigation';
 
 // 100vh for mobile
-import './modules/100vh.js';
+import './modules/100vh';
 
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');
@@ -42,23 +43,37 @@ const figures = document.querySelectorAll('figure');
 setFigureWidths(figures);
 
 // Filter blocks
-var input = document.querySelector('#filter-airblocks');
-var items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
+const input = document.querySelector('#filter-airblocks');
+const items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
 
-input.addEventListener('keyup', function(ev) {
-  var text = ev.target.value;
-  var pat = new RegExp(text, 'i');
-  for (var i=0; i < items.length; i++) {
-    var item = items[i];
+input.addEventListener('keyup', (ev) => {
+  const text = ev.target.value;
+  const pat = new RegExp(text, 'i');
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
     if (pat.test(item.classList)) {
-      item.classList.remove("hidden");
-    }
-    else {
-      item.classList.add("hidden");
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
     }
   }
 });
 
+// Get block names to element
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const splitted = item.classList.value.split('-');
+    const splittedblock = splitted[1].split('block');
+    const blockname = splittedblock[0];
+
+    const blockTagContent = `<p>${blockname}</p>`;
+    const blockTag = document.createElement('div');
+    blockTag.classList.add('hero-name-tag');
+    blockTag.innerHTML = blockTagContent;
+    item.appendChild(blockTag, item.nextSibling);
+  }
+});
 
 // Init lazyload
 // Usage example on template side when air-helper enabled:
@@ -66,7 +81,7 @@ input.addEventListener('keyup', function(ev) {
 // Refer to documentation:
 // 1) https://github.com/digitoimistodude/air-helper#image-lazyloading-1
 // 2) https://github.com/verlok/vanilla-lazyload#-getting-started---html
-var airblocks_LazyLoad = new LazyLoad({
+const airblocks_LazyLoad = new LazyLoad({
   callback_loaded: (el) => setLazyLoadedFigureWidth, // Set lazyloaded figure width so captions in aligned images will be same width as image
 });
 
@@ -77,20 +92,20 @@ airblocks_LazyLoad.update();
 (function ($) {
   // Accessibility: Ensure back to top is right color on right background
   // Note: Needs .has-light-bg or .has-dark-bg class on all blocks
-  var stickyOffset = $('.back-to-top').offset();
-  var $contentDivs = $('.block, .site-footer');
-  $(document).scroll(function () {
+  const stickyOffset = $('.back-to-top').offset();
+  const $contentDivs = $('.block, .site-footer');
+  $(document).scroll(() => {
     $contentDivs.each(function (k) {
-      var _thisOffset = $(this).offset();
-      var _actPosition = _thisOffset.top - $(window).scrollTop();
+      const _thisOffset = $(this).offset();
+      const _actPosition = _thisOffset.top - $(window).scrollTop();
       if (
-        _actPosition < stickyOffset.top &&
-        _actPosition + $(this).height() > 0
+        _actPosition < stickyOffset.top
+        && _actPosition + $(this).height() > 0
       ) {
         $('.back-to-top')
           .removeClass('has-light-bg has-dark-bg')
           .addClass(
-            $(this).hasClass('has-light-bg') ? 'has-light-bg' : 'has-dark-bg'
+            $(this).hasClass('has-light-bg') ? 'has-light-bg' : 'has-dark-bg',
           );
         return false;
       }
@@ -100,23 +115,23 @@ airblocks_LazyLoad.update();
   // Detect Visible section on viewport from bottom
   // @link https://codepen.io/BoyWithSilverWings/pen/MJgQqR
   $.fn.isInViewport = function () {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
+    const elementTop = $(this).offset().top;
+    const elementBottom = elementTop + $(this).outerHeight();
 
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+    const viewportTop = $(window).scrollTop();
+    const viewportBottom = viewportTop + $(window).height();
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
   };
 
   // Accessibility: Ensure back to top is right color on right background
-  $(window).on('resize scroll', function () {
+  $(window).on('resize scroll', () => {
     $('.block, .site-footer').each(function () {
       if ($(this).isInViewport()) {
         $('.back-to-top')
           .removeClass('has-light-bg has-dark-bg')
           .addClass(
-            $(this).hasClass('has-light-bg') ? 'has-light-bg' : 'has-dark-bg'
+            $(this).hasClass('has-light-bg') ? 'has-light-bg' : 'has-dark-bg',
           );
       }
     });
@@ -125,10 +140,10 @@ airblocks_LazyLoad.update();
   // Hide or show the 'back to top' link
   $(window).scroll(function () {
     // Back to top
-    var offset = 300; // Browser window scroll (in pixels) after which the 'back to top' link is shown
-    var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
-    var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
-    var link_class = '.back-to-top';
+    const offset = 300; // Browser window scroll (in pixels) after which the 'back to top' link is shown
+    const offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
+    const scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
+    const link_class = '.back-to-top';
 
     if ($(this).scrollTop() > offset) {
       $(link_class).addClass('is-visible');
@@ -144,36 +159,35 @@ airblocks_LazyLoad.update();
   });
 
   // Document ready start
-  $(function () {
+  $(() => {
     // Your JavaScript here
   });
-})(jQuery);
+}(jQuery));
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const easeFunctions = {
-    easeInQuad: function (t, b, c, d) {
+    easeInQuad(t, b, c, d) {
       t /= d;
       return c * t * t + b;
     },
-    easeOutQuad: function (t, b, c, d) {
+    easeOutQuad(t, b, c, d) {
       t /= d;
       return -c * t * (t - 2) + b;
-    }
+    },
   };
   const moveTo = new MoveTo({
-      ease: 'easeInQuad'
-    },
-    easeFunctions
-  );
+    ease: 'easeInQuad',
+  },
+  easeFunctions);
   const triggers = document.getElementsByClassName('js-trigger');
-  for (var i = 0; i < triggers.length; i++) {
+  for (let i = 0; i < triggers.length; i++) {
     moveTo.registerTrigger(triggers[i]);
   }
 });
 
 // Add aria-labels to links without text or aria-labels and contain image with alt text
 const links = [...document.querySelectorAll('a')];
-const linksWithImgChildren = links.forEach(link => {
+const linksWithImgChildren = links.forEach((link) => {
   // If link already has text content or an aria label no need to add aria-label
   if (link.textContent.trim() !== '' || link.ariaLabel) {
     return;
@@ -184,4 +198,3 @@ const linksWithImgChildren = links.forEach(link => {
     link.ariaLabel = ariaLabel;
   }
 });
-

@@ -5,7 +5,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:22:26
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 17:52:35
+ * @Last Modified time: 2021-11-22 18:46:11
  *
  * @package airblocks
  */
@@ -20,7 +20,7 @@ namespace Air_Light;
 
     <ul class="menu-items">
       <li class="menu-item menu-item-filter"><input id="filter-airblocks" type="text" autocomplete="off" placeholder="Filter blocks..."><span class="cursor" aria-hidden="true"></span></li>
-      <li class="menu-item"><a href="https://github.com/digitoimistodude/air-light/wiki/Creating-your-own-Gutenberg-blocks-with-Air-light-and-Advanced-Custom-Fields">Getting started</a></li>
+      <li style="display: none;" class="menu-item"><a href="https://github.com/digitoimistodude/air-light/wiki/Creating-your-own-Gutenberg-blocks-with-Air-light-and-Advanced-Custom-Fields">Getting started</a></li>
       <li class="menu-item social separator-left"><a href="https://www.linkedin.com/company/digitoimisto-dude-oy"><?php include get_theme_file_path( '/svg/linkedin.svg' ); ?><span class="screen-reader-text">LinkedIn</span></a></li>
       <li class="menu-item social"><a href="https://profiles.wordpress.org/digitoimistodude/"><?php include get_theme_file_path( '/svg/wordpress.svg' ); ?><span class="screen-reader-text">WordPress</span></a></li>
       <li class="menu-item social"><a href="https://www.facebook.com/digitoimistodude/"><?php include get_theme_file_path( '/svg/facebook.svg' ); ?><span class="screen-reader-text">Facebook</span></a></li>
