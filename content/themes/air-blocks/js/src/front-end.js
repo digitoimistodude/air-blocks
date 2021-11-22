@@ -2,7 +2,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-19 15:32:36
+ * @Last Modified time: 2021-11-22 18:01:20
  */
 /**
  * Air theme JavaScript.
@@ -43,7 +43,7 @@ setFigureWidths(figures);
 
 // Filter blocks
 var input = document.querySelector('#filter-airblocks');
-var items = document.querySelector('.airblocks-list').getElementsByTagName('section');
+var items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
 
 input.addEventListener('keyup', function(ev) {
   var text = ev.target.value;

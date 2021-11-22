@@ -62,6 +62,20 @@ body:not(.home) {
   }
 }
 
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @media only screen and (min-width: $width-max-mobile) {
   .menu-items a::after {
     display: none;

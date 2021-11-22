@@ -31,18 +31,14 @@
 
 // Structure
 @import 'layout/general';
-@import 'layout/print';
 @import 'layout/typography';
 @import 'layout/site-header';
 @import 'layout/site-footer';
 @import 'layout/forms';
-@import 'layout/blog';
 
 // Global features
 @import 'features/top';
-@import 'features/gallery';
 @import 'features/lazyload';
-@import 'features/pagination';
 @import 'features/gravity-forms';
 @import 'features/filtering';
 
