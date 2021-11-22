@@ -7,9 +7,9 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-18 21:17:09
+ * @Last Modified time: 2021-11-22 17:35:28
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -30,7 +30,7 @@ add_action( 'after_setup_theme', function() {
     /**
      * Theme textdomain
      */
-    'textdomain' => 'air-blocks',
+    'textdomain' => 'airblocks',
 
     /**
      * Image and content sizes
@@ -68,14 +68,14 @@ add_action( 'after_setup_theme', function() {
      * Menu locations
      */
     'menu_locations' => [
-      'primary' => __( 'Primary Menu', 'air-blocks' ),
+      'primary' => __( 'Primary Menu', 'airblocks' ),
     ],
 
     /**
      * Taxonomies
      *
      * See the instructions:
-     * https://github.com/digitoimistodude/air-blocks#custom-taxonomies
+     * https://github.com/digitoimistodude/airblocks#custom-taxonomies
      */
     'taxonomies' => [
       // 'your-taxonomy' => [
@@ -88,7 +88,7 @@ add_action( 'after_setup_theme', function() {
      * Post types
      *
      * See the instructions:
-     * https://github.com/digitoimistodude/air-blocks#custom-post-types
+     * https://github.com/digitoimistodude/airblocks#custom-post-types
      */
     'post_types' => [
       // 'your-post-type' => 'Your_Post_Type',
@@ -107,7 +107,7 @@ add_action( 'after_setup_theme', function() {
 
     // Custom ACF block default settings
     'acf_block_defaults' => [
-      'category'          => 'air-blocks',
+      'category'          => 'airblocks',
       'mode'              => 'auto',
       'align'             => 'full',
       'post_types'        => [
@@ -168,7 +168,7 @@ add_action( 'after_setup_theme', function() {
     'my_custom_setting' => true,
   ];
 
-  $theme_settings = apply_filters( 'airBlocks_theme_settings', $theme_settings );
+  $theme_settings = apply_filters( 'airblocks_theme_settings', $theme_settings );
 
   define( 'THEME_SETTINGS', $theme_settings );
 } ); // end action after_setup_theme

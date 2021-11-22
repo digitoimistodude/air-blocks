@@ -10,7 +10,7 @@
  * @Last Modified time: 2021-11-18 21:09:21
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;

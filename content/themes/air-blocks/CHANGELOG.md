@@ -541,7 +541,7 @@ Project start scripts have been refactored completely same manner than in this [
 - Variable all the things - no need to search and replace stuff
 - Fix typos
 - Add checks for missing packages (WSL mainly)
-- Add extra notifications that these scripts need air-blocks and dev servers to work
+- Add extra notifications that these scripts need airblocks and dev servers to work
 
 ### 7.0.6: 2021-04-07
 
@@ -703,7 +703,7 @@ Project start scripts have been refactored completely same manner than in this [
 * Add correct protocol to newtheme script final output
 ### 6.6.9: 2021-02-16
 
-* Update documentation about installing air-blocks on any development environment
+* Update documentation about installing airblocks on any development environment
 * Update clean up script bin/air-move-out.sh to clean up cpt files that are not allowed in theme directory because they are "plugin-territory functionality". Also documenting this in this point.
 ### 6.6.8: 2021-02-16
 

@@ -2,7 +2,7 @@
 /**
  * Template tags and helpers
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;

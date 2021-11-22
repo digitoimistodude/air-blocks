@@ -7,7 +7,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-09-02 10:44:32
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -21,7 +21,7 @@ function move_jquery_into_footer( $wp_scripts ) {
     $wp_scripts->add_data( 'jquery-core',    'group', 1 );
     $wp_scripts->add_data( 'jquery-migrate', 'group', 1 );
   }
-} // end airBlocks_move_jquery_into_footer
+} // end airblocks_move_jquery_into_footer
 
 /**
  * Enqueue scripts and styles.
@@ -49,7 +49,7 @@ function enqueue_theme_scripts() {
     wp_enqueue_script( 'comment-reply' );
   }
 
-  wp_localize_script( 'scripts', 'airBlocks_screenReaderText', [
+  wp_localize_script( 'scripts', 'airblocks_screenReaderText', [
     'expand'          => get_default_localization( 'Open child menu' ),
     'collapse'        => get_default_localization( 'Close child menu' ),
     'expand_for'      => get_default_localization( 'Open child menu for' ),
@@ -61,12 +61,12 @@ function enqueue_theme_scripts() {
   ] );
 
   // Add domains/hosts to disable external link indicators
-  wp_localize_script( 'scripts', 'airBlocks_externalLinkDomains', [
+  wp_localize_script( 'scripts', 'airblocks_externalLinkDomains', [
       'localhost:3000',
-      'air-blocks.test',
-      'air-blocks.fi',
+      'airblocks.test',
+      'airblocks.fi',
   ] );
-} // end airBlocks_scripts
+} // end airblocks_scripts
 
 /**
  * Load polyfills for legacy browsers
@@ -90,9 +90,9 @@ function enqueue_polyfills() {
   }';
 
   if ( file_exists( get_theme_file_path( get_asset_file( 'legacy.js' ) ) ) ) {
-    wp_register_script( 'airBlocks_legacy', '', [], filemtime( get_theme_file_path( get_asset_file( 'legacy.js' ) ) ), false );
-    wp_enqueue_script( 'airBlocks_legacy' );
-    wp_add_inline_script( 'airBlocks_legacy', $script, true );
+    wp_register_script( 'airblocks_legacy', '', [], filemtime( get_theme_file_path( get_asset_file( 'legacy.js' ) ) ), false );
+    wp_enqueue_script( 'airblocks_legacy' );
+    wp_add_inline_script( 'airblocks_legacy', $script, true );
   }
 } // end enqueue_polyfills
 

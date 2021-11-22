@@ -4,7 +4,7 @@
  * @Date:   2021-05-11 14:38:45
  * @Last Modified by: Niku Hietanen
  * @Last Modified time: 2021-05-19 08:53:57
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;

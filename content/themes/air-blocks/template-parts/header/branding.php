@@ -9,7 +9,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-11-19 15:00:15
  *
- * @package air-blocks
+ * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 

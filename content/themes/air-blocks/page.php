@@ -11,7 +11,7 @@
  * @Last Modified by:   Timi Wahalahti
  * @Last Modified time: 2021-01-12 16:10:58
  *
- * @package air-blocks
+ * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
@@ -29,7 +29,7 @@ get_header(); ?>
       <?php the_content(); ?>
 
       <?php if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'air-blocks' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
+        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'airblocks' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
       } ?>
 
     </div><!-- .container -->

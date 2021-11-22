@@ -5,7 +5,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-09-02 10:43:53
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -16,7 +16,7 @@ add_filter( 'air_helper_pll_register_strings', function() {
   ];
 
   /**
-   * Uncomment if you need to have default air-blocks accessibility strings
+   * Uncomment if you need to have default airblocks accessibility strings
    * translatable via Polylang string translations.
    */
   // foreach ( get_default_localization_strings() as $key => $value ) {
@@ -29,24 +29,24 @@ add_filter( 'air_helper_pll_register_strings', function() {
 function get_default_localization_strings( $language = 'en' ) {
   $strings = [
     'en'  => [
-      'Add a menu'                                   => __( 'Add a menu', 'air-blocks' ),
-      'Open main menu'                               => __( 'Open main menu', 'air-blocks' ),
-      'Close main menu'                              => __( 'Close main menu', 'air-blocks' ),
-      'Main navigation'                              => __( 'Main navigation', 'air-blocks' ),
-      'Back to top'                                  => __( 'Back to top', 'air-blocks' ),
-      'Open child menu'                              => __( 'Open child menu', 'air-blocks' ),
-      'Open child menu for'                          => __( 'Open child menu for', 'air-blocks' ),
-      'Close child menu'                             => __( 'Close child menu', 'air-blocks' ),
-      'Close child menu for'                         => __( 'Close child menu for', 'air-blocks' ),
-      'Skip to content'                              => __( 'Skip to content', 'air-blocks' ),
-      'External site'                                => __( 'External site', 'air-blocks' ),
-      'opens in a new window'                        => __( 'opens in a new window', 'air-blocks' ),
-      'Page not found.'                              => __( 'Page not found.', 'air-blocks' ),
-      'The reason might be mistyped or expired URL.' => __( 'The reason might be mistyped or expired URL.', 'air-blocks' ),
-      'Search'                                       => __( 'Search', 'air-blocks' ),
-      'Block missing required data'                  => __( 'Block missing required data', 'air-blocks' ),
-      'This error is shown only for logged in users' => __( 'This error is shown only for logged in users', 'air-blocks' ),
-      'No results found for your search'                   => __( 'No results found for your search', 'air-blocks' ),
+      'Add a menu'                                   => __( 'Add a menu', 'airblocks' ),
+      'Open main menu'                               => __( 'Open main menu', 'airblocks' ),
+      'Close main menu'                              => __( 'Close main menu', 'airblocks' ),
+      'Main navigation'                              => __( 'Main navigation', 'airblocks' ),
+      'Back to top'                                  => __( 'Back to top', 'airblocks' ),
+      'Open child menu'                              => __( 'Open child menu', 'airblocks' ),
+      'Open child menu for'                          => __( 'Open child menu for', 'airblocks' ),
+      'Close child menu'                             => __( 'Close child menu', 'airblocks' ),
+      'Close child menu for'                         => __( 'Close child menu for', 'airblocks' ),
+      'Skip to content'                              => __( 'Skip to content', 'airblocks' ),
+      'External site'                                => __( 'External site', 'airblocks' ),
+      'opens in a new window'                        => __( 'opens in a new window', 'airblocks' ),
+      'Page not found.'                              => __( 'Page not found.', 'airblocks' ),
+      'The reason might be mistyped or expired URL.' => __( 'The reason might be mistyped or expired URL.', 'airblocks' ),
+      'Search'                                       => __( 'Search', 'airblocks' ),
+      'Block missing required data'                  => __( 'Block missing required data', 'airblocks' ),
+      'This error is shown only for logged in users' => __( 'This error is shown only for logged in users', 'airblocks' ),
+      'No results found for your search'                   => __( 'No results found for your search', 'airblocks' ),
     ],
     'fi'  => [
       'Add a menu'                                   => 'Luo uusi valikko',

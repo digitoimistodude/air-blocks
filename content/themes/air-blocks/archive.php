@@ -6,7 +6,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-11-18 21:16:44
  *
- * @package air-blocks
+ * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 

@@ -2,7 +2,7 @@
 /**
  * All hooks that are run in the theme are listed here
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;

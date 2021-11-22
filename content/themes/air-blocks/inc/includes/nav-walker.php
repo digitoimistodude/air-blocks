@@ -11,7 +11,7 @@
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -188,7 +188,7 @@ class Nav_Walker extends \Walker_Nav_Menu {
 		}
 
 		// Add some additional default classes to the item.
-		$classes[] = 'air-blocks-menu-item menu-item-' . $item->ID;
+		$classes[] = 'airblocks-menu-item menu-item-' . $item->ID;
 		$classes[] = 'nav-item';
 
 		// Allow filtering the classes.
@@ -370,7 +370,7 @@ class Nav_Walker extends \Walker_Nav_Menu {
 			$class            = $args['menu_class'] ? ' class="menu-fallback-menu ' . esc_attr( $args['menu_class'] ) . '"' : ' class="menu-fallback-menu"';
 			$id               = $args['menu_id'] ? ' id="' . esc_attr( $args['menu_id'] ) . '"' : '';
 			$fallback_output .= '<ul' . $id . $class . '>';
-			$fallback_output .= '<li class="nav-item"><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" class="nav-link" title="' . esc_attr__( 'Add a menu', 'air-blocks' ) . '">' . esc_html__( 'Add a menu', 'air-blocks' ) . '</a></li>';
+			$fallback_output .= '<li class="nav-item"><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" class="nav-link" title="' . esc_attr__( 'Add a menu', 'airblocks' ) . '">' . esc_html__( 'Add a menu', 'airblocks' ) . '</a></li>';
 			$fallback_output .= '</ul>';
 
 			// Menu container closing tag.

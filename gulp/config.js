@@ -1,3 +1,9 @@
+/**
+ * @Author: Roni Laukkarinen
+ * @Date:   2021-11-18 15:12:33
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-22 17:37:46
+ */
 const themeDir = 'content/themes/air-blocks/';
 
 module.exports = {
@@ -48,7 +54,7 @@ module.exports = {
     opts: {
       logLevel: 'debug',
       injectChanges: true,
-      proxy: 'https://air-blocks.test',
+      proxy: 'https://airblocks.test',
       browser: 'Google Chrome',
       open: false,
       notify: true,

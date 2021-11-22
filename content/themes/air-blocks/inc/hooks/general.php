@@ -7,7 +7,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-06-22 10:15:07
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -19,9 +19,9 @@ namespace Air_Light;
  */
 function widgets_init() {
   register_sidebar( array(
-    'name'          => esc_html__( 'Sidebar', 'air-blocks' ),
+    'name'          => esc_html__( 'Sidebar', 'airblocks' ),
     'id'            => 'sidebar-1',
-    'description'   => esc_html__( 'Add widgets here.', 'air-blocks' ),
+    'description'   => esc_html__( 'Add widgets here.', 'airblocks' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h2 class="widget-title">',

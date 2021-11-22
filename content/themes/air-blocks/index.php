@@ -11,7 +11,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2020-03-17 10:17:21
  *
- * @package air-blocks
+ * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 

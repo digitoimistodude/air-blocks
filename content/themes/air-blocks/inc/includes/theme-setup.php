@@ -7,7 +7,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-05-04 11:13:01
  *
- * @package air-blocks
+ * @package airblocks
  **/
 
 namespace Air_Light;
@@ -50,12 +50,12 @@ function build_taxonomies() {
     $file_path = get_theme_file_path( '/inc/taxonomies/' . $slug . '.php' );
 
     if ( ! file_exists( $file_path ) ) {
-      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy class file does not exist.', 'air-blocks' ), $classname );
+      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy class file does not exist.', 'airblocks' ), $classname );
     }
     require $file_path;
 
     if ( ! class_exists( $classname ) ) {
-      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'air-blocks' ), $classname );
+      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'airblocks' ), $classname );
     }
 
     $taxonomy_class = new $classname( $slug );
@@ -76,13 +76,13 @@ function build_post_types() {
     $file_path = get_theme_file_path( '/inc/post-types/' . $slug . '.php' );
 
     if ( ! file_exists( $file_path ) ) {
-      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy class file does not exist.', 'air-blocks' ), $classname );
+      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy class file does not exist.', 'airblocks' ), $classname );
     }
     // Get the class file
     require $file_path;
 
     if ( ! class_exists( $classname ) ) {
-      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'air-blocks' ), $classname );
+      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'airblocks' ), $classname );
     }
 
     $post_type_class = new $classname( $slug );

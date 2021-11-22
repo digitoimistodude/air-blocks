@@ -5,7 +5,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-05-04 11:13:17
  *
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -22,20 +22,20 @@ class Your_Taxonomy extends Taxonomy {
   public function register( array $post_types = [] ) {
     // Taxonomy labels.
     $labels = [
-      'name'                  => _x( 'Your Taxonomies', 'Taxonomy plural name', 'air-blocks' ),
-      'singular_name'         => _x( 'Your Taxonomy', 'Taxonomy singular name', 'air-blocks' ),
-      'search_items'          => __( 'Search Your Taxonomies', 'air-blocks' ),
-      'popular_items'         => __( 'Popular Your Taxonomies', 'air-blocks' ),
-      'all_items'             => __( 'All Your Taxonomies', 'air-blocks' ),
-      'parent_item'           => __( 'Parent Your Taxonomy', 'air-blocks' ),
-      'parent_item_colon'     => __( 'Parent Your Taxonomy', 'air-blocks' ),
-      'edit_item'             => __( 'Edit Your Taxonomy', 'air-blocks' ),
-      'update_item'           => __( 'Update Your Taxonomy', 'air-blocks' ),
-      'add_new_item'          => __( 'Add New Your Taxonomy', 'air-blocks' ),
-      'new_item_name'         => __( 'New Your Taxonomy', 'air-blocks' ),
-      'add_or_remove_items'   => __( 'Add or remove Your Taxonomies', 'air-blocks' ),
-      'choose_from_most_used' => __( 'Choose from most used Taxonomies', 'air-blocks' ),
-      'menu_name'             => __( 'Your Taxonomy', 'air-blocks' ),
+      'name'                  => _x( 'Your Taxonomies', 'Taxonomy plural name', 'airblocks' ),
+      'singular_name'         => _x( 'Your Taxonomy', 'Taxonomy singular name', 'airblocks' ),
+      'search_items'          => __( 'Search Your Taxonomies', 'airblocks' ),
+      'popular_items'         => __( 'Popular Your Taxonomies', 'airblocks' ),
+      'all_items'             => __( 'All Your Taxonomies', 'airblocks' ),
+      'parent_item'           => __( 'Parent Your Taxonomy', 'airblocks' ),
+      'parent_item_colon'     => __( 'Parent Your Taxonomy', 'airblocks' ),
+      'edit_item'             => __( 'Edit Your Taxonomy', 'airblocks' ),
+      'update_item'           => __( 'Update Your Taxonomy', 'airblocks' ),
+      'add_new_item'          => __( 'Add New Your Taxonomy', 'airblocks' ),
+      'new_item_name'         => __( 'New Your Taxonomy', 'airblocks' ),
+      'add_or_remove_items'   => __( 'Add or remove Your Taxonomies', 'airblocks' ),
+      'choose_from_most_used' => __( 'Choose from most used Taxonomies', 'airblocks' ),
+      'menu_name'             => __( 'Your Taxonomy', 'airblocks' ),
     ];
 
     $args = [

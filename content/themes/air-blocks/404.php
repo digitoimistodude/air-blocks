@@ -6,7 +6,7 @@
  * @Last Modified by:   Timi Wahalahti
  * @Last Modified time: 2021-01-12 15:13:28
  *
- * @package air-blocks
+ * @package airblocks
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  */
 

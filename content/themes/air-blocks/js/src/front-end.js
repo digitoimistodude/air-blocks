@@ -42,8 +42,8 @@ const figures = document.querySelectorAll('figure');
 setFigureWidths(figures);
 
 // Filter blocks
-var input = document.querySelector('#filter-air-blocks');
-var items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
+var input = document.querySelector('#filter-airblocks');
+var items = document.querySelector('.airblocks-list').getElementsByTagName('section');
 
 input.addEventListener('keyup', function(ev) {
   var text = ev.target.value;
@@ -66,12 +66,12 @@ input.addEventListener('keyup', function(ev) {
 // Refer to documentation:
 // 1) https://github.com/digitoimistodude/air-helper#image-lazyloading-1
 // 2) https://github.com/verlok/vanilla-lazyload#-getting-started---html
-var airBlocks_LazyLoad = new LazyLoad({
+var airblocks_LazyLoad = new LazyLoad({
   callback_loaded: (el) => setLazyLoadedFigureWidth, // Set lazyloaded figure width so captions in aligned images will be same width as image
 });
 
 // After your content has changed...
-airBlocks_LazyLoad.update();
+airblocks_LazyLoad.update();
 
 // jQuery start
 (function ($) {

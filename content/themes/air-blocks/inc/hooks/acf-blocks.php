@@ -4,7 +4,7 @@
  * @Date:   2021-05-11 14:34:14
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-11-19 15:14:11
- * @package air-blocks
+ * @package airblocks
  */
 
 namespace Air_Light;
@@ -12,8 +12,8 @@ namespace Air_Light;
 function acf_blocks_add_category_in_gutenberg( $categories, $post ) {
   return array_merge( $categories, [
     [
-      'slug'  => 'air-blocks',
-      'title' => __( 'Theme blocks', 'air-blocks' ),
+      'slug'  => 'airblocks',
+      'title' => __( 'Theme blocks', 'airblocks' ),
     ],
   ] );
 } // end acf_blocks_add_category_in_gutenberg

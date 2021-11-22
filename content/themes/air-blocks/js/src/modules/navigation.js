@@ -93,7 +93,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
           thisDropdown.find('.dropdown').removeClass('toggled-on');
           dropdownToggle.attr('aria-expanded', 'false');
           // jscs:enable
-          screenReaderSpan.text(airBlocks_screenReaderText.expand);
+          screenReaderSpan.text(airblocks_screenReaderText.expand);
           // Move focus back to previous dropdown select
           // But only if we are not already in the toggle of the first dropdown menu
           if (areWeInDropdown === true) {
@@ -113,7 +113,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       prevDropdown.find('.dropdown-toggle').removeClass('toggled-on');
       prevDropdown.find('.dropdown').removeClass('toggled-on');
       dropdownTogglePrev.attr('aria-expanded', 'false');
-      screenReaderSpanPrev.text(airBlocks_screenReaderText.expand);
+      screenReaderSpanPrev.text(airblocks_screenReaderText.expand);
 
       // Close next dropdown if we are on main level
       var nextDropdown = $(this).parent().next();
@@ -124,7 +124,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       nextDropdown.find('.dropdown-toggle').removeClass('toggled-on');
       nextDropdown.find('.dropdown').removeClass('toggled-on');
       dropdownToggleNext.attr('aria-expanded', 'false');
-      screenReaderSpanNext.text(airBlocks_screenReaderText.expand);
+      screenReaderSpanNext.text(airblocks_screenReaderText.expand);
     }
   });
 
@@ -133,7 +133,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
   // Add default dropdown-toggle label
   $('.dropdown-toggle').each(function () {
-    $(this).attr('aria-label', `${airBlocks_screenReaderText.expand_for} ${$(this).prev().text()}`);
+    $(this).attr('aria-label', `${airblocks_screenReaderText.expand_for} ${$(this).prev().text()}`);
   });
 
   // Toggles the sub-menu when dropdown toggle button accessed
@@ -153,9 +153,9 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
     $(this).attr(
       'aria-label',
-      $(this).attr('aria-label') === `${airBlocks_screenReaderText.collapse_for} ${$(this).prev().text()}`
-        ? `${airBlocks_screenReaderText.expand_for} ${$(this).prev().text()}`
-        : `${airBlocks_screenReaderText.collapse_for} ${$(this).prev().text()}`,
+      $(this).attr('aria-label') === `${airblocks_screenReaderText.collapse_for} ${$(this).prev().text()}`
+        ? `${airblocks_screenReaderText.expand_for} ${$(this).prev().text()}`
+        : `${airblocks_screenReaderText.collapse_for} ${$(this).prev().text()}`,
     );
   });
 
@@ -313,16 +313,16 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       // Change screen reader open/close labels
       $('#nav-toggle-label').text(
         // eslint-disable-next-line no-undef
-        $('#nav-toggle-label').text() === airBlocks_screenReaderText.expand_toggle
-          ? airBlocks_screenReaderText.collapse_toggle
-          : airBlocks_screenReaderText.expand_toggle,
+        $('#nav-toggle-label').text() === airblocks_screenReaderText.expand_toggle
+          ? airblocks_screenReaderText.collapse_toggle
+          : airblocks_screenReaderText.expand_toggle,
       );
 
       $(this).attr(
         'aria-label',
-        $(this).attr('aria-label') === airBlocks_screenReaderText.expand_toggle
-          ? airBlocks_screenReaderText.collapse_toggle
-          : airBlocks_screenReaderText.expand_toggle,
+        $(this).attr('aria-label') === airblocks_screenReaderText.expand_toggle
+          ? airblocks_screenReaderText.collapse_toggle
+          : airblocks_screenReaderText.expand_toggle,
       );
 
       // jscs:disable
@@ -419,7 +419,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     button.className = button.className.replace(' is-active', '');
     button.setAttribute('aria-expanded', 'false');
     menu.setAttribute('aria-expanded', 'false');
-    $('#nav-toggle-label').text(airBlocks_screenReaderText.expand_toggle);
+    $('#nav-toggle-label').text(airblocks_screenReaderText.expand_toggle);
 
     // Return focus to nav-toggle
     button.focus();

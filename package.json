@@ -1,7 +1,7 @@
 {
-  "name": "air-blocks",
+  "name": "airblocks",
   "version": "1.0.0",
-  "description": "air-blocks powered by dudestack + devpackages",
+  "description": "airblocks powered by dudestack + devpackages",
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "devDependencies": {
     "@babel/core": "^7.16.0",

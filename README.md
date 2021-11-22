@@ -1,4 +1,4 @@
-# air-blocks
+# airblocks
 ![based_on_air_version 8.1.8_](https://img.shields.io/badge/based_on_air_version-8.1.8_-brightgreen.svg?style=flat-square) ![project_created 18_Nov_2021](https://img.shields.io/badge/project_created-18_Nov_2021-blue.svg?style=flat-square) ![Tested_up_to WordPress_5.8.2](https://img.shields.io/badge/Tested_up_to-WordPress_5.8.2-blue.svg?style=flat-square) ![Compatible_with PHP_7.4](https://img.shields.io/badge/Compatible_with-PHP_7.4-green.svg?style=flat-square)
 
 This project is hand made for customer by Dude.
@@ -27,9 +27,9 @@ This project is hand made for customer by Dude.
 
 Green checkmarks show if the environment is already set up and running, red cross indicates if it's not yet there or disabled.
 
-✅  Development: [air-blocks.test](http://air-blocks.test)<br>
-❌  Staging: [air-blocks.vaiheessa.fi](https://air-blocks.vaiheessa.fi)<br>
-❌  Production: [air-blocks.fi](https://air-blocks.fi/)
+✅  Development: [airblocks.test](http://airblocks.test)<br>
+❌  Staging: [airblocks.vaiheessa.fi](https://airblocks.vaiheessa.fi)<br>
+❌  Production: [airblocks.fi](https://airblocks.fi/)
 
 ## Setting it up initially
 

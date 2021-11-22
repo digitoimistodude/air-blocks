@@ -6,7 +6,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-11-18 21:16:53
  *
- * @package air-blocks
+ * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 
@@ -25,12 +25,12 @@ get_header(); ?>
       <?php the_content();
 
       // Required by WordPress Theme Check, feel free to remove as it's rarely used in starter themes
-      wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'air-blocks' ), 'after' => '</div>' ) );
+      wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'airblocks' ), 'after' => '</div>' ) );
 
       entry_footer();
 
       if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'air-blocks' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
+        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'airblocks' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
       }
 
       the_post_navigation();
