@@ -5,7 +5,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:22:26
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 18:46:11
+ * @Last Modified time: 2021-11-22 19:58:08
  *
  * @package airblocks
  */
@@ -19,7 +19,8 @@ namespace Air_Light;
   <nav id="nav" class="nav-primary nav-menu" aria-label="<?php echo esc_html( get_default_localization( 'Main navigation' ) ); ?>">
 
     <ul class="menu-items">
-      <li class="menu-item menu-item-filter"><input id="filter-airblocks" type="text" autocomplete="off" placeholder="Filter blocks..."><span class="cursor" aria-hidden="true"></span></li>
+      <li class="menu-item menu-item-filter"><input id="filter-airblocks" type="search" autocomplete="off" placeholder="Filter blocks..."><span class="cursor" aria-hidden="true"></span></li>
+      <li class="menu-item menu-item-button"><button id="toggle" class="toggle-outlines" type="button">Toggle outlines</button></li>
       <li style="display: none;" class="menu-item"><a href="https://github.com/digitoimistodude/air-light/wiki/Creating-your-own-Gutenberg-blocks-with-Air-light-and-Advanced-Custom-Fields">Getting started</a></li>
       <li class="menu-item social separator-left"><a href="https://www.linkedin.com/company/digitoimisto-dude-oy"><?php include get_theme_file_path( '/svg/linkedin.svg' ); ?><span class="screen-reader-text">LinkedIn</span></a></li>
       <li class="menu-item social"><a href="https://profiles.wordpress.org/digitoimistodude/"><?php include get_theme_file_path( '/svg/wordpress.svg' ); ?><span class="screen-reader-text">WordPress</span></a></li>

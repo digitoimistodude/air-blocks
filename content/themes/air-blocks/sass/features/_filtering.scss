@@ -33,7 +33,7 @@
   background-color: transparent;
   border: 0;
   border-radius: 0;
-  color: var(--color-main-level);
+  color: var(--color-white);
   display: inline-flex;
   font-size: var(--font-size-main-level);
   font-weight: var(--font-weight-main-level);
@@ -45,6 +45,18 @@
   transition: .22s;
   white-space: nowrap;
   width: 120px;
+
+  &::-webkit-search-cancel-button {
+    --icon-search-cancel-size: 18px;
+    // stylelint-disable-next-line
+    -webkit-appearance: none;
+    background-image: url('../../svg/search-cancel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: var(--icon-search-cancel-size) var(--icon-search-cancel-size);
+    height: var(--icon-search-cancel-size);
+    width: var(--icon-search-cancel-size);
+  }
 
   // stylelint-disable-next-line
   &:hover,

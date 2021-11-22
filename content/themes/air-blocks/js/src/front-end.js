@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 19:23:15
+ * @Last Modified time: 2021-11-22 19:46:00
  */
 /**
  * Air theme JavaScript.
@@ -59,8 +59,8 @@ input.addEventListener('keyup', (ev) => {
   }
 });
 
-// Get block names to element
 document.addEventListener('DOMContentLoaded', () => {
+  // Add block name tag to each block
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
     const splitted = item.classList.value.split('-');
@@ -74,6 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
     blockTag.innerHTML = blockTagContent;
     item.appendChild(blockTag, item.nextSibling);
   }
+
+  // Toggle button
+  document.querySelector('.toggle-outlines').addEventListener('click', (e) => {
+    [].map.call(document.querySelectorAll('.site'), (el) => {
+      el.classList.toggle('has-decorations');
+    });
+  });
 });
 
 // Init lazyload

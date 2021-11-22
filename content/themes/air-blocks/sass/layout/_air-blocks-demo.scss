@@ -1,38 +1,88 @@
 :root {
   --color-heliotrope: #866cff;
+  --color-background-site: #f3f3f3;
 }
 
-.site {
-  background-color: #f3f3f3;
+.menu-item-button {
+  align-items: center;
+  display: flex;
+  order: 999;
+
+  button {
+    background-color: var(--color-white);
+    border: 0;
+    border-radius: 0;
+    color: var(--color-black);
+    font-size: 12px;
+    margin-left: 1rem;
+    padding: 4px 8px;
+  }
 }
 
+.menu-item.social {
+  display: none;
+}
+
+.block,
+.site,
+.hero-name-tag p,
 .hero-name-tag {
-  position: absolute;
-  right: var(--padding-container-horizontal);
-  top: var(--padding-container-horizontal);
-  z-index: 22;
-}
-
-.hero-name-tag p {
-  background-color: var(--color-black);
-  border-radius: 4px;
-  color: var(--color-white);
-  font-size: var(--font-size-14);
-  line-height: 1;
-  margin: 0;
-  padding: 8px 10px;
-  transition: all .5s;
+  transition: all .22s;
 }
 
 .block {
-  margin: 4.7rem;
-  outline: 1px dashed var(--color-black);
-  overflow: visible;
-  padding: 4.7rem;
-  z-index: 4;
+  margin: 0;
+  padding: 0;
+}
 
-  @media (max-width: $container-mobile) {
-    margin: var(--padding-container-horizontal);
-    padding: var(--padding-container-horizontal);
+html,
+body,
+.site {
+  background-color: var(--color-background-site);
+}
+
+.has-decorations {
+  .hero-name-tag {
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: -22px;
+    z-index: 22;
   }
+
+  // stylelint-disable-next-line
+  .hero-name-tag p {
+    background-color: var(--color-black);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: var(--color-white);
+    font-size: 12px;
+    line-height: 1;
+    margin: 0;
+    padding: 5px 8px;
+    transform: translateX(1rem);
+  }
+
+  .block {
+    // stylelint-disable-next-line
+    background-image: linear-gradient(var(--color-black), var(--color-cyan-bright)), linear-gradient(var(--color-black), var(--color-cyan-bright));
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 1px 100%;
+    border-bottom: 1px solid var(--color-cyan-bright);
+    border-top: 1px solid var(--color-black);
+    margin: 4.7rem;
+    overflow: visible;
+    padding: 4.7rem;
+    z-index: 4;
+
+    @media (max-width: $container-mobile) {
+      margin: var(--padding-container-horizontal);
+      padding: var(--padding-container-horizontal);
+    }
+  }
+}
+
+.hero-name-tag {
+  opacity: 0;
 }
