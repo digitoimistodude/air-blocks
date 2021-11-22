@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 18:54:45
+ * @Last Modified time: 2021-11-22 19:23:15
  */
 /**
  * Air theme JavaScript.
@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const item = items[i];
     const splitted = item.classList.value.split('-');
     const splittedblock = splitted[1].split('block');
-    const blockname = splittedblock[0];
+    const getBlockName = splittedblock[0].split(' ');
+    const blockname = getBlockName[0];
 
     const blockTagContent = `<p>${blockname}</p>`;
     const blockTag = document.createElement('div');

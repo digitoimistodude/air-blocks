@@ -1,0 +1,77 @@
+// Move these to _font-size.scss
+:root {
+  --font-size-28: 28px;
+}
+
+// Move these to coponents:
+@mixin heading-block-normal() {
+  font-size: var(--font-size-28);
+}
+
+.heading-block-normal {
+  @include heading-block-normal();
+}
+
+// CTA block
+.block-cta {
+  .container {
+    @media (max-width: $container-mobile) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .cta {
+    border-radius: 6px;
+    padding-bottom: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 6rem;
+
+    @media (min-width: 700px) {
+      align-items: center;
+      display: flex;
+      gap: 4rem;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $container-mobile) {
+      border-radius: 0;
+      padding-bottom: 5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-top: 5rem;
+    }
+  }
+
+  h2 {
+    @include heading-block-normal();
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    max-width: 650px;
+  }
+
+  .content p {
+    margin-top: 2rem;
+  }
+
+  .button-wrapper {
+    display: flex;
+
+    @media (min-width: $container-ipad) {
+      margin: 0;
+    }
+  }
+
+  .button {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+
+    @media (min-width: 700px) {
+      @include button-size-large();
+    }
+  }
+}

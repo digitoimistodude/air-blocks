@@ -21,11 +21,12 @@
 
   .hero-name-tag p {
     background-color: var(--color-black);
+    border-radius: 4px;
     color: var(--color-white);
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-14);
     line-height: 1;
     margin: 0;
-    padding: 8px 12px;
+    padding: 8px 10px;
   }
 }
 

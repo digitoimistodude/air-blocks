@@ -1,5 +1,19 @@
 <?php
 /**
+ * TODO: Add here the name and meaning of this file, hooks.php
+ *
+ * TODO: Add description here for this filefile called hooks.
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-11-18 15:12:35
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-22 19:00:20
+ *
+ * @package air-blocks
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ */
+
+/**
  * All hooks that are run in the theme are listed here
  *
  * @package airblocks
@@ -49,6 +63,9 @@ add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_editor_title_
 /**
  * ACF blocks
  */
+require get_theme_file_path( 'inc/hooks/acf-block-example-data.php' );
+add_filter( 'air_acf_blocks_example_data', __NAMESPACE__ . '\set_acf_blocks_example_data', 10, 1 );
+
 require get_theme_file_path( 'inc/hooks/acf-blocks.php' );
 add_filter( 'block_categories', __NAMESPACE__ . '\acf_blocks_add_category_in_gutenberg', 10, 2 );
 add_action( 'acf/init', __NAMESPACE__ . '\acf_blocks_init' );

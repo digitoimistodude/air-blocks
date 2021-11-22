@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 17:35:28
+ * @Last Modified time: 2021-11-22 19:14:16
  *
  * @package airblocks
  */
@@ -102,6 +102,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'           => 'hero',
         'title'          => 'Sivun yläosa',
+      ],
+      [
+        'name'  => 'cta',
+        'title' => 'Call to action',
       ],
     ],
 
