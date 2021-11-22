@@ -5,7 +5,7 @@
 // stylelint-disable no-descending-specificity, a11y/no-display-none
 
 // Settings
-$absolute-navigation: true;
+$absolute-navigation: false;
 $use-dropdown-bubble: true;
 $use-dropdown-toggle-animation: true;
 
@@ -27,7 +27,7 @@ $use-dropdown-toggle-animation: true;
   --width-sub-menu: 22rem;
 
   // Colors
-  --color-background-nav-desktop: var(--color-white);
+  --color-background-nav-desktop: var(--color-black);
   --color-background-sub-menu: var(--color-white);
   --color-border-sub-menu: rgb(41 44 61 / .05);
   --color-dropdown-toggle: var(--color-black);
@@ -98,7 +98,7 @@ body:not(.home) {
 
   .nav-container {
     @if $absolute-navigation == false {
-      background-color: var(--color-main-level);
+      background-color: var(--color-background-nav-desktop);
       box-shadow: var(--box-shadow-navigation-static);
       position: relative;
       z-index: 222;
