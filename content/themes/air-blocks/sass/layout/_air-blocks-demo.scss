@@ -29,8 +29,36 @@
     padding: 0;
   }
 
+  button:focus,
   button:hover {
     cursor: pointer;
+  }
+}
+
+.menu-items .menu-item.menu-item-blocks-count {
+  align-items: center;
+  color: var(--color-white);
+  display: inline-flex;
+  font-size: var(--font-size-15);
+  font-weight: var(--font-weight-semibold);
+  gap: 1rem;
+  opacity: .77;
+  order: 2;
+  overflow: visible;
+
+  span {
+    align-items: center;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    font-size: 13px;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+  }
+
+  @media (max-width: 680px) {
+    display: none;
   }
 }
 

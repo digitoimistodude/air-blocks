@@ -10,6 +10,10 @@
   z-index: 22;
 }
 
+.menu-item.menu-item-filter {
+  order: 1;
+}
+
 .menu-item.menu-item-filter .cursor {
   animation-direction: normal;
   animation-duration: 1.25s;

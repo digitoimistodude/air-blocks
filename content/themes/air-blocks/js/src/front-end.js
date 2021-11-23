@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-23 10:05:53
+ * @Last Modified time: 2021-11-23 17:51:46
  */
 /**
  * Air theme JavaScript.
@@ -45,11 +45,21 @@ setFigureWidths(figures);
 // Filter blocks
 const input = document.querySelector('#filter-airblocks');
 const items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
+const counterItem = document.getElementById('block-count');
 
 input.addEventListener('keyup', (ev) => {
   const text = ev.target.value;
+
   const pat = new RegExp(text, 'i');
   for (let i = 0; i < items.length; i++) {
+    if (text === '') {
+      // Count blocks
+      counterItem.innerHTML = items.length;
+    } else {
+      // Count filtered blocks
+      counterItem.innerHTML = i;
+    }
+
     const item = items[i];
     if (pat.test(item.classList)) {
       item.classList.remove('hidden');
@@ -60,6 +70,9 @@ input.addEventListener('keyup', (ev) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Count blocks
+  counterItem.innerHTML = items.length;
+
   // Add block name tag to each block
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
