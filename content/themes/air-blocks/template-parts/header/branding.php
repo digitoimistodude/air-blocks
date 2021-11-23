@@ -21,7 +21,7 @@ $description = get_bloginfo( 'description', 'display' );
 <div class="site-branding">
 
   <p class="site-title">
-      <span class="label"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php include get_theme_file_path( '/svg/logo.svg' ); ?> Air Blocks</label></a> <span class="by">by</span> <a href="https://www.dude.fi"><span class="screen-reader-text">DUDE</span> <?php include get_theme_file_path( '/svg/logo-dude.svg' ); ?></a>
+      <span class="label"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php include get_theme_file_path( '/svg/logo-block.svg' ); ?> Air Blocks</label></a> <span class="by">by</span> <a href="https://www.dude.fi"><span class="screen-reader-text">DUDE</span> <?php include get_theme_file_path( '/svg/logo-dude.svg' ); ?></a>
     </a>
   </p>
 
