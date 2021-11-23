@@ -5,7 +5,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:22:26
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-23 10:03:37
+ * @Last Modified time: 2021-11-23 17:19:56
  *
  * @package airblocks
  */
@@ -19,6 +19,7 @@ namespace Air_Light;
   <nav id="nav" class="nav-primary nav-menu" aria-label="<?php echo esc_html( get_default_localization( 'Main navigation' ) ); ?>">
 
     <ul class="menu-items">
+      <li class="menu-item menu-item-blocks-count"><span>2</span> blocks available</li>
       <li class="menu-item menu-item-filter"><input id="filter-airblocks" type="search" autocomplete="off" placeholder="Filter blocks..."><span class="cursor" aria-hidden="true"></span></li>
       <li class="menu-item menu-item-button">
         <button id="toggle" class="toggle-outlines toggled" type="button">
