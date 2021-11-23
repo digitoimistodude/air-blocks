@@ -76,331 +76,329 @@ body:not(.home) {
   }
 }
 
-@media only screen and (min-width: $width-max-mobile) {
-  .menu-items a::after {
-    display: none;
+.menu-items a::after {
+  display: none;
+}
+
+.menu-items a > svg {
+  height: 16px;
+  width: 16px;
+}
+
+.menu-items .menu-item {
+  align-items: center;
+  display: flex;
+}
+
+.menu-items .menu-item.social.separator-left a {
+  border-left: 1px solid var(--color-main-level);
+  padding-left: 21px;
+}
+
+.nav-container {
+  @if $absolute-navigation == false {
+    background-color: var(--color-background-nav-desktop);
+    box-shadow: var(--box-shadow-navigation-static);
+    position: relative;
+    z-index: 222;
   }
 
-  .menu-items a > svg {
-    height: 16px;
-    width: 16px;
-  }
-
-  .menu-items .menu-item {
-    align-items: center;
-    display: flex;
-  }
-
-  .menu-items .menu-item.social.separator-left a {
-    border-left: 1px solid var(--color-main-level);
-    padding-left: 21px;
-  }
-
-  .nav-container {
-    @if $absolute-navigation == false {
-      background-color: var(--color-background-nav-desktop);
-      box-shadow: var(--box-shadow-navigation-static);
-      position: relative;
-      z-index: 222;
-    }
-
-    @if $absolute-navigation == true {
-      background-color: transparent;
-      position: absolute;
-      width: 100%;
-    }
-  }
-
-  // Need to use display: none here to make sure mobile nav-toggle is visually hidden on desktop
-  .nav-toggle {
-    display: none;
-  }
-
-  // Navigation wrapper
-  .nav-primary {
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-
-  // Navigation unordered list wrapper element
-  .menu-items {
-    align-items: center;
+  @if $absolute-navigation == true {
     background-color: transparent;
-    display: flex;
-    gap: var(--gap-main-level-horizontal);
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
-
-  // Navigation list item
-  .menu-item {
-    margin: 0;
-    position: relative;
-  }
-
-  // Menu items
-  .menu-item > a {
-    align-items: center;
-    color: var(--color-main-level);
-    display: inline-flex;
-    font-size: var(--font-size-main-level);
-    font-weight: var(--font-weight-main-level);
-    margin-left: 0;
-    margin-right: 0;
-    padding-bottom: var(--padding-main-level-vertical);
-    padding-left: var(--padding-main-level-horizontal);
-    padding-right: var(--padding-main-level-horizontal);
-    padding-top: var(--padding-main-level-vertical);
-    transition: .22s;
-    white-space: nowrap;
-  }
-
-  .menu-item .sub-menu a {
-    align-items: center;
-    color: var(--color-sub-menu);
-    display: inline-flex;
-    font-size: var(--font-size-sub-menu);
-    font-weight: var(--font-weight-sub-menu);
-    line-height: 1.5;
-    padding-bottom: var(--padding-sub-menu-link-vertical);
-    padding-left: var(--padding-sub-menu-link-horizontal);
-    padding-right: var(--padding-sub-menu-link-horizontal);
-    padding-top: var(--padding-sub-menu-link-vertical);
-    white-space: normal;
-  }
-
-  // Current menu item color
-  .menu-item.current-menu-parent > a,
-  .menu-item.current-menu-item > a {
-    color: var(--color-current);
-  }
-
-  // Let's make space for the nav-toggle/arrow
-  .menu-item.menu-item-has-children a {
-    transition: padding .2s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
-  }
-
-  .menu-item > a:hover,
-  .menu-item > a:focus {
-    color: var(--color-hover-main-level);
-  }
-
-  .menu-item .sub-menu a:hover,
-  .menu-item .sub-menu a:focus {
-    color: var(--color-hover-sub-menu);
-  }
-
-  // Create animation illusion
-  .sub-menu.toggled-on a,
-  .sub-menu.toggled-on .sub-menu a,
-  .menu-item.menu-item-has-children.hover-intent .sub-menu a,
-  .menu-item.menu-item-has-children:focus .sub-menu a {
-    padding-bottom: var(--padding-sub-menu-link-vertical);
-    padding-top: var(--padding-sub-menu-link-vertical);
-  }
-
-  .sub-menu.toggled-on,
-  .sub-menu.toggled-on .sub-menu,
-  .menu-item.menu-item-has-children.hover-intent .sub-menu,
-  .menu-item.menu-item-has-children:focus .sub-menu {
-    padding-bottom: var(--padding-sub-menu-vertical);
-    padding-top: var(--padding-sub-menu-vertical);
-  }
-
-  .nav-primary > ul:first-of-type > .menu-item-has-children:focus::before,
-  .nav-primary > ul:first-of-type > .menu-item-has-children:hover::before {
-    transform: scale(1);
-    transition: all .2s cubic-bezier(.19, 1, .22, 1);
-  }
-
-  // Dropdowns
-  .sub-menu {
-    background-color: var(--color-background-sub-menu);
-    border-bottom: 1px solid var(--color-border-sub-menu);
-    border-bottom-left-radius: var(--border-radius-sub-menu);
-    border-bottom-right-radius: var(--border-radius-sub-menu);
-    border-left: 1px solid var(--color-border-sub-menu);
-    border-right: 1px solid var(--color-border-sub-menu);
-    border-top-left-radius: var(--border-radius-sub-menu);
-    border-top-right-radius: var(--border-radius-sub-menu);
-    box-shadow: 0 25px 20px -10px rgb(5 4 25 / .05);
-    left: 0;
-    margin-left: 0;
-    margin-top: var(--gap-dropdown);
-    opacity: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
     position: absolute;
-    top: 100%;
-    transition: all .2s cubic-bezier(.19, 1, .22, 1);
-    visibility: hidden;
-    width: var(--width-sub-menu);
-    z-index: 9;
-
-    // All dropdowns in level 2 and after
-    .sub-menu {
-      left: 100%;
-      margin-left: 0;
-      margin-top: calc(-1 * var(--padding-sub-menu-vertical));
-      top: 0;
-    }
-
-    li {
-      float: none;
-      padding: 0;
-      width: var(--width-sub-menu);
-    }
+    width: 100%;
   }
+}
 
-  // This is where the magic happens
-  .menu-item-has-children > .sub-menu.toggled-on,
-  .menu-item-has-children:focus > .sub-menu,
-  .menu-item-has-children.hover-intent > .sub-menu {
-    opacity: 1;
-    transform: translateY(0%);
-    visibility: visible;
-    z-index: 12;
-  }
+// Need to use display: none here to make sure mobile nav-toggle is visually hidden on desktop
+.nav-toggle {
+  display: none;
+}
 
-  .menu-item-has-children .sub-menu.toggled-on .sub-menu,
-  .menu-item-has-children .sub-menu .sub-menu.toggled-on,
-  .menu-item-has-children:focus .sub-menu .sub-menu,
-  .menu-item-has-children.hover-intent .sub-menu .sub-menu {
+// Navigation wrapper
+.nav-primary {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+// Navigation unordered list wrapper element
+.menu-items {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: var(--gap-main-level-horizontal);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+// Navigation list item
+.menu-item {
+  margin: 0;
+  position: relative;
+}
+
+// Menu items
+.menu-item > a {
+  align-items: center;
+  color: var(--color-main-level);
+  display: inline-flex;
+  font-size: var(--font-size-main-level);
+  font-weight: var(--font-weight-main-level);
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: var(--padding-main-level-vertical);
+  padding-left: var(--padding-main-level-horizontal);
+  padding-right: var(--padding-main-level-horizontal);
+  padding-top: var(--padding-main-level-vertical);
+  transition: .22s;
+  white-space: nowrap;
+}
+
+.menu-item .sub-menu a {
+  align-items: center;
+  color: var(--color-sub-menu);
+  display: inline-flex;
+  font-size: var(--font-size-sub-menu);
+  font-weight: var(--font-weight-sub-menu);
+  line-height: 1.5;
+  padding-bottom: var(--padding-sub-menu-link-vertical);
+  padding-left: var(--padding-sub-menu-link-horizontal);
+  padding-right: var(--padding-sub-menu-link-horizontal);
+  padding-top: var(--padding-sub-menu-link-vertical);
+  white-space: normal;
+}
+
+// Current menu item color
+.menu-item.current-menu-parent > a,
+.menu-item.current-menu-item > a {
+  color: var(--color-current);
+}
+
+// Let's make space for the nav-toggle/arrow
+.menu-item.menu-item-has-children a {
+  transition: padding .2s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+}
+
+.menu-item > a:hover,
+.menu-item > a:focus {
+  color: var(--color-hover-main-level);
+}
+
+.menu-item .sub-menu a:hover,
+.menu-item .sub-menu a:focus {
+  color: var(--color-hover-sub-menu);
+}
+
+// Create animation illusion
+.sub-menu.toggled-on a,
+.sub-menu.toggled-on .sub-menu a,
+.menu-item.menu-item-has-children.hover-intent .sub-menu a,
+.menu-item.menu-item-has-children:focus .sub-menu a {
+  padding-bottom: var(--padding-sub-menu-link-vertical);
+  padding-top: var(--padding-sub-menu-link-vertical);
+}
+
+.sub-menu.toggled-on,
+.sub-menu.toggled-on .sub-menu,
+.menu-item.menu-item-has-children.hover-intent .sub-menu,
+.menu-item.menu-item-has-children:focus .sub-menu {
+  padding-bottom: var(--padding-sub-menu-vertical);
+  padding-top: var(--padding-sub-menu-vertical);
+}
+
+.nav-primary > ul:first-of-type > .menu-item-has-children:focus::before,
+.nav-primary > ul:first-of-type > .menu-item-has-children:hover::before {
+  transform: scale(1);
+  transition: all .2s cubic-bezier(.19, 1, .22, 1);
+}
+
+// Dropdowns
+.sub-menu {
+  background-color: var(--color-background-sub-menu);
+  border-bottom: 1px solid var(--color-border-sub-menu);
+  border-bottom-left-radius: var(--border-radius-sub-menu);
+  border-bottom-right-radius: var(--border-radius-sub-menu);
+  border-left: 1px solid var(--color-border-sub-menu);
+  border-right: 1px solid var(--color-border-sub-menu);
+  border-top-left-radius: var(--border-radius-sub-menu);
+  border-top-right-radius: var(--border-radius-sub-menu);
+  box-shadow: 0 25px 20px -10px rgb(5 4 25 / .05);
+  left: 0;
+  margin-left: 0;
+  margin-top: var(--gap-dropdown);
+  opacity: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  position: absolute;
+  top: 100%;
+  transition: all .2s cubic-bezier(.19, 1, .22, 1);
+  visibility: hidden;
+  width: var(--width-sub-menu);
+  z-index: 9;
+
+  // All dropdowns in level 2 and after
+  .sub-menu {
+    left: 100%;
+    margin-left: 0;
     margin-top: calc(-1 * var(--padding-sub-menu-vertical));
     top: 0;
-    z-index: 10;
   }
 
-  // Sub menu items that have items under them
-  .menu-item.menu-item-has-children {
-    align-items: center;
-    display: flex;
-    gap: var(--gap-between-dropdown-toggle);
-    justify-content: space-between;
-    position: relative;
-
-    // Add a "safe area" pseudo element to fill the gap
-    // between menu item and sub menu to help hovering
-    &::after {
-      content: '';
-      display: block;
-      height: var(--gap-dropdown);
-      max-width: var(--width-sub-menu);
-      position: absolute;
-      top: 100%;
-      visibility: hidden;
-      width: 100%;
-    }
-  }
-
-  // Ensure "safe area" is visible only after triggering submenu with mouse
-  .menu-item.menu-item-has-children.hover-intent::after {
-    visibility: visible;
-
-    // Make sure it's on top of everything
-    z-index: 9999999;
-  }
-
-  // Toggle icon dimensions on desktop
-  .dropdown-toggle svg {
-    height: var(--dropdown-toggle-size);
-    width: var(--dropdown-toggle-size);
-
-    @if $use-dropdown-toggle-animation == true {
-      transition: all .35s cubic-bezier(.19, 1, .22, 1);
-    }
-  }
-
-  // Main level toggle icon
-  .dropdown-toggle.toggled-on svg {
-    transform: rotateX(180deg);
-  }
-
-  .dropdown-toggle {
-    align-items: center;
-    background-color: transparent;
-    border: 0;
-    color: var(--color-dropdown-toggle);
-    display: inline-flex;
-    justify-content: center;
+  li {
+    float: none;
     padding: 0;
-    pointer-events: none;
+    width: var(--width-sub-menu);
   }
+}
 
-  // Sub-menu toggle icon
-  .sub-menu .dropdown-toggle {
-    width: 3rem;
+// This is where the magic happens
+.menu-item-has-children > .sub-menu.toggled-on,
+.menu-item-has-children:focus > .sub-menu,
+.menu-item-has-children.hover-intent > .sub-menu {
+  opacity: 1;
+  transform: translateY(0%);
+  visibility: visible;
+  z-index: 12;
+}
+
+.menu-item-has-children .sub-menu.toggled-on .sub-menu,
+.menu-item-has-children .sub-menu .sub-menu.toggled-on,
+.menu-item-has-children:focus .sub-menu .sub-menu,
+.menu-item-has-children.hover-intent .sub-menu .sub-menu {
+  margin-top: calc(-1 * var(--padding-sub-menu-vertical));
+  top: 0;
+  z-index: 10;
+}
+
+// Sub menu items that have items under them
+.menu-item.menu-item-has-children {
+  align-items: center;
+  display: flex;
+  gap: var(--gap-between-dropdown-toggle);
+  justify-content: space-between;
+  position: relative;
+
+  // Add a "safe area" pseudo element to fill the gap
+  // between menu item and sub menu to help hovering
+  &::after {
+    content: '';
+    display: block;
+    height: var(--gap-dropdown);
+    max-width: var(--width-sub-menu);
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    width: 100%;
   }
+}
 
-  .sub-menu .dropdown-toggle svg {
-    transform: rotate(-90deg) rotateX(0deg);
+// Ensure "safe area" is visible only after triggering submenu with mouse
+.menu-item.menu-item-has-children.hover-intent::after {
+  visibility: visible;
+
+  // Make sure it's on top of everything
+  z-index: 9999999;
+}
+
+// Toggle icon dimensions on desktop
+.dropdown-toggle svg {
+  height: var(--dropdown-toggle-size);
+  width: var(--dropdown-toggle-size);
+
+  @if $use-dropdown-toggle-animation == true {
+    transition: all .35s cubic-bezier(.19, 1, .22, 1);
   }
+}
 
-  .sub-menu .dropdown-toggle.toggled-on svg {
-    transform: rotate(-90deg) rotateX(180deg);
+// Main level toggle icon
+.dropdown-toggle.toggled-on svg {
+  transform: rotateX(180deg);
+}
+
+.dropdown-toggle {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: var(--color-dropdown-toggle);
+  display: inline-flex;
+  justify-content: center;
+  padding: 0;
+  pointer-events: none;
+}
+
+// Sub-menu toggle icon
+.sub-menu .dropdown-toggle {
+  width: 3rem;
+}
+
+.sub-menu .dropdown-toggle svg {
+  transform: rotate(-90deg) rotateX(0deg);
+}
+
+.sub-menu .dropdown-toggle.toggled-on svg {
+  transform: rotate(-90deg) rotateX(180deg);
+}
+
+// Don't use gap filler in sub menu items
+// Acceptable use of display: none here, for visual/technical purposes
+.sub-menu .menu-item-has-children::after {
+  display: none;
+}
+
+@media only screen and (max-width: $width-max-mobile) {
+  ul li:focus > ul,
+  ul li:hover > ul {
+    display: block;
   }
+}
 
-  // Don't use gap filler in sub menu items
-  // Acceptable use of display: none here, for visual/technical purposes
-  .sub-menu .menu-item-has-children::after {
-    display: none;
+// Disable animations on IE10 + IE11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // Enable hovers
+  ul li:focus > ul,
+  ul li:hover > ul {
+    display: block;
   }
+}
 
-  @media only screen and (max-width: $width-max-mobile) {
-    ul li:focus > ul,
-    ul li:hover > ul {
-      display: block;
-    }
-  }
-
-  // Disable animations on IE10 + IE11
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    // Enable hovers
-    ul li:focus > ul,
-    ul li:hover > ul {
-      display: block;
-    }
+// Smooth animation
+@if $use-dropdown-toggle-animation == true {
+  .menu-item.menu-item-has-children > .dropdown-toggle.toggled-on svg,
+  .menu-item.menu-item-has-children:hover > .dropdown-toggle svg,
+  .menu-item.menu-item-has-children:focus > .dropdown-toggle svg {
+    transform: translateY(0%) rotate(180deg);
   }
 
   // Smooth animation
-  @if $use-dropdown-toggle-animation == true {
-    .menu-item.menu-item-has-children > .dropdown-toggle.toggled-on svg,
-    .menu-item.menu-item-has-children:hover > .dropdown-toggle svg,
-    .menu-item.menu-item-has-children:focus > .dropdown-toggle svg {
-      transform: translateY(0%) rotate(180deg);
-    }
-
-    // Smooth animation
-    // stylelint-disable-next-line selector-max-specificity, selector-max-class
-    .menu-item.menu-item-has-children .menu-item.menu-item-has-children > .dropdown-toggle.toggled-on svg,
-    .menu-item.menu-item-has-children .menu-item.menu-item-has-children:hover > .dropdown-toggle svg,
-    .menu-item.menu-item-has-children .menu-item.menu-item-has-children:focus > .dropdown-toggle svg {
-      transform: translateY(0%) rotate(90deg);
-    }
+  // stylelint-disable-next-line selector-max-specificity, selector-max-class
+  .menu-item.menu-item-has-children .menu-item.menu-item-has-children > .dropdown-toggle.toggled-on svg,
+  .menu-item.menu-item-has-children .menu-item.menu-item-has-children:hover > .dropdown-toggle svg,
+  .menu-item.menu-item-has-children .menu-item.menu-item-has-children:focus > .dropdown-toggle svg {
+    transform: translateY(0%) rotate(90deg);
   }
+}
 
-  // Dropdown bubble
-  @if $use-dropdown-bubble == true {
-    .menu-item-has-children::before {
-      // Use of non-variable is acceptable here because bubble needs it
-      // stylelint-disable-next-line sh-waqar/declaration-use-variable
-      border-color: transparent transparent var(--color-white);
-      border-style: solid;
-      border-width: 0 5px 5px;
-      bottom: -10px;
-      content: '';
-      display: block;
-      height: 0;
-      left: 50%;
-      margin-left: -20px;
-      position: absolute;
-      transform: scale(0);
-      transform-origin: center bottom;
-      transition: none;
-      width: 0;
-    }
+// Dropdown bubble
+@if $use-dropdown-bubble == true {
+  .menu-item-has-children::before {
+    // Use of non-variable is acceptable here because bubble needs it
+    // stylelint-disable-next-line sh-waqar/declaration-use-variable
+    border-color: transparent transparent var(--color-white);
+    border-style: solid;
+    border-width: 0 5px 5px;
+    bottom: -10px;
+    content: '';
+    display: block;
+    height: 0;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center bottom;
+    transition: none;
+    width: 0;
   }
-} // @media only screen and (min-width: $width-max-mobile)
+}

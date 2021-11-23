@@ -29,6 +29,12 @@
   width: 1px;
 }
 
+@media (max-width: 540px) {
+  .menu-item.menu-item-filter {
+    display: none;
+  }
+}
+
 .menu-item.menu-item-filter input {
   background-color: transparent;
   border: 0;

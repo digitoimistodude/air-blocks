@@ -15,12 +15,6 @@
   padding-top: var(--padding-site-header-vertical);
   position: relative;
   z-index: 15;
-
-  @media (max-width: $width-max-mobile) {
-    flex-wrap: wrap;
-    height: var(--height-navigation-mobile);
-    justify-content: center;
-  }
 }
 
 .site-title {
@@ -72,13 +66,6 @@
   .label {
     font-size: var(--font-size-14);
     font-weight: 700;
-
-    @media (max-width: $width-max-mobile) {
-      align-items: center;
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
   }
 
   .by {

@@ -2,7 +2,7 @@
 // The main layout for the website navigation, for the mobile version only.
 
 // Settings
-$absolute-navigation-mobile: true;
+$absolute-navigation-mobile: false;
 
 // Settings for jonsuh/hamburgers
 // These need to be SCSS variables
@@ -35,10 +35,10 @@ $nav-open-from-direction: top;
 
   // Colors
   --color-active-main-level-mobile: var(--color-white);
-  --color-background-nav-mobile-header: var(--color-main);
-  --color-background-nav-mobile-header-active: var(--color-main);
-  --color-background-nav-mobile-layer: var(--color-main);
-  --color-background-nav-mobile-layer-active: var(--color-main);
+  --color-background-nav-mobile-header: var(--color-black);
+  --color-background-nav-mobile-header-active: var(--color-black);
+  --color-background-nav-mobile-layer: var(--color-black);
+  --color-background-nav-mobile-layer-active: var(--color-black);
   --color-current-mobile: var(--color-white);
   --color-dropdown-toggle-mobile: var(--color-white);
   --color-hamburger-active: var(--color-white);
@@ -77,8 +77,7 @@ $nav-open-from-direction: top;
 // Let's ensure site-header loads properly and doesn't leave empty spaces
 @media (max-width: $width-max-mobile) {
   .nav-container {
-    // background-color: var(--color-background-nav-mobile-header);
-    background-color: transparent;
+    background-color: var(--color-background-nav-mobile-header);
 
     @if $absolute-navigation-mobile == false {
       position: relative;
@@ -101,7 +100,7 @@ $nav-open-from-direction: top;
 }
 
 // Mobile styles
-@media screen and (max-width: $width-max-mobile - 1px) {
+@media screen and (max-width: 1px - 1px) {
   // General navigation resets for mobile
   .site-header ul,
   .site-header li,
