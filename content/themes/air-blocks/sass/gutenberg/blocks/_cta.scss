@@ -1,16 +1,6 @@
-// Move these to _font-size.scss
-:root {
-  --font-size-28: 28px;
-}
-
-// Move these to coponents:
-@mixin heading-block-normal() {
-  font-size: var(--font-size-28);
-}
-
-.heading-block-normal {
-  @include heading-block-normal();
-}
+// NB! These needs to be set:
+// _font-size.scss: --font-size-28: 28px; + breakpoints
+// Components: heading-block-normal();
 
 // CTA block
 .block-cta {
