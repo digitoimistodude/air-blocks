@@ -7,7 +7,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:17:32
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 19:42:25
+ * @Last Modified time: 2021-11-23 09:19:52
  *
  * @package airblocks
  */
@@ -33,7 +33,7 @@ namespace Air_Light;
   <?php wp_body_open(); ?>
   <div id="page" class="site has-decorations">
 
-    <div class="nav-container">
+    <div class="nav-container is-fixed">
       <header class="site-header">
 
         <?php get_template_part( 'template-parts/header/branding' ); ?>
@@ -42,4 +42,4 @@ namespace Air_Light;
       </header>
     </div><!-- .nav-container -->
 
-    <div class="site-content">
+    <div class="site-content has-fixed-nav">
