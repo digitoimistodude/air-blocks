@@ -68,8 +68,8 @@
 
 .block,
 .site,
-.hero-name-tag p,
-.hero-name-tag {
+.block-name-tag p,
+.block-name-tag {
   transition: all .22s;
 }
 
@@ -84,7 +84,7 @@ body,
   background-color: var(--color-background-site);
 }
 
-.hero-name-tag {
+.block-name-tag {
   left: 0;
   opacity: 0;
   position: absolute;
@@ -106,7 +106,7 @@ body,
 }
 
 .has-decorations {
-  .hero-name-tag {
+  .block-name-tag {
     opacity: 1;
   }
 

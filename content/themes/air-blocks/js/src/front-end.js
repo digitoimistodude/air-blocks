@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-23 17:51:46
+ * @Last Modified time: 2021-11-23 18:02:34
  */
 /**
  * Air theme JavaScript.
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const blockTagContent = `<p>${blockname}</p>`;
     const blockTag = document.createElement('div');
-    blockTag.classList.add('hero-name-tag');
+    blockTag.classList.add('block-name-tag');
     blockTag.innerHTML = blockTagContent;
     item.appendChild(blockTag, item.nextSibling);
   }
