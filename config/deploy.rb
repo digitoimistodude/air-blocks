@@ -1,23 +1,11 @@
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
-
-# Branch options
-# Prompts for the branch name (defaults to current branch)
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-
-# Sets branch to current one
-#set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-
-# Hardcodes branch to always be master
-# This could be overridden in a stage config file
-set :branch, :master
-
-set :deploy_to, "/srv/www/#{fetch(:application)}"
-
-set :log_level, :info
-
+set :application, "air-blocks"
+set :repo_url, "git@github.com:digitoimistodude/air-blocks.git"
+set :branch, "master"
+set :log_level, :debug
 set :linked_files, %w{.env}
-set :linked_dirs, %w{content/uploads}
+set :linked_dirs, %w{media}
+set :composer_install_flags, '--no-dev --prefer-dist --no-scripts --optimize-autoloader'
+set :composer_roles, :all
 
 namespace :deploy do
 
