@@ -1,3 +1,9 @@
+/**
+ * @Author: Roni Laukkarinen
+ * @Date:   2021-11-18 15:12:33
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-23 09:49:21
+ */
 // Hide deprecation warnings
 process.env.NODE_PENDING_DEPRECATION = 0;
 

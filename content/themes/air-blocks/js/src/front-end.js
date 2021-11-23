@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 19:46:00
+ * @Last Modified time: 2021-11-23 10:05:53
  */
 /**
  * Air theme JavaScript.
@@ -74,12 +74,16 @@ document.addEventListener('DOMContentLoaded', () => {
     blockTag.innerHTML = blockTagContent;
     item.appendChild(blockTag, item.nextSibling);
   }
+});
 
-  // Toggle button
-  document.querySelector('.toggle-outlines').addEventListener('click', (e) => {
-    [].map.call(document.querySelectorAll('.site'), (el) => {
-      el.classList.toggle('has-decorations');
-    });
+// Toggle button
+document.querySelector('.toggle-outlines').addEventListener('click', (e) => {
+  [].map.call(document.querySelectorAll('.toggle-outlines'), (el) => {
+    el.classList.toggle('toggled');
+  });
+
+  [].map.call(document.querySelectorAll('.site'), (el) => {
+    el.classList.toggle('has-decorations');
   });
 });
 

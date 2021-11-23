@@ -1,6 +1,17 @@
+// stylelint-disable a11y/no-display-none, a11y/font-size-is-readable
 :root {
   --color-heliotrope: #866cff;
   --color-background-site: #f3f3f3;
+}
+
+.toggle-outlines {
+  &.toggled .disabled {
+    display: none;
+  }
+
+  &:not(.toggled) .enabled {
+    display: none;
+  }
 }
 
 .menu-item-button {
@@ -9,13 +20,13 @@
   order: 999;
 
   button {
-    background-color: var(--color-white);
+    background-color: transparent;
     border: 0;
     border-radius: 0;
-    color: var(--color-black);
+    color: var(--color-white);
     font-size: 12px;
     margin-left: 1rem;
-    padding: 4px 8px;
+    padding: 0;
   }
 }
 
@@ -39,6 +50,10 @@ html,
 body,
 .site {
   background-color: var(--color-background-site);
+}
+
+.hero-name-tag {
+  opacity: 0;
 }
 
 .has-decorations {
@@ -77,12 +92,8 @@ body,
     z-index: 4;
 
     @media (max-width: $container-mobile) {
-      margin: var(--padding-container-horizontal);
-      padding: var(--padding-container-horizontal);
+      margin: 4.7rem var(--padding-container-horizontal);
+      padding: 4.7rem var(--padding-container-horizontal);
     }
   }
-}
-
-.hero-name-tag {
-  opacity: 0;
 }

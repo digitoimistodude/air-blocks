@@ -2,7 +2,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:33
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 17:37:46
+ * @Last Modified time: 2021-11-23 09:44:26
  */
 const themeDir = 'content/themes/air-blocks/';
 
@@ -50,7 +50,7 @@ module.exports = {
   },
   browsersync: {
     // Important! If src is wrong, styles will not inject to the browser
-    src: [themeDir + 'css/**/*'],
+    src: [themeDir + 'css/**/*', themeDir + 'js/dev/**/*'],
     opts: {
       logLevel: 'debug',
       injectChanges: true,
@@ -109,7 +109,7 @@ module.exports = {
   },
   js: {
     src: themeDir + 'js/src/*.js',
-    watch: themeDir + 'js/src/**/*',
+    watch: [themeDir + 'js/src/*.js', themeDir + 'js/src/**/*'],
     production: themeDir + 'js/prod/',
     development: themeDir + 'js/dev/',
   },

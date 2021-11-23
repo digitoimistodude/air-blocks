@@ -16,4 +16,8 @@
 
 .site-content.has-fixed-nav {
   padding-top: 76px;
+
+  @media (max-width: $width-max-mobile) {
+    padding-top: var(--height-navigation-mobile);
+  }
 }
