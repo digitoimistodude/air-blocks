@@ -14,18 +14,6 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-// phpcs:disable Squiz.Commenting.InlineComment.SpacingBefore
-// This block depends on following:
-
-// Composer repositories (optional):
-// {
-//   "type": "vcs",
-//   "url": "https://github.com/digitoimistodude/breadcrumb-trail"
-// },
-
-// Composer require (optional):
-// "digitoimistodude/breadcrumb-trail": "dev-master",
-
 // JS (required):
 // └── js/src/modules/100vh.js
 
@@ -81,14 +69,7 @@ if ( empty( $title ) ) {
     <div class="content">
       <div class="content-wrapper">
 
-        <?php if ( function_exists( 'breadcrumb_trail' ) && empty( $upper_title ) ) {
-          \breadcrumb_trail( [
-            'show_browse' => false,
-            'labels' => [
-              'home' => ask__( 'Yleinen: Etusivu' ),
-            ],
-          ] );
-        } elseif ( ! empty( $upper_title ) ) { ?>
+        <?php if ( ! empty( $upper_title ) ) { ?>
           <p class="prefix">
             <?php echo esc_html( $upper_title ); ?>
           </p>
