@@ -66,9 +66,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 /*!***********************************************************!*\
   !*** ./content/themes/air-blocks/js/src/modules/100vh.js ***!
   \***********************************************************/
-/***/ (() => {
+/***/ (function() {
 
-eval("/**\n * @Author: Roni Laukkarinen\n * @Date:   2021-11-19 15:31:46\n * @Last Modified by:   Roni Laukkarinen\n * @Last Modified time: 2021-11-19 15:32:29\n */\n// @source https://css-tricks.com/the-trick-to-viewport-units-on-mobile/\n// First we get the viewport height and we multiple it by 1% to get a value for a vh unit\nvar vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document\n\ndocument.documentElement.style.setProperty('--vh', \"\".concat(vh, \"px\")); // We listen to the resize event\n\nwindow.addEventListener('resize', function () {\n  // We execute the same script as before\n  // eslint-disable-next-line no-shadow\n  var vh = window.innerHeight * 0.01;\n  document.documentElement.style.setProperty('--vh', \"\".concat(vh, \"px\"));\n});\n\n//# sourceURL=webpack://airblocks/./content/themes/air-blocks/js/src/modules/100vh.js?");
+eval("var _this = this;\n\n/* eslint-disable no-shadow */\n\n/**\n * @Author: Roni Laukkarinen\n * @Date:   2021-11-19 15:31:46\n * @Last Modified by:   Roni Laukkarinen\n * @Last Modified time: 2021-11-24 18:55:28\n */\n// 100vh fix\n// @source https://css-tricks.com/the-trick-to-viewport-units-on-mobile/\n// First we get the viewport height and we multiple it by 1% to get a value for a vh unit\nvar vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document\n\ndocument.documentElement.style.setProperty('--vh', \"\".concat(vh, \"px\")); // We listen to the resize event\n\nwindow.addEventListener('resize', function () {\n  // If we turn mobile phone from portrait to landscape or vice versa\n  if (window.innerWidth > window.innerHeight || Math.abs(_this.lastHeight - window.innerHeight) > 100) {\n    // We execute the same script as before\n    var _vh = window.innerHeight * 0.01;\n\n    document.documentElement.style.setProperty('--vh', \"\".concat(_vh, \"px\"));\n  }\n});\n\n//# sourceURL=webpack://airblocks/./content/themes/air-blocks/js/src/modules/100vh.js?");
 
 /***/ }),
 
