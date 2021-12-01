@@ -7,8 +7,8 @@
  *
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-12 12:01:44
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2021-11-26 10:46:36
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -30,11 +30,11 @@ if ( ! isset( $args ) ) {
   $title = get_field( 'title' );
   $content = get_field( 'content' );
   $button = get_field( 'button' );
-  $bg_image = get_post_thumbnail_id( get_the_ID() );
   $video = get_field( 'video' );
+  $bg_image = get_field( 'bg_image' );
 
-  if ( get_field( 'bg_image' ) ) {
-    $bg_image = get_field( 'bg_image' );
+  if ( empty( $bg_image ) ) {
+    $bg_image = get_post_thumbnail_id( get_the_ID() );
   }
 } else {
   $upper_title = $args['upper_title'];
@@ -57,10 +57,10 @@ if ( empty( $title ) ) {
 ?>
 
 <section class="block block-hero block-hero-<?php echo esc_attr( $style ) ?>">
-<div class="shade" aria-hidden="true"></div>
- <div class="container">
+  <div class="shade" aria-hidden="true"></div>
+  <div class="container">
 
-  <?php vanilla_lazyload_div( $bg_image ); ?>
+    <?php vanilla_lazyload_div( $bg_image ); ?>
 
     <?php if ( ! empty( $video ) ) : ?>
       <video src="<?php echo esc_url( $video['url'] ); ?>" loop muted autoplay></video>
@@ -84,7 +84,7 @@ if ( empty( $title ) ) {
         endif;
 
         if ( ! empty( $button ) ) : ?>
-         <p class="button-wrapper">
+          <p class="button-wrapper">
             <a class="button button-large<?php if ( str_contains( $button['url'], '#' ) ) echo ' js-trigger'; ?>" href="<?php echo esc_url( $button['url'] ); ?>">
               <?php echo esc_html( $button['title'] ); ?>
             </a>
