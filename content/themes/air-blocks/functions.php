@@ -6,8 +6,8 @@
  * own files under /inc and just require here.
  *
  * @Date: 2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 19:14:16
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2021-12-13 12:22:32
  *
  * @package airblocks
  */
@@ -106,6 +106,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'cta',
         'title' => 'Call to action',
+      ],
+      [
+        'name'  => 'title-content-columns',
+        'title' => 'Otsikko ja tekstisisältö palstoissa',
       ],
     ],
 

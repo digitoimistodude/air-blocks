@@ -2,8 +2,8 @@
 /**
  * @Author: Timi Wahalahti
  * @Date:   2021-05-11 14:34:14
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-19 15:14:11
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2021-12-13 12:53:44
  * @package airblocks
  */
 
@@ -37,6 +37,7 @@ function acf_blocks_init() {
           'mode' => 'preview',
           'data' => $example_data[ $block['name'] ],
         ],
+        'viewportWidth' => 1400,
       ];
     }
 

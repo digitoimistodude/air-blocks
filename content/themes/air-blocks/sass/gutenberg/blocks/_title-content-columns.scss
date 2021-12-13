@@ -1,0 +1,25 @@
+// NB! These needs to be set:
+// _font-size.scss: --font-size-28: 28px; + breakpoints
+// Components: heading-block-normal();
+
+// Title content columns block
+.block-title-content-columns {
+  .container {
+    display: grid;
+    row-gap: 2rem;
+
+    @media (min-width: $container-ipad) {
+      column-gap: 4rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  h2 {
+    @include heading-block-normal();
+    margin-bottom: 0;
+  }
+
+  .content p:first-child {
+    margin-top: 0;
+  }
+}
