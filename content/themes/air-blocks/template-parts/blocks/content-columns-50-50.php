@@ -35,18 +35,22 @@ if ( empty( $content_left ) || empty( $content_right ) ) {
 <section class="block block-content-columns-50-50">
   <div class="container">
     <div class="col">
-      <h2>
-        <?php echo esc_html( $title_left ) ?>
-      </h2>
+      <?php if ( ! empty( $title_left ) ) : ?>
+        <h2>
+          <?php echo esc_html( $title_left ) ?>
+        </h2>
+      <?php endif; ?>
       <div class="content">
         <?php echo wp_kses_post( wpautop( $content_left ) ); ?>
       </div>
     </div>
 
     <div class="col">
-      <h2>
-        <?php echo esc_html( $title_right ) ?>
-      </h2>
+      <?php if ( ! empty( $title_right ) ) : ?>
+        <h2>
+          <?php echo esc_html( $title_right ) ?>
+        </h2>
+      <?php endif; ?>
       <div class="content">
         <?php echo wp_kses_post( wpautop( $content_right ) ); ?>
       </div>
