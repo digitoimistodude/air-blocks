@@ -1,0 +1,18 @@
+// NB! These needs to be set:
+// _font-size.scss: --font-size-24: 24px; + breakpoints
+
+// Quote block
+.block-quote {
+  * {
+    max-width: 1000px;
+    text-align: center;
+  }
+
+  .content {
+    font-size: var(--font-size-24);
+  }
+
+  .author {
+    font-size: var(--font-size-14);
+  }
+}

@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 13:09:02
+ * @Last Modified time: 2021-12-13 15:07:07
  *
  * @package airblocks
  */
@@ -114,6 +114,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'content-columns-50-50',
         'title' => 'Kaksi tekstisisältöpalstaa',
+      ],
+      [
+        'name'  => 'quote',
+        'title' => 'Lainaus',
       ],
     ],
 
