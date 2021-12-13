@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 16:00:52
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 12:54:13
+ * @Last Modified time: 2021-12-13 13:49:51
  *
  * @package air-blocks
  */
@@ -28,11 +28,6 @@ function set_acf_blocks_example_data( $data ) {
 
   // Number here is equivalent of image ID, for example https://www.alpa.fi/wp/wp-admin/upload.php?item=22
   $default_img = 92;
-
-  $block_text = [
-    'text_title' => $text,
-    'text' => $wysiwyg,
-  ];
 
   $downloadable_material = [
     'background_color' => 'red',
@@ -59,10 +54,11 @@ function set_acf_blocks_example_data( $data ) {
   ];
 
   return [
-    'text-list-cols' => [
-      'content_type' => 'text',
-      'text_left' => $block_text,
-      'text_right' => $block_text,
+    'content-columns-50-50' => [
+      'title_left' => $text,
+      'title_right' => $text,
+      'content_left' => $wysiwyg,
+      'content_right' => $wysiwyg,
     ],
     'citate' => [
       'citate' => $medium_text,

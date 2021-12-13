@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 12:22:32
+ * @Last Modified time: 2021-12-13 13:09:02
  *
  * @package airblocks
  */
@@ -110,6 +110,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'title-content-columns',
         'title' => 'Otsikko ja tekstisisältö palstoissa',
+      ],
+      [
+        'name'  => 'content-columns-50-50',
+        'title' => 'Kaksi tekstisisältöpalstaa',
       ],
     ],
 
