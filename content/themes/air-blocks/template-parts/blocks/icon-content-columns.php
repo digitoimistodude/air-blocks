@@ -1,0 +1,65 @@
+<?php
+/**
+ * The template for icon-content-columns
+ *
+ * Description of the file called
+ * icon-content-columns.
+ *
+ * @Author:		Tuomas Marttila
+ * @Date:   		2021-12-13 15:55:55
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2021-12-13 15:56:06
+ *
+ * @package air-blocks
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ */
+
+// Files (required):
+// ├── inc/hooks/admin/acf-dynamic-icon-select.scss
+// ├── sass/gutenberg/blocks/_icon-content-columns.scss
+// ├── svg/block-icons/icon-content-columns.svg
+// └── svg/foruser/block.svg
+
+namespace Air_Light;
+
+$columns = get_field( 'columns' );
+
+if ( empty( $columns ) ) {
+  maybe_show_error_block( 'Lisää vähintään yksi palsta' );
+  return;
+}
+
+?>
+
+<section class="block block-icon-content-columns">
+  <div class="container">
+    <?php foreach ( $columns as $column ) : ?>
+      <div class="col">
+      <?php include get_theme_file_path( "svg/foruser/{$column['icon_svg']}" ); ?>
+
+        <div class="content-wrapper">
+
+          <?php if ( ! empty( $column['title'] ) ) : ?>
+            <h2>
+              <?php echo esc_html( $column['title'] ); ?>
+            </h2>
+          <?php endif; ?>
+
+          <?php if ( ! empty( $column['content'] ) ) : ?>
+            <p>
+              <?php echo wp_kses_post( wpautop( $column['content'] ) ); ?>
+            </p>
+          <?php endif; ?>
+
+          <?php if ( ! empty( $column['button'] ) ) : ?>
+            <p class="button-wrapper">
+              <a href="<?php echo esc_url( $column['button']['url'] ) ?>" class="button"><?php echo esc_html( $column['button']['title'] ); ?></a>
+            </p>
+          <?php endif; ?>
+
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
+

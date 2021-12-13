@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 15:07:07
+ * @Last Modified time: 2021-12-13 15:47:21
  *
  * @package airblocks
  */
@@ -118,6 +118,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'quote',
         'title' => 'Lainaus',
+      ],
+      [
+        'name'  => 'icon-content-columns',
+        'title' => 'Tekstipalstat ikoneilla',
       ],
     ],
 
