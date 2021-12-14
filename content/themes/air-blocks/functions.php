@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-14 11:00:56
+ * @Last Modified time: 2021-12-14 12:58:03
  *
  * @package airblocks
  */
@@ -126,6 +126,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'image-content-columns',
         'title' => 'Tekstipalstat kuvilla',
+      ],
+      [
+        'name'  => 'image-content',
+        'title' => 'Kuva ja tekstisisältö vierekkäin',
       ],
     ],
 

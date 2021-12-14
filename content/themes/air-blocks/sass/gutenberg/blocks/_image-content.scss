@@ -1,0 +1,46 @@
+// NB! These needs to be set:
+// Components: heading-block-normal();
+
+// Image content block
+.block-image-content {
+  .container {
+    display: grid;
+    row-gap: 3rem;
+
+    @media (min-width: $container-ipad) {
+      column-gap: 6rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .col-content {
+    align-items: center;
+    display: flex;
+
+    @media (max-width: $container-ipad) {
+      order: 1;
+    }
+  }
+
+  .col-image {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  .image {
+    aspect-ratio: 16 / 9;
+  }
+
+  h2 {
+    @include heading-block-normal();
+    margin-bottom: 2rem;
+  }
+
+  .content p:first-child {
+    margin-top: 0;
+  }
+
+  &.image-left .col-content {
+    order: 1;
+  }
+}

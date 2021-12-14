@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 16:00:52
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-14 11:33:04
+ * @Last Modified time: 2021-12-14 14:04:12
  *
  * @package air-blocks
  */
@@ -74,6 +74,13 @@ function set_acf_blocks_example_data( $data ) {
     ],
     'image-content-columns' => [
       'columns' => [ $image_column, $image_column, $image_column ],
+    ],
+    'image-content' => [
+      'title' => $text,
+      'media_side' => 'left',
+      'content' => $wysiwyg,
+      'image' => $default_img,
+      'link' => $link,
     ],
   ];
 }
