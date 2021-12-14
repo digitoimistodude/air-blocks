@@ -1,0 +1,7 @@
+@mixin heading-block-small() {
+  font-size: var(--font-size-20);
+}
+
+.heading-block-small {
+  @include heading-block-small();
+}

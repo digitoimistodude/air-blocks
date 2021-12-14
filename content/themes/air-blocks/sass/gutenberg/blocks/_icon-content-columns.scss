@@ -1,0 +1,29 @@
+// NB! These needs to be set:
+// _font-size.scss: --font-size-16: 16px; + breakpoints
+// Components: heading-block-small();
+
+// Icon content columns block
+.block-icon-content-columns {
+  .container {
+    display: grid;
+    row-gap: 4rem;
+
+    @media (min-width: $container-ipad) {
+      column-gap: 6rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  svg {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    @include heading-block-small();
+    margin-bottom: 1.5rem;
+  }
+
+  p:first-of-type {
+    margin-top: 1.5rem;
+  }
+}

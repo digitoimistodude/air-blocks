@@ -6,8 +6,8 @@
  *
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-11-18 15:12:35
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-22 19:00:20
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2021-12-13 16:25:52
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -69,6 +69,13 @@ add_filter( 'air_acf_blocks_example_data', __NAMESPACE__ . '\set_acf_blocks_exam
 require get_theme_file_path( 'inc/hooks/acf-blocks.php' );
 add_filter( 'block_categories', __NAMESPACE__ . '\acf_blocks_add_category_in_gutenberg', 10, 2 );
 add_action( 'acf/init', __NAMESPACE__ . '\acf_blocks_init' );
+
+/**
+ * Dynamic svg icon select
+ */
+require get_theme_file_path( 'inc/hooks/admin/acf-dynamic-icon-select.php' );
+add_filter( 'acf/load_field/type=select', __NAMESPACE__ . '\acf_dynamic_select_for_icon' );
+add_action( 'acf/input/admin_head', __NAMESPACE__ . '\improved_acf_svg_selector_ui_styles' );
 
 /**
  * Form related hooks

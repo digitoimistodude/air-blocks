@@ -18,7 +18,11 @@
 // ├── inc/hooks/admin/acf-dynamic-icon-select.scss
 // ├── sass/gutenberg/blocks/_icon-content-columns.scss
 // ├── svg/block-icons/icon-content-columns.svg
-// └── svg/foruser/block.svg
+// ├── svg/foruser/block.svg
+// ├── svg/foruser/cloud.svg
+// └── svg/foruser/database.svg
+
+// Remember to include acf-dynamic-icon-select to inc/hooks.php
 
 namespace Air_Light;
 
@@ -46,14 +50,12 @@ if ( empty( $columns ) ) {
           <?php endif; ?>
 
           <?php if ( ! empty( $column['content'] ) ) : ?>
-            <p>
-              <?php echo wp_kses_post( wpautop( $column['content'] ) ); ?>
-            </p>
+            <?php echo wp_kses_post( wpautop( $column['content'] ) ); ?>
           <?php endif; ?>
 
-          <?php if ( ! empty( $column['button'] ) ) : ?>
+          <?php if ( ! empty( $column['link'] ) ) : ?>
             <p class="button-wrapper">
-              <a href="<?php echo esc_url( $column['button']['url'] ) ?>" class="button"><?php echo esc_html( $column['button']['title'] ); ?></a>
+              <a href="<?php echo esc_url( $column['link']['url'] ) ?>" class="button"><?php echo esc_html( $column['link']['title'] ); ?></a>
             </p>
           <?php endif; ?>
 

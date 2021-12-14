@@ -34,9 +34,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "block.svg": "Kuutio"
-                    },
+                    "choices": [],
                     "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
@@ -119,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639405008
+    "modified": 1639405459
 }
