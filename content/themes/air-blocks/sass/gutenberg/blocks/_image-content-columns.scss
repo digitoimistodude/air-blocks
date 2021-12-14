@@ -1,8 +1,8 @@
 // NB! These needs to be set:
 // Components: heading-block-small();
 
-// Icon content columns block
-.block-icon-content-columns {
+// Image content columns block
+.block-image-content-columns {
   .container {
     display: grid;
     row-gap: 4rem;
@@ -13,7 +13,8 @@
     }
   }
 
-  svg {
+  .image {
+    aspect-ratio: 16 / 9;
     margin-bottom: 2rem;
   }
 

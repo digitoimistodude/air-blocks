@@ -1,28 +1,22 @@
 <?php
 /**
- * The template for icon-content-columns
+ * The template for image-content-columns
  *
  * Description of the file called
- * icon-content-columns.
+ * image-content-columns.
  *
  * @Author:		Tuomas Marttila
- * @Date:   		2021-12-13 15:55:55
+ * @Date:   		2021-12-14 11:00:36
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 15:56:06
+ * @Last Modified time: 2021-12-14 11:04:51
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 // Files (required):
-// ├── inc/hooks/admin/acf-dynamic-icon-select.php
-// ├── sass/gutenberg/blocks/_icon-content-columns.scss
-// ├── svg/block-icons/icon-content-columns.svg
-// ├── svg/foruser/block.svg
-// ├── svg/foruser/cloud.svg
-// └── svg/foruser/database.svg
-
-// Remember to include acf-dynamic-icon-select to inc/hooks.php
+// ├── sass/gutenberg/blocks/_image-content-columns.scss
+// └── svg/block-icons/image-content-columns.svg
 
 namespace Air_Light;
 
@@ -35,12 +29,16 @@ if ( empty( $columns ) ) {
 
 ?>
 
-<section class="block block-icon-content-columns">
+<section class="block block-image-content-columns">
   <div class="container">
     <?php foreach ( $columns as $column ) : ?>
       <div class="col">
 
-        <?php include get_theme_file_path( "svg/foruser/{$column['icon_svg']}" ); ?>
+        <?php if ( ! empty( $column['image'] ) ) : ?>
+          <div class="image has-lazyload">
+            <?php vanilla_lazyload_div( $column['image'] ) ?>
+          </div>
+        <?php endif; ?>
 
         <div class="content-wrapper">
 

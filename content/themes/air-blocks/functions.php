@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 15:47:21
+ * @Last Modified time: 2021-12-14 11:00:56
  *
  * @package airblocks
  */
@@ -122,6 +122,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'icon-content-columns',
         'title' => 'Tekstipalstat ikoneilla',
+      ],
+      [
+        'name'  => 'image-content-columns',
+        'title' => 'Tekstipalstat kuvilla',
       ],
     ],
 

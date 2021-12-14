@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 16:00:52
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 15:30:21
+ * @Last Modified time: 2021-12-14 11:33:04
  *
  * @package air-blocks
  */
@@ -27,30 +27,20 @@ function set_acf_blocks_example_data( $data ) {
   ];
 
   // Number here is equivalent of image ID, for example https://www.alpa.fi/wp/wp-admin/upload.php?item=22
-  $default_img = 92;
+  $default_img = 31;
 
-  $downloadable_material = [
-    'background_color' => 'red',
-    'material_title' => $text,
-    'description' => $medium_text,
-    'download_location' => true,
-    'link' => $link,
-    'file_size' => '34kt',
-  ];
-
-  $box = [
-    'icon_svg' => 'henkilot.svg',
-    'title' => $text,
-    'content' => $medium_text,
-    'button' => $link,
-  ];
-
-  $image_box = [
+  $image_column = [
     'image' => $default_img,
-    'tag_badge' => 'Lorem',
     'title' => $text,
     'content' => $medium_text,
-    'button' => $link,
+    'link' => $link,
+  ];
+
+  $icon_column = [
+    'icon_svg' => 'block.svg',
+    'title' => $text,
+    'content' => $medium_text,
+    'link' => $link,
   ];
 
   return [
@@ -69,35 +59,21 @@ function set_acf_blocks_example_data( $data ) {
       'image' => $default_img,
       'form' => 1,
     ],
-    'downloads' => [
-      'title' => $text,
-      'materials' => [ $downloadable_material, $downloadable_material, $downloadable_material ],
-    ],
     'cta' => [
       'background_color' => 'red',
       'title' => $text,
       'content' => $medium_text,
       'link' => $link,
     ],
-    'media-content-cols' => [
-      'background_color' => 'red',
-      'media_side' => 'left',
-      'show_video' => false,
-      'image' => $default_img,
-      'title' => $text,
-      'content' => $medium_text,
-      'button' => $link,
-    ],
     'title-content-columns' => [
       'title' => $text,
       'content' => $wysiwyg,
     ],
-    'icon-content-cols' => [
-      'background_color' => false,
-      'boxes' => [ $box, $box, $box ],
+    'icon-content-columns' => [
+      'columns' => [ $icon_column, $icon_column, $icon_column ],
     ],
-    'image-content-cols' => [
-      'boxes' => [ $image_box, $image_box, $image_box ],
+    'image-content-columns' => [
+      'columns' => [ $image_column, $image_column, $image_column ],
     ],
   ];
 }
