@@ -40,7 +40,7 @@ if ( empty( $image ) || empty( $content ) ) {
 
       <div class="wrapper">
         <?php if ( ! empty( $title ) ) : ?>
-          <h2 class="heading-block" id="<?php echo wp_kses_post( $title ); ?>">
+          <h2>
             <?php echo wp_kses_post( $title ); ?>
           </h2>
         <?php endif; ?>
