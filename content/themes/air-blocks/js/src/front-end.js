@@ -2,8 +2,8 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-23 18:02:34
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2021-12-15 12:12:59
  */
 /**
  * Air theme JavaScript.
@@ -20,7 +20,7 @@ import 'what-input';
 
 // Features
 // import './modules/sticky-nav.js'
-// import slick from 'slick-carousel';
+import slick from 'slick-carousel';
 
 // Navigation
 import './modules/navigation';
@@ -185,7 +185,27 @@ airblocks_LazyLoad.update();
 
   // Document ready start
   $(() => {
-    // Your JavaScript here
+    // Slick
+    const slickSettings = {
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      speed: 660,
+      variableWidth: true,
+      prevArrow: '<button class="slick-btn slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 1000 1000"><path d="M733 990L243 500 733 10l23.9 23.9-466 466.1L757 966.1 733 990z"/></svg></button>',
+      nextArrow: '<button class="slick-btn slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 1000 1000"><path d="M240.9 964.1l25.9 25.9 492.3-492.3-.4-.4L271.6 10 246 35.6l461.7 461.7-466.8 466.8z"/></svg></button>',
+    };
+
+    const imageCarousels = document.querySelectorAll('.slider');
+
+    imageCarousels.forEach((slider) => {
+      $(slider).slick({
+        ...slickSettings,
+        appendArrows: slider.parentNode.querySelector('.controls-buttons'),
+      });
+    });
   });
 }(jQuery));
 

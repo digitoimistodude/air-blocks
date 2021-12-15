@@ -61,6 +61,8 @@
 
   // Import gravity forms inside Gutenberg editor
   @import 'features/gravity-forms';
+  // Import slick inside Gutenberg editor
+  @import 'features/slick';
 
   // Prevent horizontal scrolling
   overflow-x: hidden;
