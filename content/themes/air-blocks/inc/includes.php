@@ -4,8 +4,8 @@
  *
  * @Author: Niku Hietanen
  * @Date: 2020-02-18 15:07:17
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-05-04 11:12:06
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2021-12-15 09:03:58
  *
  * @package airblocks
  */
@@ -29,4 +29,8 @@ if ( file_exists( get_theme_file_path( '/inc/includes/taxonomy.php' ) ) ) {
 
 if ( file_exists( get_theme_file_path( '/inc/includes/post-type.php' ) ) ) {
   require get_theme_file_path( '/inc/includes/post-type.php' );
+}
+
+if ( class_exists( 'acf_field' ) ) {
+  require get_theme_file_path( '/inc/includes/acf-field-gravity-forms.php' );
 }

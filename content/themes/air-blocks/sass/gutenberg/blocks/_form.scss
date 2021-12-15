@@ -1,0 +1,20 @@
+// NB! These needs to be set:
+// Components: heading-block-normal();
+
+// Form block
+.block-form {
+  .container {
+    display: grid;
+    row-gap: 4rem;
+
+    @media (min-width: $container-ipad) {
+      column-gap: 6rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  h2 {
+    @include heading-block-normal();
+    margin-bottom: 1.5rem;
+  }
+}

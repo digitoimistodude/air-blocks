@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-14 12:58:03
+ * @Last Modified time: 2021-12-15 08:42:29
  *
  * @package airblocks
  */
@@ -130,6 +130,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'image-content',
         'title' => 'Kuva ja tekstisisältö vierekkäin',
+      ],
+      [
+        'name'  => 'form',
+        'title' => 'Lomake',
       ],
     ],
 
