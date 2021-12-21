@@ -7,13 +7,15 @@
  *
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
- * @Last Modified by:   Timi Wahalahti
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-11-26 10:46:36
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
+// TODO: To be added to bin/blocks/hero.sh (remove these comments after added):
+// ----------------------------------------------------------------------------
 // JS (required):
 // └── js/src/modules/100vh.js
 
