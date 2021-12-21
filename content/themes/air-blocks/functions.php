@@ -6,12 +6,8 @@
  * own files under /inc and just require here.
  *
  * @Date: 2019-10-15 12:30:02
- * @Last Modified by:   Tuomas Marttila
-<<<<<<< HEAD
- * @Last Modified time: 2021-12-15 08:42:29
-=======
- * @Last Modified time: 2021-12-15 10:21:04
->>>>>>> block-carousel
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-12-21 16:51:41
  *
  * @package airblocks
  */
@@ -136,13 +132,11 @@ add_action( 'after_setup_theme', function() {
         'title' => 'Kuva ja tekstisisältö vierekkäin',
       ],
       [
-<<<<<<< HEAD
         'name'  => 'form',
         'title' => 'Lomake',
-=======
+      [,
         'name'  => 'carousel',
         'title' => 'Kuvakaruselli',
->>>>>>> block-carousel
       ],
     ],
 

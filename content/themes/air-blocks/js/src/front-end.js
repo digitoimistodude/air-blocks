@@ -2,35 +2,20 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
-<<<<<<< HEAD
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 16:47:24
-=======
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-15 12:12:59
->>>>>>> block-carousel
- */
-/**
- * Air theme JavaScript.
+ * @Last Modified time: 2021-12-21 16:52:43
  */
 
 // Import modules (comment to disable)
 import MoveTo from 'moveto';
 import LazyLoad from 'vanilla-lazyload';
 import reframe from 'reframe.js';
+import slick from 'slick-carousel';
 import getLocalization from './modules/localization';
 import { styleExternalLinks, getChildAltText } from './modules/external-link';
 import { setFigureWidths, setLazyLoadedFigureWidth } from './modules/gutenberg-helpers';
 import 'what-input';
-
-// Features
-// import './modules/sticky-nav.js'
-import slick from 'slick-carousel';
-
-// Navigation
 import './modules/navigation';
-
-// 100vh for mobile
 import './modules/100vh';
 
 // Define Javascript is active by changing the body class
