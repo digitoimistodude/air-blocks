@@ -1,4 +1,4 @@
-### 1.0.2: 2021-12-03
+### 1.0.2: 2021-12-21
 
 * New block: Carousel
 * New block: Form
