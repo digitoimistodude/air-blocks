@@ -105,6 +105,10 @@ body,
   }
 }
 
+.block.block-image-content-columns .block-name-tag p:first-of-type {
+  margin: 0;
+}
+
 .has-decorations {
   .block-name-tag {
     opacity: 1;
