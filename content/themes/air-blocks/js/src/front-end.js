@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 11:34:30
+ * @Last Modified time: 2021-12-21 12:28:00
  */
 /**
  * Air theme JavaScript.
@@ -67,20 +67,27 @@ function addListenerMulti(element, eventNames, listener) {
   }
 }
 
-addListenerMulti(input, 'keyup keydown click', (ev) => {
+addListenerMulti(input, 'keyup click', (ev) => {
   const text = ev.target.value;
 
   const pat = new RegExp(text, 'i');
   for (let i = 0; i < items.length; i++) {
-    if (text === '') {
-      // Count blocks
-      counterItem.innerHTML = items.length;
-    } else {
-      // Count filtered blocks
-      counterItem.innerHTML = i;
-    }
-
     const item = items[i];
+    const splitted = item.classList.value.split('block-');
+    const getBlockName = splitted[1].split(' ');
+    const blockname = getBlockName[0];
+
+    const regex = new RegExp(items[i], 'g');
+    const wordCount = (text.match(regex)[0] || []).length;
+    console.log(`${wordCount} times the word [${items[i]}]`);
+
+    // Count filtered blocks
+    // if (blockname.match(pat) !== null || blockname.match(pat) !== undefined) {
+    //   counterItem.innerHTML = resultCount;
+    // } else {
+    //   counterItem.innerHTML = items.length;
+    // }
+
     if (pat.test(item.classList)) {
       item.classList.remove('hidden');
     } else {
