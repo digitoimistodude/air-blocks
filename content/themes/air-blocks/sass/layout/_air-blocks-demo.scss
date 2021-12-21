@@ -117,6 +117,17 @@ body,
   .block-carousel {
     overflow: visible;
     position: relative;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .slider-slide img {
+      @media (max-width: $container-desktop) {
+        max-width: calc(100vw - 8rem);
+      }
+    }
   }
 
   .block-carousel::before,
@@ -145,10 +156,18 @@ body,
 
   .block-carousel::before {
     left: -4.8rem;
+
+    @media (max-width: $container-mobile) {
+      left: -1.6rem;
+    }
   }
 
   .block-carousel::after {
     right: -4.8rem;
+
+    @media (max-width: $container-mobile) {
+      right: -1.6rem;
+    }
   }
 
   .block {
