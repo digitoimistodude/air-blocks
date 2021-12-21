@@ -87,7 +87,6 @@
     width: 10px;
 
     button {
-      @include hiddentext();
       border: 2px solid #fff;
       border-radius: 6px;
       cursor: pointer;

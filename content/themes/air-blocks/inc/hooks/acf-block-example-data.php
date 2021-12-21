@@ -2,8 +2,8 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 16:00:52
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-15 09:40:54
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-12-21 16:49:37
  *
  * @package air-blocks
  */
@@ -28,6 +28,11 @@ function set_acf_blocks_example_data( $data ) {
 
   // Number here is equivalent of image ID, for example https://www.alpa.fi/wp/wp-admin/upload.php?item=22
   $default_img = 31;
+  $url = wp_get_attachment_url( $default_img );
+
+  $image = [
+    'url' => $url,
+  ];
 
   $image_column = [
     'image' => $default_img,
@@ -80,6 +85,9 @@ function set_acf_blocks_example_data( $data ) {
       'content' => $wysiwyg,
       'image' => $default_img,
       'link' => $link,
+    ],
+    'carousel' => [
+      'images' => [ $image, $image, $image ],
     ],
   ];
 }
