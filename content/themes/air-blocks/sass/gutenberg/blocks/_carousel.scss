@@ -1,8 +1,7 @@
 .block-carousel {
   .slider-slide img {
     border-radius: 6px;
-    max-height: 600px;
-    max-width: 800px;
+    height: 500px;
 
     @media (max-width: $container-desktop) {
       height: auto;
@@ -28,11 +27,11 @@
   }
 
   // Show overflowing content
-  // .container,
-  // .slick-list,
-  // .slider {
-  //   overflow: visible;
-  // }
+  .container,
+  .slick-list,
+  .slider {
+    overflow: visible;
+  }
 
   // Hide overflow to the left
   // .slider::before {
