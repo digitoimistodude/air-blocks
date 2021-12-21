@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 16:39:44
+ * @Last Modified time: 2021-12-21 16:47:24
  */
 /**
  * Air theme JavaScript.
@@ -73,13 +73,6 @@ addListenerMulti(input, 'keyup click', (ev) => {
     const getBlockName = splitted[1].split(' ');
     const blockname = getBlockName[0];
 
-    // Count filtered blocks
-    // if (blockname.match(pat) !== null || blockname.match(pat) !== undefined) {
-    //   counterItem.innerHTML = resultCount;
-    // } else {
-    //   counterItem.innerHTML = items.length;
-    // }
-
     if (pat.test(item.classList)) {
       item.classList.remove('hidden');
     } else {
@@ -138,14 +131,14 @@ function showSuggestions(results, inputVal) {
   suggestions.innerHTML = '';
 
   if (results.length > 0) {
+    // Count filtered blocks
+    counterItem.innerHTML = results.length;
+
     for (let i = 0; i < results.length; i++) {
       let item = results[i];
 
       if (item.indexOf(inputVal) > -1) {
-      // Highlights only the first match
-      // TODO: highlight all matches
         const match = item.match(new RegExp(inputVal, 'i'));
-
         item = item.replace(match[0], `<strong>${match[0]}</strong>`);
         suggestions.innerHTML += `<li>${item}</li>`;
       }
@@ -181,9 +174,14 @@ suggestions.addEventListener('click', useSuggestion);
 input.addEventListener('search', (event) => {
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
+
+    // Reset
     item.classList.remove('hidden');
     suggestions.classList.remove('has-suggestions');
   }
+
+  // Amount of block shown by default
+  counterItem.innerHTML = items.length;
 });
 
 // Init lazyload
