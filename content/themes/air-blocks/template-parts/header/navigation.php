@@ -5,7 +5,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:22:26
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-23 17:44:46
+ * @Last Modified time: 2021-12-21 14:59:53
  *
  * @package airblocks
  */
@@ -20,7 +20,11 @@ namespace Air_Light;
 
     <ul class="menu-items">
       <li class="menu-item menu-item-blocks-count"><span id="block-count">?</span> blocks available</li>
-      <li class="menu-item menu-item-filter"><input id="filter-airblocks" type="search" autocomplete="off" placeholder="Filter blocks..."><span class="cursor" aria-hidden="true"></span></li>
+      <li class="menu-item menu-item-filter"><input id="filter-airblocks" type="search" autocomplete="off" placeholder="Filter blocks..."><span class="cursor" aria-hidden="true"></span>
+    	  <div class="suggestions">
+		      <ul></ul>
+	      </div>
+      </li>
       <li class="menu-item menu-item-button">
         <button id="toggle" class="toggle-outlines toggled" type="button">
           <span class="disabled"><?php include get_theme_file_path( '/svg/border-out.svg' ); ?></span>

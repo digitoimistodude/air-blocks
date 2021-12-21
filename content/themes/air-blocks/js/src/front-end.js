@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 12:28:00
+ * @Last Modified time: 2021-12-21 16:39:44
  */
 /**
  * Air theme JavaScript.
@@ -47,14 +47,6 @@ const input = document.querySelector('#filter-airblocks');
 const items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
 const counterItem = document.getElementById('block-count');
 
-// Empty search when clicking cancel button on search input
-input.addEventListener('search', (event) => {
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-    item.classList.remove('hidden');
-  }
-});
-
 /* Add one or more listeners to an element
 ** @param {DOMElement} element - DOM element to add listeners to
 ** @param {string} eventNames - space separated list of event names, e.g. 'click change'
@@ -67,6 +59,10 @@ function addListenerMulti(element, eventNames, listener) {
   }
 }
 
+// Add block classes to an array
+const blocks = Array.from(items, ({ classList }) => classList.value);
+
+// Filter blocks
 addListenerMulti(input, 'keyup click', (ev) => {
   const text = ev.target.value;
 
@@ -76,10 +72,6 @@ addListenerMulti(input, 'keyup click', (ev) => {
     const splitted = item.classList.value.split('block-');
     const getBlockName = splitted[1].split(' ');
     const blockname = getBlockName[0];
-
-    const regex = new RegExp(items[i], 'g');
-    const wordCount = (text.match(regex)[0] || []).length;
-    console.log(`${wordCount} times the word [${items[i]}]`);
 
     // Count filtered blocks
     // if (blockname.match(pat) !== null || blockname.match(pat) !== undefined) {
@@ -124,6 +116,74 @@ document.querySelector('.toggle-outlines').addEventListener('click', (e) => {
   [].map.call(document.querySelectorAll('.site'), (el) => {
     el.classList.toggle('has-decorations');
   });
+});
+
+// Autocomplete
+const suggestions = document.querySelector('.suggestions ul');
+
+function search(str) {
+  const results = [];
+  const val = str.toLowerCase();
+
+  for (let i = 0; i < blocks.length; i++) {
+    if (blocks[i].toLowerCase().indexOf(val) > -1) {
+      results.push(blocks[i].split('block-')[1].split(' ')[0]);
+    }
+  }
+
+  return results;
+}
+
+function showSuggestions(results, inputVal) {
+  suggestions.innerHTML = '';
+
+  if (results.length > 0) {
+    for (let i = 0; i < results.length; i++) {
+      let item = results[i];
+
+      if (item.indexOf(inputVal) > -1) {
+      // Highlights only the first match
+      // TODO: highlight all matches
+        const match = item.match(new RegExp(inputVal, 'i'));
+
+        item = item.replace(match[0], `<strong>${match[0]}</strong>`);
+        suggestions.innerHTML += `<li>${item}</li>`;
+      }
+    }
+    suggestions.classList.add('has-suggestions');
+  } else {
+    results = [];
+    suggestions.innerHTML = '';
+    suggestions.classList.remove('has-suggestions');
+  }
+}
+
+function searchHandler(e) {
+  const inputVal = e.currentTarget.value;
+  let results = [];
+  if (inputVal.length > 0) {
+    results = search(inputVal);
+  }
+  showSuggestions(results, inputVal);
+}
+
+function useSuggestion(e) {
+  input.value = e.target.innerText;
+  input.focus();
+  suggestions.innerHTML = '';
+  suggestions.classList.remove('has-suggestions');
+}
+
+input.addEventListener('keyup', searchHandler);
+suggestions.addEventListener('click', useSuggestion);
+
+// Empty search when clicking cancel button on search input
+input.addEventListener('search', (event) => {
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    item.classList.remove('hidden');
+    suggestions.classList.remove('has-suggestions');
+  }
 });
 
 // Init lazyload

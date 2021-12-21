@@ -1,4 +1,8 @@
 // stylelint-disable a11y/no-display-none, declaration-no-important
+:root {
+  --height-input: 36px;
+}
+
 .hidden {
   display: none !important;
 }
@@ -12,6 +16,51 @@
 
 .menu-item.menu-item-filter {
   order: 1;
+  position: relative;
+
+  .suggestions {
+    position: absolute;
+    top: var(--height-input);
+    width: 100%;
+  }
+
+  ul {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / .2);
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: visible;
+    padding: 0;
+    width: 100%;
+
+    &.has-suggestions {
+      display: block;
+    }
+
+    li {
+      background-color: rgb(255 255 255 / .8);
+      cursor: pointer;
+      font-size: var(--font-size-14);
+      line-height: 1.2;
+      padding: .8rem 1rem;
+      width: 100%;
+
+      &:first-child {
+        padding-top: 1rem;
+      }
+
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: var(--color-black);
+        color: var(--color-white);
+      }
+    }
+  }
 }
 
 .menu-item.menu-item-filter .cursor {
