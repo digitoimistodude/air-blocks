@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 16:51:41
+ * @Last Modified time: 2021-12-21 16:54:18
  *
  * @package airblocks
  */
@@ -134,7 +134,8 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'form',
         'title' => 'Lomake',
-      [,
+      ],
+      [
         'name'  => 'carousel',
         'title' => 'Kuvakaruselli',
       ],
