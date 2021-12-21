@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-23 18:02:34
+ * @Last Modified time: 2021-12-21 10:35:55
  */
 /**
  * Air theme JavaScript.
@@ -47,7 +47,27 @@ const input = document.querySelector('#filter-airblocks');
 const items = document.querySelector('.air-blocks-list').getElementsByTagName('section');
 const counterItem = document.getElementById('block-count');
 
-input.addEventListener('keyup', (ev) => {
+// Empty search when clicking cancel button on search input
+input.addEventListener('search', (event) => {
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    item.classList.remove('hidden');
+  }
+});
+
+/* Add one or more listeners to an element
+** @param {DOMElement} element - DOM element to add listeners to
+** @param {string} eventNames - space separated list of event names, e.g. 'click change'
+** @param {Function} listener - function to attach for each event as a listener
+*/
+function addListenerMulti(element, eventNames, listener) {
+  const events = eventNames.split(' ');
+  for (let i = 0, iLen = events.length; i < iLen; i++) {
+    element.addEventListener(events[i], listener, false);
+  }
+}
+
+addListenerMulti(input, 'keyup keydown click', (ev) => {
   const text = ev.target.value;
 
   const pat = new RegExp(text, 'i');
