@@ -18,7 +18,7 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Lisää palsta",
             "sub_fields": [
                 {
@@ -34,7 +34,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": [],
+                    "choices": {
+                        "block.svg": "Block",
+                        "cloud.svg": "Cloud",
+                        "database.svg": "Database"
+                    },
                     "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
@@ -117,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639405459
+    "modified": 1640078999
 }

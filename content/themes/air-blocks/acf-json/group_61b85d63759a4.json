@@ -18,7 +18,7 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Lisää palsta",
             "sub_fields": [
                 {
@@ -119,5 +119,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639474054
+    "modified": 1640078998
 }
