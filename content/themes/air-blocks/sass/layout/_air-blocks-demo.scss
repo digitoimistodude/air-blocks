@@ -105,7 +105,9 @@ body,
   }
 }
 
-.block.block-image-content-columns .block-name-tag p:first-of-type {
+// stylelint-disable-next-line selector-max-specificity
+.site-main .block.block-icon-content-columns p:first-of-type,
+.site-main .block.block-image-content-columns .block-name-tag p:first-of-type {
   margin: 0;
 }
 
