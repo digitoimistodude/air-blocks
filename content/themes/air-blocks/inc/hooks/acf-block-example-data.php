@@ -2,8 +2,8 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 16:00:52
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 16:49:37
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2022-01-04 14:09:13
  *
  * @package air-blocks
  */
@@ -88,6 +88,9 @@ function set_acf_blocks_example_data( $data ) {
     ],
     'carousel' => [
       'images' => [ $image, $image, $image ],
+    ],
+    'content' => [
+      'content' => $wysiwyg,
     ],
   ];
 }

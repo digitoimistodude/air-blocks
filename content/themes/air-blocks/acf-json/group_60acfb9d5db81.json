@@ -106,7 +106,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/form"
             }
         ]
     ],
@@ -119,5 +119,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639551425
+    "modified": 1641289658
 }

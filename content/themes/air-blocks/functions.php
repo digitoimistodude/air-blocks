@@ -6,8 +6,8 @@
  * own files under /inc and just require here.
  *
  * @Date: 2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 16:54:18
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2022-01-04 11:37:47
  *
  * @package airblocks
  */
@@ -138,6 +138,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'carousel',
         'title' => 'Kuvakaruselli',
+      ],
+      [
+        'name'  => 'content',
+        'title' => 'Tekstisisältö',
       ],
     ],
 
