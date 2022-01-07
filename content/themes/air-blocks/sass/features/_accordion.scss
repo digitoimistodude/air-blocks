@@ -1,0 +1,94 @@
+:root {
+  --color-accordion-border: var(--color-blue-chalk);
+  --color-accordion-focus: var(--color-cyan);
+  --color-content: var(--color-black);
+  --font-size-accordion-title: var(--font-size-20);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-accordion-border);
+}
+
+.accordion h3 {
+  margin: 0;
+  padding: 0;
+}
+// Some styles here are to reset default theme button styles
+button.accordion-trigger {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-black);
+  display: block;
+  font-size: var(--font-size-accordion-title);
+  font-weight: 400;
+  margin: 0;
+  max-width: none;
+  outline: none;
+  padding: 2rem;
+  text-align: left;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-accordion-focus);
+  }
+}
+
+.accordion-title {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  pointer-events: none;
+  text-transform: none;
+}
+
+.accordion-icon {
+  background-image: url('../../svg/plus.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  display: inline-flex;
+  height: 20px;
+  min-width: 20px;
+  order: 1;
+  pointer-events: none;
+  width: 20px;
+
+  svg {
+    align-self: center;
+  }
+
+  @media (max-width: $container-mobile) {
+    background-size: 18px 18px;
+    height: 18px;
+    margin-top: 5px;
+    min-width: 18px;
+    width: 18px;
+  }
+}
+
+.accordion-title-helper {
+  order: 2;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  background-image: url('../../svg/minus.svg');
+}
+
+.accordion-panel > div {
+  color: var(--color-content);
+  padding-bottom: 3.5rem;
+  padding-left: 7rem;
+  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-left: 6rem;
+  }
+}

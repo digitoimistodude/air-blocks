@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2022-01-04 11:37:47
+ * @Last Modified time: 2022-01-07 11:16:32
  *
  * @package airblocks
  */
@@ -142,6 +142,10 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'content',
         'title' => 'Tekstisisältö',
+      ],
+      [
+        'name'  => 'accordion',
+        'title' => 'Haitari',
       ],
     ],
 

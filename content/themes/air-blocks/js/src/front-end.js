@@ -2,8 +2,8 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-21 17:01:38
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2022-01-07 11:51:55
  */
 
 // Import modules (comment to disable)
@@ -17,6 +17,7 @@ import { setFigureWidths, setLazyLoadedFigureWidth } from './modules/gutenberg-h
 import 'what-input';
 import './modules/navigation';
 import './modules/100vh';
+import './modules/accordion';
 
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');
