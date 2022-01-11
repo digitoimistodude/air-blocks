@@ -14,17 +14,6 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-// TODO: To be added to bin/blocks/hero.sh (remove these comments after added):
-// ----------------------------------------------------------------------------
-// JS (required):
-// └── js/src/modules/100vh.js
-
-// Files (required):
-// ├── sass/components/_prefix.scss
-// ├── sass/gutenberg/blocks/_hero.scss
-// ├── svg/block-icons/hero.svg
-// └── svg/play.svg
-
 namespace Air_Light;
 
 if ( ! isset( $args ) ) {
