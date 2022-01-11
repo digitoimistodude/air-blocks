@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-01-11 16:53:38
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-01-11 18:04:35
+# @Last Modified time: 2022-01-11 18:05:52
 echo "
 ${YELLOW}Checking if we have supported version of the theme...${TXTRESET} "
 
@@ -14,7 +14,7 @@ export AIR_LIGHT_THEME_VERSION=$(cat ${PROJECT_THEME_PATH}/functions.php |grep A
   echo " "
  else
   echo "
-${RED}The version of ${THEME_NAME} theme is ${AIR_LIGHT_REQUIRED_VERSION}. Air-blocks require at least ${AIR_LIGHT_REQUIRED_VERSION}. Sorry. The newtheme script will now quit...${TXTRESET}
+${RED}The version of your theme '${THEME_NAME}' theme is ${WHITE}${AIR_LIGHT_THEME_VERSION}${RED}. Air-blocks require at least ${WHITE}${AIR_LIGHT_REQUIRED_VERSION}${RED}. Sorry. The newtheme script will now quit...${TXTRESET}
 "
   exit
  fi
