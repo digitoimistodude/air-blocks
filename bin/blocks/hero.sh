@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-01-11 17:06:47
+# @Last Modified time: 2022-01-11 17:12:30
 export BLOCK_DISPLAY_NAME="hero"
 echo "${YELLOW}Copying ${BLOCK_DISPLAY_NAME} block assets...${TXTRESET}"
 
@@ -25,6 +25,7 @@ sed -e "/\/\/ ACF blocks/a\\
 rm ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss && mv ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks2.scss ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss
 
 # Block icon
+mkdir -p ${PROJECT_THEME_PATH}/svg/block-icons
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/block-icons/${BLOCK_DISPLAY_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/
 
 # Other SVG icons needed by this block
