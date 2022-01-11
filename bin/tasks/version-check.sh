@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-01-11 16:53:38
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-01-11 18:16:38
+# @Last Modified time: 2022-01-11 18:17:34
 echo "
 ${YELLOW}Checking if we have supported version of the theme...${TXTRESET} "
 
@@ -23,6 +23,8 @@ echo "
 ${YELLOW}Checking if we have theme with ACF blocks support...${TXTRESET} "
 
 if [[ -d "${PROJECT_THEME_PATH}/template-parts/blocks" ]]; then
+  echo " "
+else
   echo "
 ${RED}Your theme does not have ACF blocks support. Please check from docs.airwptheme.com and install the newest theme with block support. The newtheme script will now quit...${TXTRESET}}
 "
