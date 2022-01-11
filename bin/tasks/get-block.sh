@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2021-11-24 19:08:35
+# @Last Modified time: 2022-01-11 16:53:38
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -13,6 +13,9 @@ echo "${YELLOW}Copying block files to the theme folder of the project: ${PROJECT
 
 # Create blocks directory if it does not exist
 mkdir -p ${PROJECT_THEME_PATH}/template-parts/blocks
+
+# ACF related tasks
+source ${SCRIPTS_LOCATION}/tasks/acf.sh
 
 # BLOCKS HERE
 if [ "$BLOCK_NAME" == "hero" ]; then
