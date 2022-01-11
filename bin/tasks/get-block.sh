@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-01-11 16:53:38
+# @Last Modified time: 2022-01-11 18:49:20
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -23,5 +23,5 @@ if [ "$BLOCK_NAME" == "hero" ]; then
 elif [ "$BLOCK_NAME" == "cta" ]; then
   source ${SCRIPTS_LOCATION}/blocks/cta.sh
 else
-  echo "Block called $BLOCK_NAME does not exist (yet). Or perhaps you mistyped it?"
+  echo "Block called $BLOCK_NAME does not exist (yet) in the importer script. Or perhaps you mistyped it?"
 fi
