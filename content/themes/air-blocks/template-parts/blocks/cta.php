@@ -2,13 +2,15 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 15:45:19
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-11-26 10:43:33
+ * @Last Modified by:   Elias Kautto
+ * @Last Modified time: 2022-01-13 14:27:21
  *
  * @package air-blocks
  */
 
 namespace Air_Light;
+
+use function WP_CLI\Utils\maybe_require;
 
 if ( ! isset( $args ) ) {
   $title = get_field( 'title' );
@@ -22,6 +24,11 @@ if ( ! isset( $args ) ) {
 
 if ( empty( $title ) ) {
   maybe_show_error_block( 'Otsikko on pakollinen' );
+  return;
+}
+
+if ( empty( $link ) || ! array_key_exists( 'url', $link ) ) {
+  maybe_show_error_block( 'Linkki on pakollinen' );
   return;
 }
 ?>
@@ -38,14 +45,12 @@ if ( empty( $title ) ) {
         } ?>
       </div>
 
-      <?php if ( ! empty( $link ) && array_key_exists( 'url', $link ) ) : ?>
-        <p class="button-wrapper">
-          <a class="button" href="<?php echo esc_url( $link['url'] ) ?>">
-            <?php echo esc_html( $link['title'] ) ?>
-            <?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?>
-          </a>
-        </p>
-      <?php endif; ?>
+      <p class="button-wrapper">
+        <a class="button" href="<?php echo esc_url( $link['url'] ) ?>">
+          <?php echo esc_html( $link['title'] ) ?>
+          <?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?>
+        </a>
+      </p>
 
     </div>
   </div>
