@@ -6,8 +6,8 @@
  * own files under /inc and just require here.
  *
  * @Date: 2019-10-15 12:30:02
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2022-01-07 11:16:32
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-02-04 18:11:15
  *
  * @package airblocks
  */
@@ -100,8 +100,8 @@ add_action( 'after_setup_theme', function() {
     // Register custom ACF Blocks
     'acf_blocks' => [
       [
-        'name'           => 'hero',
-        'title'          => 'Sivun yläosa',
+        'name' => 'hero',
+        'title' => 'Sivun yläosa',
       ],
       [
         'name'  => 'cta',
