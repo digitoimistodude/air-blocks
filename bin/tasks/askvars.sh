@@ -2,10 +2,41 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 15:18:21
+# @Last Modified time: 2022-02-07 15:35:43
+
+# General vars
+ENV_FILE="${HOME}/.env_createproject"
+
+# Do we ask for lang or not
+if grep -q "AIR_BLOCKS_LANG" ${ENV_FILE}; then
+  # If found
+  echo ""
+else
+  # If not found
+  echo ""
+
+  # Ask language
+  echo "${BOLDYELLOW}Block language:${TXTRESET}
+${YELLOW}(Pro tip: Set up AIR_BLOCKS_LANG=en/fi to ${ENV_FILE} if you do not want this to get asked every time)${TXTRESET} "
+
+  echo "
+${BOLDGREEN}Available languages:${TXTRESET} "
+  echo "en
+fi
+"
+
+  # Read given lang
+  read -e AIR_BLOCKS_LANG
+
+  if [[ ! AIR_BLOCKS_LANG =~ ^(fi|en)$ ]]; then
+    echo "Language must be ${BOLDGREEN}en${TXTRESET} or ${BOLDGREEN}fi${TXTRESET}."
+    exit
+  fi
+fi
 
 # Ask block name
-echo "${BOLDYELLOW}Block name in lowercase (the one filtered in blocks.airwptheme.com):${TXTRESET} "
+echo "
+${BOLDYELLOW}Block name in lowercase (the one filtered in blocks.airwptheme.com):${TXTRESET} "
 
 # Show available blocks
 source ${SCRIPTS_LOCATION}/tasks/blocks-available.sh
