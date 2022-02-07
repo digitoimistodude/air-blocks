@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 16:56:58
+# @Last Modified time: 2022-02-07 17:03:39
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -22,20 +22,35 @@ ${YELLOW}(Pro tip: Set up AIR_BLOCKS_LANG=en/fi to ${ENV_FILE} if you do not wan
 
   echo "
 ${BOLDGREEN}Available languages:${TXTRESET} "
-  echo "en
-fi
+  echo "1 en
+2 fi
 "
 
   # Read given lang
   read -e AIR_BLOCKS_LANG
 
-  if ! [[ ${AIR_BLOCKS_LANG} = "fi" || ${AIR_BLOCKS_LANG} = "en" ]]; then
-    echo "Language must be ${BOLDGREEN}en${TXTRESET} or ${BOLDGREEN}fi${TXTRESET}."
+  # Exit if not number between 0-2
+  REGNUMBERS='^[0-9]+$'
+  if ! [[ $AIR_BLOCKS_LANG =~ $REGNUMBERS ]] ; then
+     echo "
+${RED}Error: $AIR_BLOCKS_LANG is not a number.${TXTRESET}
+  ";
+     exit
+  fi
+
+  if ! [[ ${AIR_BLOCKS_LANG} = "1" || ${AIR_BLOCKS_LANG} = "2" ]]; then
+    echo "Language must be ${BOLDGREEN}1 {TXTRESET}(en) or ${BOLDGREEN}2 ${TXTRESET}(fi)."
     exit
   fi
-fi
 
-echo ${AIR_BLOCKS_LANG}
+  if [[ ${AIR_BLOCKS_LANG} = 1 ]]; then
+    AIR_BLOCKS_LANG="en"
+  fi
+
+  if [[ ${AIR_BLOCKS_LANG} = 2 ]]; then
+    AIR_BLOCKS_LANG="fi"
+  fi
+fi
 
 # Ask block name
 echo "

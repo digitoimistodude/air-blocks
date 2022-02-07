@@ -11,6 +11,7 @@
 * newblock.sh block importer: Register ACF block in functions.php
 * newblock.sh block importer: List available blocks
 * newblock.sh block importer: Localizations
+* Change block selection to number based selection
 
 ### 1.0.2: 2021-12-21
 
