@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 17:03:39
+# @Last Modified time: 2022-02-07 17:04:21
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -58,6 +58,9 @@ ${BOLDYELLOW}Select block (number):${TXTRESET} "
 
 # Show available blocks
 source ${SCRIPTS_LOCATION}/tasks/blocks-available.sh
+
+# Add extra line break
+echo ""
 
 # Read given block number
 read -e BLOCK_NUMBER

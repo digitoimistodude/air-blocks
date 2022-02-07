@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 16:08:32
+# @Last Modified time: 2022-02-07 17:09:10
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -41,7 +41,7 @@ else
 
   # Block icon
   mkdir -p ${PROJECT_THEME_PATH}/svg/block-icons
-  cp -nv ${AIRBLOCKS_THEME_PATH}/svg/block-icons/${BLOCK_DISPLAY_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/
+  cp -nv ${AIRBLOCKS_THEME_PATH}/svg/block-icons/${BLOCK_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/
 fi
 
 # Start block import script
