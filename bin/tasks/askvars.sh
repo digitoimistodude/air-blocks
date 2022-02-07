@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 15:47:43
+# @Last Modified time: 2022-02-07 16:56:58
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -39,16 +39,28 @@ echo ${AIR_BLOCKS_LANG}
 
 # Ask block name
 echo "
-${BOLDYELLOW}Block name in lowercase (the one filtered in blocks.airwptheme.com):${TXTRESET} "
+${BOLDYELLOW}Select block (number):${TXTRESET} "
 
 # Show available blocks
 source ${SCRIPTS_LOCATION}/tasks/blocks-available.sh
 
+# Read given block number
+read -e BLOCK_NUMBER
+
+# Exit if not number
+REGNUMBERS='^[0-9]+$'
+if ! [[ $BLOCK_NUMBER =~ $REGNUMBERS ]] ; then
+   echo "
+${RED}Error: $BLOCK_NUMBER is not a number.${TXTRESET}
+";
+   exit
+fi
+
+# Select block by number
+BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+
 # Add extra line break
 echo ""
-
-# Read given block name
-read -e BLOCK_NAME
 
 # Ask project name
 echo "
