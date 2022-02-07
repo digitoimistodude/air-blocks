@@ -1,3 +1,17 @@
+### [Unreleased]
+
+* Multiple bugfixes
+* New block: Content
+* New block: Accordion
+* Hero block improvements
+* Demo improvements 
+* Check supported Air-light theme version when running block importer
+* Check if theme supports Gutenberg + ACF blocks
+* Major rehaul to newblock logic, add generic commands to get-block.sh
+* newblock.sh block importer: Register ACF block in functions.php
+* newblock.sh block importer: List available blocks
+* newblock.sh block importer: Localizations
+
 ### 1.0.2: 2021-12-21
 
 * New block: Carousel
