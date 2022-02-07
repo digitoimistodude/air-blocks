@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-01-11 19:20:50
+# @Last Modified time: 2022-02-07 16:08:32
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -35,9 +35,9 @@ else
 
   # Import block styles to _blocks.scss
   sed -e "/\/\/ ACF blocks/a\\
-    @import 'gutenberg/blocks/hero';" < ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss > ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks2.scss
+    @import 'gutenberg/blocks/${BLOCK_NAME}';" < ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss > ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss
   rm ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss
-  mv ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks2.scss ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss
+  mv ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss ${AIRBLOCKS_THEME_PATH}/sass/gutenberg/_blocks.scss
 
   # Block icon
   mkdir -p ${PROJECT_THEME_PATH}/svg/block-icons
