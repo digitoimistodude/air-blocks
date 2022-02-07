@@ -2,7 +2,10 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 14:55:44
+# @Last Modified time: 2022-02-07 16:37:26
+
+# Block specific variables
+export BLOCK_ACF_JSON_FILE="${AIRBLOCKS_THEME_PATH}/acf-json/group_618bb10852874.json"
 
 # JavaScript dependencies
 cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/100vh.js ${PROJECT_THEME_PATH}/js/src/modules/100vh.js
@@ -13,9 +16,6 @@ cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_heading-hero.scss ${PROJECT_THEM
 
 # Other SVG icons needed by this block
 # cp -nv ${AIRBLOCKS_THEME_PATH}/svg/play.svg ${PROJECT_THEME_PATH}/svg/
-
-# Import ACF fields
-cp -nv ${AIRBLOCKS_THEME_PATH}/acf-json/group_618bb10852874.json ${PROJECT_THEME_PATH}/acf-json/
 
 # Register ACF block in functions.php
 sed -e "/\'acf_blocks\' \=\> \[/a\\
@@ -29,3 +29,12 @@ rm ${AIRBLOCKS_THEME_PATH}/functions.php
 
 # Rename the changed file to the official one
 mv ${AIRBLOCKS_THEME_PATH}/functions_with_changes.php ${AIRBLOCKS_THEME_PATH}/functions.php
+
+# Check if translations are needed
+if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
+  # Run localization task
+  source ${SCRIPTS_LOCATION}/tasks/localization.sh
+else
+  # Just import the ACF fields file "as is"
+  cp -nv ${BLOCK_ACF_JSON_FILE} ${PROJECT_THEME_PATH}/acf-json/
+fi
