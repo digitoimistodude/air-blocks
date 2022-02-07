@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 15:35:43
+# @Last Modified time: 2022-02-07 15:47:43
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -10,7 +10,8 @@ ENV_FILE="${HOME}/.env_createproject"
 # Do we ask for lang or not
 if grep -q "AIR_BLOCKS_LANG" ${ENV_FILE}; then
   # If found
-  echo ""
+  # Get var from env
+  AIR_BLOCKS_LANG=$(grep AIR_BLOCKS_LANG $ENV_FILE | cut -d '=' -f2)
 else
   # If not found
   echo ""
@@ -28,11 +29,13 @@ fi
   # Read given lang
   read -e AIR_BLOCKS_LANG
 
-  if [[ ! AIR_BLOCKS_LANG =~ ^(fi|en)$ ]]; then
+  if ! [[ ${AIR_BLOCKS_LANG} = "fi" || ${AIR_BLOCKS_LANG} = "en" ]]; then
     echo "Language must be ${BOLDGREEN}en${TXTRESET} or ${BOLDGREEN}fi${TXTRESET}."
     exit
   fi
 fi
+
+echo ${AIR_BLOCKS_LANG}
 
 # Ask block name
 echo "
@@ -40,6 +43,9 @@ ${BOLDYELLOW}Block name in lowercase (the one filtered in blocks.airwptheme.com)
 
 # Show available blocks
 source ${SCRIPTS_LOCATION}/tasks/blocks-available.sh
+
+# Add extra line break
+echo ""
 
 # Read given block name
 read -e BLOCK_NAME
