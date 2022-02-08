@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 15:59:57
+# @Last Modified time: 2022-02-08 16:19:00
 
 # Block specific variables
 export BLOCK_ACF_JSON_FILE="group_618bb10852874.json"
@@ -23,5 +23,5 @@ cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_heading-hero.scss ${PROJECT_THEM
 sed -e "/\'acf_blocks\' \=\> \[/a\\
       [|\
        'name' => 'hero-full-height',|\
-       'title' => 'Sivun yläosa',|\
+       'title' => 'Sivun korkea yläosa',|\
       ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile

@@ -2,10 +2,10 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 16:16:34
+# @Last Modified time: 2022-02-08 16:19:12
 
 # Translate strings for block json (defined in the sh file of the selected block)
-sed -i'' -e 's/\"title\"\: \"Lohko\: Sivun yläosa\"\,/\"title\"\: \"Block\: Hero with full height\"\,/
+sed -i'' -e 's/\"title\"\: \"Lohko\: Sivun korkea yläosa\"\,/\"title\"\: \"Block\: Hero with full height\"\,/
 s/\"label\"\: \"Taustakuva\"\,/\"title\"\: \"Background image\"\,/
 s/\"label\"\: \"Taustavideo/\"label\"\: \"Background video/
 s/\"label\"\: \"Yläotsikko\"\,/\"label\"\: \"Upper title\"\,/
