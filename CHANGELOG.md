@@ -1,6 +1,8 @@
 ### [Unreleased]
 
 * Fix 5.9 related WSOD
+* Disable air-helper media directory hook as it breaks things in production
+* Fix hero block labels in front end
 
 ### 1.0.3: 2021-02-08
 

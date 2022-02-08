@@ -47,7 +47,7 @@ if ( empty( $title ) ) {
 }
 ?>
 
-<section class="block block-hero block-hero-full-height block-hero-<?php echo esc_attr( $style ) ?>">
+<section class="block block-hero-full-height block-hero-<?php echo esc_attr( $style ) ?>">
   <div class="shade" aria-hidden="true"></div>
   <div class="container">
 

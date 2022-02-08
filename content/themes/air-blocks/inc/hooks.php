@@ -7,7 +7,7 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-08 18:24:44
+ * @Last Modified time: 2022-02-08 18:30:11
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -25,6 +25,11 @@ namespace Air_Light;
  * Enable search view
  */
 // add_filter( 'air_helper_disable_views_search', '__return_false' );
+
+/**
+ * Disable media library path because wp replaces media so that the domain will be airmediatheme.com...
+ */
+add_filter( 'air_helper_change_uploads_path', '__return_false' );
 
 /**
  * Breadcrumb

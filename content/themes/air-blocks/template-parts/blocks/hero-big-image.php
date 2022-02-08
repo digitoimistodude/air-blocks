@@ -7,7 +7,7 @@
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2022-02-08 09:45:56
- * @Last Modified by:   Tuomas Marttila
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2022-02-08 10:27:15
  *
  * @package air-blocks
@@ -43,7 +43,7 @@ if ( empty( $title ) ) {
 }
 ?>
 
-<section class="block block-hero block-hero-big-image">
+<section class="block block-hero-big-image">
   <div class="image has-lazyload" aria-hidden="true">
     <?php native_lazyload_tag( $bg_image ); ?>
 
