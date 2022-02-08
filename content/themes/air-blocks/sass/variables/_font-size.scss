@@ -20,6 +20,9 @@
   --font-size-24: 24px;
   --font-size-28: 28px;
 
+  // Heading font sizes
+  --font-size-41: 41px;
+
   // Element font sizes
   --font-size-default: var(--font-size-17);
   --font-size-paragraphs: var(--font-size-18);
@@ -60,6 +63,7 @@
     --font-size-h5: 14px;
     --font-size-h6: 12px;
     --font-size-28: 22px;
+    --font-size-41: 33px;
   }
 
   // Paragraph font sizes in tiny phones like iPhone 5S

@@ -1,3 +1,6 @@
+// NB! These needs to be set:
+// _font-size.scss: --font-size-41: 41px; + breakpoints
+// Components: _content-box-scss;
 .block-hero-big-image {
   > .image {
     align-items: end;
@@ -26,24 +29,7 @@
   }
 
   .content {
-  }
-
-  &.block-hero-big-image-white .content {
-    background-color: var(--color-navy-light);
-  }
-
-  &.block-hero-big-image-dark .content {
-    background-color: var(--color-navy);
-
-    h1,
-    p,
-    a {
-      color: var(--color-navy-light);
-    }
-
-    .button {
-      background-color: var(--color-navy-light);
-      color: var(--color-navy);
-    }
+    @include content-box();
+    background-color: var(--color-white);
   }
 }

@@ -1,0 +1,33 @@
+@mixin content-box($padding: 6.5rem 8rem) {
+  padding: $padding;
+
+  h1 {
+    font-size: var(--font-size-41);
+    line-height: 1.22;
+    margin-bottom: -1.1rem;
+  }
+
+  .content-wrapper {
+    display: grid;
+    gap: 2rem;
+  }
+
+  // Reset margin for gap
+  .heading-hero,
+  h1,
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: $container-ipad-landscape) {
+    padding: 4.5rem 6rem;
+  }
+
+  @media (max-width: 880px) {
+    padding: 3.2rem;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding: 3.2rem 2.3rem;
+  }
+}

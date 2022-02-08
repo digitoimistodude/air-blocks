@@ -14,6 +14,11 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
+// Files (required):
+// ├── sass/gutenberg/blocks/_hero-big-image.scss
+// ├── sass/components/_content-box.scss
+// └── svg/block-icons/hero-big-image.svg
+
 namespace Air_Light;
 
 if ( ! isset( $args ) ) {
@@ -57,7 +62,7 @@ if ( empty( $title ) ) {
             if ( ! empty( $link ) ) : ?>
               <p class="button-wrapper">
                 <a class="button button-large<?php if ( str_contains( $link['url'], '#' ) ) echo ' js-trigger'; ?>" href="<?php echo esc_url( $link['url'] ); ?>">
-                  <?php echo esc_html( $button['title'] ); ?>
+                  <?php echo esc_html( $link['title'] ); ?>
                 </a>
               </p>
             <?php endif; ?>

@@ -1,13 +1,14 @@
+// NB! These needs to be set:
+// _font-size.scss: --font-size-41: 41px; + breakpoints
+// Components: _content-box-scss;
 .block-hero-small-image {
-  background-color: var(--color-orange-light);
-
   .container {
     align-items: center;
+    overflow: visible;
     position: relative;
     z-index: 1;
 
     img {
-      border-bottom-left-radius: 32px;
       z-index: 0;
     }
 
@@ -18,7 +19,6 @@
       width: 100%;
 
       @media (min-width: 880px) {
-        border-bottom-left-radius: 32px;
         margin-right: -8rem;
       }
     }
@@ -26,6 +26,7 @@
     @media (max-width: 880px) {
       img,
       .image {
+        @include aspect-ratio(355, 259);
         background-color: var(--color-white);
         height: auto;
         min-height: 259px;
@@ -78,7 +79,6 @@
     }
 
     [type="search"]::placeholder {
-      color: var(--color-navy);
       opacity: 1;
     }
 
@@ -115,7 +115,9 @@
   }
 
   .content {
+    @include content-box($padding: 9.2rem 8rem);
     background-color: var(--color-white);
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / .05);
     position: relative;
     z-index: 2;
 

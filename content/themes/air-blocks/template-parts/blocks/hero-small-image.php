@@ -14,6 +14,11 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
+// Files (required):
+// ├── sass/gutenberg/blocks/_hero-small-image.scss
+// ├── sass/components/_content-box.scss
+// └── svg/block-icons/hero-small-image.svg
+
 namespace Air_Light;
 
 if ( ! isset( $args ) ) {
@@ -50,7 +55,7 @@ if ( empty( $title ) ) {
   <div class="container">
 
     <div class="image has-lazyload" aria-hidden="true">
-      <?php native_lazyload_tag( $bg_image ); ?>
+      <?php native_lazyload_tag( $image ); ?>
     </div>
 
     <div class="content">
@@ -74,10 +79,10 @@ if ( empty( $title ) ) {
 
           <div class="search">
             <form>
-              <label for="input-text"><?php echo esc_html( 'Etsi' ) ?></label>
+              <label for="input-text"><?php echo esc_html( 'Search' ) ?></label>
               <div class="inputs">
-                <input type="search" id="input-text" placeholder="<?php echo esc_html( 'Kirjoita hakusana' ) ?>">
-                <button><?php echo esc_html( 'Hae' ) ?></button>
+                <input type="search" id="input-text" placeholder="<?php echo esc_html( 'Enter text' ) ?>">
+                <button><?php echo esc_html( 'Search' ) ?></button>
               </div>
             </form>
           </div>

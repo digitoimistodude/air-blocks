@@ -7,7 +7,7 @@
  *
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Tuomas Marttila
  * @Last Modified time: 2021-11-26 10:46:36
  *
  * @package airblocks
@@ -47,7 +47,7 @@ if ( empty( $title ) ) {
 }
 ?>
 
-<section class="block block-hero block-hero-<?php echo esc_attr( $style ) ?>">
+<section class="block block-hero block-hero-full-height block-hero-<?php echo esc_attr( $style ) ?>">
   <div class="shade" aria-hidden="true"></div>
   <div class="container">
 

@@ -1,4 +1,4 @@
-.block-hero::after {
+.block-hero-full-height::after {
   background-image: linear-gradient(180deg, var(--color-black) 0%, rgb(51 51 51 / 0) 100%);
   content: '';
   height: 164px;
@@ -10,7 +10,7 @@
   z-index: 4;
 }
 
-.block-hero {
+.block-hero-full-height {
   display: flex;
   height: calc(var(--vh, 1vh) * 100);
 
@@ -54,7 +54,7 @@
   }
 }
 
-.block-hero .content {
+.block-hero-full-height .content {
   align-items: center;
   display: flex;
   height: 100%;
