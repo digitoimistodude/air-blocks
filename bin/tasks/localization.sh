@@ -2,10 +2,10 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 15:51:37
+# @Last Modified time: 2022-02-08 16:16:34
 
 # Translate strings for block json (defined in the sh file of the selected block)
-sed -i'' -e 's/\"title\"\: \"Lohko\: Sivun yläosa\"\,/\"title\"\: \"Block\: Hero\"\,/
+sed -i'' -e 's/\"title\"\: \"Lohko\: Sivun yläosa\"\,/\"title\"\: \"Block\: Hero with full height\"\,/
 s/\"label\"\: \"Taustakuva\"\,/\"title\"\: \"Background image\"\,/
 s/\"label\"\: \"Taustavideo/\"label\"\: \"Background video/
 s/\"label\"\: \"Yläotsikko\"\,/\"label\"\: \"Upper title\"\,/
@@ -16,4 +16,4 @@ s/\"label\"\: \"Nappi\"\,/\"label\"\: \"Button\"\,/
 s/\"label\"\: \"Tyyli\"\,/\"label\"\: \"Style\"\,/' ${BLOCK_ACF_JSON_PATH}
 
 # Translate blocks for functions.php, make changes directly to the file
-sed -e 's/Sivun yläosa/Hero/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
+sed -e 's/Sivun yläosa/Hero with full height/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
