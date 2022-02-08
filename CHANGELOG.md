@@ -3,6 +3,8 @@
 * Multiple bugfixes
 * New block: Content
 * New block: Accordion
+* New block: Hero small image
+* New block: Hero big image
 * Hero block improvements
 * Demo improvements 
 * Check supported Air-light theme version when running block importer
@@ -13,6 +15,7 @@
 * newblock.sh block importer: Localizations
 * Change block selection to number based selection
 * Make lang selection consistent by number
+* Rename hero block to 'hero-full-height'
 
 ### 1.0.2: 2021-12-21
 
