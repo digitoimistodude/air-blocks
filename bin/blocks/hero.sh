@@ -2,10 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 17:22:21
+# @Last Modified time: 2022-02-08 10:28:55
 
 # Block specific variables
-export BLOCK_ACF_JSON_FILE="${AIRBLOCKS_THEME_PATH}/acf-json/group_618bb10852874.json"
+export BLOCK_ACF_JSON_FILE="group_618bb10852874.json"
+export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}.json"
 
 # JavaScript dependencies
 cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/100vh.js ${PROJECT_THEME_PATH}/js/src/modules/100vh.js
@@ -40,5 +41,5 @@ if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
   source ${SCRIPTS_LOCATION}/tasks/localization.sh
 else
   # Just import the ACF fields file "as is"
-  cp -nv ${BLOCK_ACF_JSON_FILE} ${PROJECT_THEME_PATH}/acf-json/
+  cp -nv ${BLOCK_ACF_JSON_PATH} ${PROJECT_THEME_PATH}/acf-json/
 fi
