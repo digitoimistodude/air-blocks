@@ -2,20 +2,18 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 17:23:52
+# @Last Modified time: 2022-02-08 15:51:37
 
-# Localization variables
-LOCALIZED_STRINGS="${SCRIPTS_LOCATION}/tasks/localization.properties"
+# Translate strings for block json (defined in the sh file of the selected block)
+sed -i'' -e 's/\"title\"\: \"Lohko\: Sivun yläosa\"\,/\"title\"\: \"Block\: Hero\"\,/
+s/\"label\"\: \"Taustakuva\"\,/\"title\"\: \"Background image\"\,/
+s/\"label\"\: \"Taustavideo/\"label\"\: \"Background video/
+s/\"label\"\: \"Yläotsikko\"\,/\"label\"\: \"Upper title\"\,/
+s/\"instructions\"\: \"Jos kenttä on jätetty tyhjäksi\, tilalla näytetään murupolku\.\"\,/\"instructions\"\: \"If field is left out empty\, will show breadcrumbs in place\.\"\,/
+s/\"label\"\: \"Otsikko\"\,/\"label\"\: \"Heading\"\,/
+s/\"label\"\: \"Tekstisisältö\"\,/\"label\"\: \"Text content\"\,/
+s/\"label\"\: \"Nappi\"\,/\"label\"\: \"Button\"\,/
+s/\"label\"\: \"Tyyli\"\,/\"label\"\: \"Style\"\,/' ${BLOCK_ACF_JSON_PATH}
 
-# Loop through strings and update file
-while IFS="=" read -r TRANSLATE_FROM TRANSLATE_TO;
-do
-  echo "Translating ${TRANSLATE_FROM} to ${TRANSLATE_TO}"
-  sed -i'' -e 's/$TRANSLATE_FROM/$TRANSLATE_TO/' ${BLOCK_ACF_JSON_FILE}
-done < "${BLOCK_ACF_JSON_FILE}" > ${BLOCK_ACF_JSON_FILE}_en.json;
-
-# Import the localized file with ACF fields
-cp -nv ${BLOCK_ACF_JSON_FILE}_en.json ${PROJECT_THEME_PATH}/acf-json/
-
-# Remove the leftover file
-rm ${BLOCK_ACF_JSON_FILE}_en.json
+# Translate blocks for functions.php, make changes directly to the file
+sed -e 's/Sivun yläosa/Hero/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
