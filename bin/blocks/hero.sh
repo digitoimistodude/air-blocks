@@ -2,11 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 10:28:55
+# @Last Modified time: 2022-02-08 10:36:57
 
 # Block specific variables
 export BLOCK_ACF_JSON_FILE="group_618bb10852874.json"
-export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}.json"
+export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
 
 # JavaScript dependencies
 cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/100vh.js ${PROJECT_THEME_PATH}/js/src/modules/100vh.js
