@@ -6,8 +6,8 @@
  *
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-11-18 15:12:35
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 16:25:52
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-02-08 18:24:44
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -53,10 +53,10 @@ add_action( 'wp_default_scripts', __NAMESPACE__ . '\move_jquery_into_footer' );
  * Gutenberg associated hooks
  */
 require get_theme_file_path( 'inc/hooks/gutenberg.php' );
-add_filter( 'allowed_block_types', __NAMESPACE__ . '\allowed_block_types', 10, 2 );
+add_filter( 'allowed_block_types_all', __NAMESPACE__ . '\allowed_block_types', 10, 2 );
 add_filter( 'use_block_editor_for_post_type', __NAMESPACE__ . '\use_block_editor_for_post_type', 10, 2 );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\register_block_editor_assets' );
-add_filter( 'block_editor_settings', __NAMESPACE__ . '\remove_gutenberg_inline_styles', 10, 2 );
+add_filter( 'block_editor_settings_all', __NAMESPACE__ . '\remove_gutenberg_inline_styles', 10, 2 );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_editor_styles' );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_editor_title_input_styles' );
 
@@ -67,7 +67,7 @@ require get_theme_file_path( 'inc/hooks/acf-block-example-data.php' );
 add_filter( 'air_acf_blocks_example_data', __NAMESPACE__ . '\set_acf_blocks_example_data', 10, 1 );
 
 require get_theme_file_path( 'inc/hooks/acf-blocks.php' );
-add_filter( 'block_categories', __NAMESPACE__ . '\acf_blocks_add_category_in_gutenberg', 10, 2 );
+add_filter( 'block_categories_all', __NAMESPACE__ . '\acf_blocks_add_category_in_gutenberg', 10, 2 );
 add_action( 'acf/init', __NAMESPACE__ . '\acf_blocks_init' );
 
 /**

@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Fix 5.9 related WSOD
+
 ### 1.0.3: 2021-02-08
 
 * Multiple bugfixes
