@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for hero
+ * The template for hero-full-height
  *
  * Description of the file called
- * hero.
+ * hero-full-height.
  *
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
- * @Last Modified by:   Tuomas Marttila
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-11-26 10:46:36
  *
  * @package airblocks
