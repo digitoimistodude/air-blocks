@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 10:36:57
+# @Last Modified time: 2022-02-08 15:19:28
 
 # Block specific variables
 export BLOCK_ACF_JSON_FILE="group_618bb10852874.json"
@@ -31,15 +31,3 @@ rm ${PROJECT_THEME_PATH}/functions.php
 
 # Rename the changed file to the official one
 mv ${PROJECT_THEME_PATH}/functions_with_changes.php ${PROJECT_THEME_PATH}/functions.php
-
-# Ask block name
-echo "${BOLDYELLOW}Importing ACF fields (json)...${TXTRESET} "
-
-# Check if translations are needed
-if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
-  # Run localization task
-  source ${SCRIPTS_LOCATION}/tasks/localization.sh
-else
-  # Just import the ACF fields file "as is"
-  cp -nv ${BLOCK_ACF_JSON_PATH} ${PROJECT_THEME_PATH}/acf-json/
-fi

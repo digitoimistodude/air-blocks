@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 17:09:10
+# @Last Modified time: 2022-02-08 15:19:43
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -51,3 +51,19 @@ else
   echo "Block called $BLOCK_NAME does not exist (yet) in the importer script. Or perhaps you mistyped it?"
   exit
 fi
+
+# Run required things after the block/<block>.sh
+# (like localization.sh that needs to be run after the <block>.sh
+# because it gets variables from that file)
+
+# Localizations
+echo "${BOLDYELLOW}Importing ACF fields (json)...${TXTRESET} "
+
+# Check if translations are needed
+if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
+  # Run localization task
+  source ${SCRIPTS_LOCATION}/tasks/localization.sh
+fi
+
+# Just import the ACF fields file
+cp -nv ${BLOCK_ACF_JSON_PATH} ${PROJECT_THEME_PATH}/acf-json/
