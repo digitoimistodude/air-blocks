@@ -1,3 +1,8 @@
+#!/bin/bash
+# @Author: Roni Laukkarinen
+# @Date:   2022-02-08 16:03:52
+# @Last Modified by:   Roni Laukkarinen
+# @Last Modified time: 2022-02-08 16:05:33
 # Tasks after functions.php has been updated
 # Remove the file without any changes
 rm ${PROJECT_THEME_PATH}/functions.php
@@ -27,3 +32,10 @@ rm ${PROJECT_THEME_PATH}/functions.php
 
 # Rename the changed file to the official one
 mv ${PROJECT_THEME_PATH}/tmpfile ${PROJECT_THEME_PATH}/functions.php
+
+# Run gulp for SCSS and JS once
+echo "${BOLDYELLOW}Running gulp tasks (requires npm packages to be installed previously)...${TXTRESET} "
+cd ${PROJECTS_HOME}/${PROJECT_NAME}
+gulp js
+gulp devstyles
+gulp prodstyles
