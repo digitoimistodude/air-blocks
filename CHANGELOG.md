@@ -1,4 +1,4 @@
-### [Unreleased]
+### 1.0.3: 2021-02-08
 
 * Multiple bugfixes
 * New block: Content
@@ -16,6 +16,7 @@
 * Change block selection to number based selection
 * Make lang selection consistent by number
 * Rename hero block to 'hero-full-height'
+* Run tests for the first block script, improve tasks
 
 ### 1.0.2: 2021-12-21
 

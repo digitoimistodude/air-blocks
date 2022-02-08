@@ -3,11 +3,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:06:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 15:39:21
+# @Last Modified time: 2022-02-08 16:46:12
 
 # Script specific vars
 SCRIPT_LABEL='for macOS'
-SCRIPT_VERSION='1.0.8'
+SCRIPT_VERSION='1.1.0'
 
 # Vars needed for this file to function globally
 CURRENTFILE=`basename $0`
