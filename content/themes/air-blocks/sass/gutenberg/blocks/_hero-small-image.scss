@@ -1,0 +1,132 @@
+.block-hero-small-image {
+  background-color: var(--color-orange-light);
+
+  .container {
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    img {
+      border-bottom-left-radius: 32px;
+      z-index: 0;
+    }
+
+    > .image {
+      align-items: center;
+      display: grid;
+      height: 100%;
+      width: 100%;
+
+      @media (min-width: 880px) {
+        border-bottom-left-radius: 32px;
+        margin-right: -8rem;
+      }
+    }
+
+    @media (max-width: 880px) {
+      img,
+      .image {
+        background-color: var(--color-white);
+        height: auto;
+        min-height: 259px;
+      }
+    }
+
+    @media (min-width: 880px) {
+      display: grid;
+      grid-template-columns: 760px minmax(0, 1fr);
+    }
+
+    @media (min-width: 880px) and (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $width-grid-base + 40px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .search {
+    margin-top: 1rem;
+
+    form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .inputs {
+      width: 100%;
+
+      @media (min-width: 880px) {
+        display: flex;
+      }
+    }
+
+    [type="search"] {
+      font-size: var(--font-size-16);
+      width: calc(100% - 196px);
+
+      @media (min-width: 880px) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      @media (max-width: 880px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    [type="search"]::placeholder {
+      color: var(--color-navy);
+      opacity: 1;
+    }
+
+    button {
+      font-size: var(--font-size-18);
+      justify-content: center;
+      min-width: 196px;
+      text-align: center;
+
+      @media (min-width: 880px) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+    }
+  }
+
+  .search label {
+    display: block;
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+  }
+
+  .search [type="search"],
+  .search button {
+    align-items: center;
+    display: inline-flex;
+    height: 5.8rem;
+
+    @media (max-width: 880px) {
+      height: 5rem;
+      width: 100%;
+    }
+  }
+
+  .content {
+    background-color: var(--color-white);
+    position: relative;
+    z-index: 2;
+
+    p {
+      font-size: var(--font-size-20);
+    }
+
+    @media (min-width: 880px) {
+      margin-bottom: 4.2rem;
+      margin-left: -8rem;
+      margin-top: 4.2rem;
+    }
+  }
+}

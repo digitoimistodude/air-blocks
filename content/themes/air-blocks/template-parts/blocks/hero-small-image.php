@@ -1,11 +1,16 @@
 <?php
 /**
- * @Author:		Elias Kautto
- * @Date:   		2022-02-03 09:43:56
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2022-02-08 10:19:25
+ * The template for hero-small-image
  *
- * @package lhkk
+ * Description of the file called
+ * hero-small-image.
+ *
+ * @Author:		Tuomas Marttila
+ * @Date:   		2022-02-08 09:46:05
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2022-02-08 10:27:28
+ *
+ * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 

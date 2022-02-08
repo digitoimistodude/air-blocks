@@ -1,11 +1,16 @@
 <?php
 /**
- * @Author:		Elias Kautto
- * @Date:   		2022-02-02 13:09:31
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2022-02-08 10:16:43
+ * The template for hero-big-image
  *
- * @package lhkk
+ * Description of the file called
+ * hero-big-image.
+ *
+ * @Author:		Tuomas Marttila
+ * @Date:   		2022-02-08 09:45:56
+ * @Last Modified by:   Tuomas Marttila
+ * @Last Modified time: 2022-02-08 10:27:15
+ *
+ * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
@@ -33,7 +38,7 @@ if ( empty( $title ) ) {
 }
 ?>
 
-<section class="block block-hero block-hero-big-image has-light-bg">
+<section class="block block-hero block-hero-big-image">
   <div class="image has-lazyload" aria-hidden="true">
     <?php native_lazyload_tag( $bg_image ); ?>
 

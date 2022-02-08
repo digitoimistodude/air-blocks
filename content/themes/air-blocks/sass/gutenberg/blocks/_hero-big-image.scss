@@ -1,0 +1,49 @@
+.block-hero-big-image {
+  > .image {
+    align-items: end;
+    display: grid;
+    height: 633px;
+
+    img {
+      z-index: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $container-ipad-landscape) {
+      align-items: end;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $width-grid-base + 40px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .content {
+  }
+
+  &.block-hero-big-image-white .content {
+    background-color: var(--color-navy-light);
+  }
+
+  &.block-hero-big-image-dark .content {
+    background-color: var(--color-navy);
+
+    h1,
+    p,
+    a {
+      color: var(--color-navy-light);
+    }
+
+    .button {
+      background-color: var(--color-navy-light);
+      color: var(--color-navy);
+    }
+  }
+}
