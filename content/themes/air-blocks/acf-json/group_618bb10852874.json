@@ -1,6 +1,6 @@
 {
   "key": "group_618bb10852874",
-  "title": "Lohko: Sivun yläosa",
+  "title": "Lohko: Sivun yläosa korkea",
   "fields": [
     {
       "key": "field_61925343fdbae",
@@ -145,7 +145,7 @@
       {
         "param": "block",
         "operator": "==",
-        "value": "acf\/hero"
+        "value": "acf\/hero-full-height"
       }
     ]
   ],
