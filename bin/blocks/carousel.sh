@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 15:21:20
+# @Last Modified time: 2022-02-10 15:24:41
 
 
 # // New files/Dependencies (this file will install them)::
@@ -35,7 +35,7 @@ rm ${PROJECT_THEME_PATH}/sass/global.scss
 mv ${PROJECT_THEME_PATH}/sass/global_with_changes.scss ${PROJECT_THEME_PATH}/sass/global.scss
 
 # JS direct replaces
-LC_ALL=C sed -i '' -e "s;\/\/ import slick from \'slick-carousel\'\;;import slick from \'slick-carousel\'\;;" ${PROJECT_THEME_PATH}/js/src/front-end.js
+LC_ALL=C sed -i '' -e "s;\/\/ import slick;import slick;" ${PROJECT_THEME_PATH}/js/src/front-end.js
 
 # Add carousel code to front-end.js
 sed -e "/\/\/ Document ready start/a\\
