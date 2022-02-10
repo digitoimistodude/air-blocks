@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 16:27:11
+# @Last Modified time: 2022-02-10 15:36:49
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -35,7 +35,7 @@ else
 
   # Import block styles to _blocks.scss
   sed -e "/\/\/ ACF blocks/a\\
-    @import 'gutenberg/blocks/${BLOCK_NAME}';" < ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss > ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss
+  @import 'gutenberg/blocks/${BLOCK_NAME}';" < ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss > ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss
   rm ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
   mv ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
 
