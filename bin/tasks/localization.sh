@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 10:54:21
+# @Last Modified time: 2022-02-10 11:32:15
 
 # Translate strings for block json (defined in the sh file of the selected block)
 
@@ -22,6 +22,7 @@ sed -e 's/Sivun korkea yläosa/Hero with full height/' ${PROJECT_THEME_PATH}/fun
 
 # Block: accordion
 sed -i'' -e 's/\"title\"\: \"Lohko\: Haitari\"\,/\"title\"\: \"Block\: Accordion\"\,/
+s/\"label\"\: \"Lisää uusi haitari/\"label\"\: \"Add new accordion/
 s/\"label\"\: \"Haitarin kohteet\"\,/\"label\"\: \"Accordion items\"\,/' ${BLOCK_ACF_JSON_PATH}
 
 # Translate blocks for functions.php, make changes directly to the file
