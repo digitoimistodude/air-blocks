@@ -2,11 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 11:22:17
+# @Last Modified time: 2022-02-10 12:18:31
 
 # // New files/Dependencies (this file will install them):
+# // ├── sass/gutenberg/blocks/_accordion.scss (automatic from get-block.sh)
 # // ├── js/src/modules/accordion.js
-# // ├── sass/gutenberg/blocks/_accordion.scss
 # // ├── svg/minus.svg
 # // ├── svg/plus.svg
 # // └── svg/block-icons/accordion.svg

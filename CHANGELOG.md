@@ -4,6 +4,7 @@
 * Disable air-helper media directory hook as it breaks things in production
 * Fix hero block labels in front end
 * newblock.sh block importer: Add accordion
+* newblock.sh block importer: Add carousel
 
 ### 1.0.3: 2021-02-08
 

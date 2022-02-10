@@ -2,11 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 11:22:48
+# @Last Modified time: 2022-02-10 12:18:38
 
 # // New files/Dependencies (this file will install them):
+# // ├── sass/gutenberg/blocks/_hero-full-height.scss (automatic from get-block.sh)
 # // ├── js/src/modules/100vh.js
-# // ├── sass/gutenberg/blocks/_hero-full-height.scss
 # // ├── sass/components/_prefix.scss
 # // ├── sass/components/_heading-hero.scss
 # // └── svg/block-icons/hero-big-image.svg

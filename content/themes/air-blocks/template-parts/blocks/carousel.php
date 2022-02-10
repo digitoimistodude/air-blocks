@@ -7,21 +7,12 @@
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 10:20:37
- * @Last Modified by:   Tuomas Marttila
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-12-15 10:24:29
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-// Files (required):
-// ├── sass/gutenberg/blocks/_carousel.scss
-// ├── sass/features/_slick.scss
-// ├── js/src/front-end.js
-// ├── js/src/gutenberg-editor.js
-// ├── svg/block-icons/carousel.svg
-
-// Import default slick styles to gutenberg
 
 namespace Air_Light;
 

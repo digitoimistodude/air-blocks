@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 11:41:08
+# @Last Modified time: 2022-02-10 14:07:50
 
 # Translate strings for block json (defined in the sh file of the selected block)
 
@@ -17,7 +17,7 @@ s/\"label\"\: \"Tekstisisältö\"\,/\"label\"\: \"Content\"\,/
 s/\"label\"\: \"Nappi\"\,/\"label\"\: \"Button\"\,/
 s/\"label\"\: \"Tyyli\"\,/\"label\"\: \"Style\"\,/' ${BLOCK_ACF_JSON_PATH}
 
-# Translate blocks for functions.php, make changes directly to the file
+# Block: hero-full-height, translate blocks for functions.php, make changes directly to the file
 sed -e 's/Sivun korkea yläosa/Hero with full height/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
 
 # Block: accordion
@@ -25,5 +25,12 @@ sed -i'' -e 's/\"title\"\: \"Lohko\: Haitari\"\,/\"title\"\: \"Block\: Accordion
 s/\"button_label\"\: \"Lisää uusi haitari/\"button_label\"\: \"Add new accordion/
 s/\"label\"\: \"Haitarin kohteet\"\,/\"label\"\: \"Accordion items\"\,/' ${BLOCK_ACF_JSON_PATH}
 
-# Translate blocks for functions.php, make changes directly to the file
+# Block: accordion, translate blocks for functions.php, make changes directly to the file
 sed -e 's/Haitari/Accordion/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
+
+# Block: carousel
+sed -i'' -e 's/\"title\"\: \"Lohko\: Kuvakaruselli\"\,/\"title\"\: \"Block\: Carousel\"\,/
+s/\"label\"\: \"Kuvat/\"button_label\"\: \"Images/' ${BLOCK_ACF_JSON_PATH}
+
+# Block: carousel, translate blocks for functions.php, make changes directly to the file
+sed -e 's/Kuvakaruselli/Carousel/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
