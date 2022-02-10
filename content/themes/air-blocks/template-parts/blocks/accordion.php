@@ -7,22 +7,12 @@
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2022-01-07 11:12:46
- * @Last Modified by:   Tuomas Marttila
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2022-01-07 11:12:49
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
- // Files (required):
-// ├── sass/features/_accordion.scss
-// ├── js/src/modules/accordion.js
-// ├── svg/minus.svg
-// ├── svg/plus.svg
-// ├── svg/block-icons/accordion.svg
-
-// Import accordion.js in front-end.js
-// Import default accordion styles to gutenberg in gutenberg-editor.scss
 
 namespace Air_Light;
 

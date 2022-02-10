@@ -2,8 +2,9 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-08 16:03:52
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 16:05:33
+# @Last Modified time: 2022-02-10 10:55:41
 # Tasks after functions.php has been updated
+
 # Remove the file without any changes
 rm ${PROJECT_THEME_PATH}/functions.php
 
