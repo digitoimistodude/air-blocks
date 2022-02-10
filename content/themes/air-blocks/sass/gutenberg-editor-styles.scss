@@ -66,8 +66,8 @@
   // Import slick inside Gutenberg editor
   @import 'features/slick';
 
-  // Import accordion inside Gutenberg editor
-  @import 'features/accordion';
+  // Import accordion inside Gutenberg editor just to make sure
+  @import 'gutenberg/blocks/accordion';
 
   // Prevent horizontal scrolling
   overflow-x: hidden;

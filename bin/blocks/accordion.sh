@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 12:18:31
+# @Last Modified time: 2022-02-10 16:10:01
 
 # // New files/Dependencies (this file will install them):
 # // ├── sass/gutenberg/blocks/_accordion.scss (automatic from get-block.sh)
@@ -14,6 +14,7 @@
 # // Changes to files/folders:
 # // ├── js/src/front-end.js
 # // ├── sass/gutenberg/_blocks.scss
+# // ├── sass/gutenberg-editor-styles.scss
 # // ├── acf-json/
 # // └── functions.php
 
@@ -29,6 +30,14 @@ sed -e "/\import \'what-input\'\;/a\\
 import './modules/accordion';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
+
+# Import styles to gutenberg-editor-styles.scss
+sed -e "/\@import \'features\/gravity-forms\'\;/a\\
+§\
+  \/\/ Import accordion inside Gutenberg editor just to make sure§\
+  \@import \'gutenberg\/blocks\/accordion\'\;\\" < ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss | tr '§' '\n' > ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss
+rm ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
+mv ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
 
 # Other SVG icons needed by this block
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/minus.svg ${PROJECT_THEME_PATH}/svg/
