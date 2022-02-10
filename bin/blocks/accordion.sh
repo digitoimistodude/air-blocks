@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 11:14:21
+# @Last Modified time: 2022-02-10 11:22:17
 
 # // New files/Dependencies (this file will install them):
 # // ├── js/src/modules/accordion.js
@@ -29,15 +29,6 @@ sed -e "/\import \'what-input\'\;/a\\
 import './modules/accordion';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
-
-# Style component dependencies
-#cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_prefix.scss ${PROJECT_THEME_PATH}/sass/components/_prefix.scss
-
-# Import components right after the last default component in the _components.scss file
-#sed -e "/\@import \'link\'\;/a\\
-#@import 'prefix';" < ${PROJECT_THEME_PATH}/sass/components/_components.scss > ${PROJECT_THEME_PATH}/sass/components/_components_with_changes.scss
-#rm ${PROJECT_THEME_PATH}/sass/components/_components.scss
-#mv ${PROJECT_THEME_PATH}/sass/components/_components_with_changes.scss ${PROJECT_THEME_PATH}/sass/components/_components.scss
 
 # Other SVG icons needed by this block
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/minus.svg ${PROJECT_THEME_PATH}/svg/

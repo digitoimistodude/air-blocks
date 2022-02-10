@@ -2,11 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-08 16:40:34
+# @Last Modified time: 2022-02-10 11:22:48
 
 # // New files/Dependencies (this file will install them):
 # // ├── js/src/modules/100vh.js
-# // ├── sass/gutenberg/blocks/_hero-big-image.scss
+# // ├── sass/gutenberg/blocks/_hero-full-height.scss
 # // ├── sass/components/_prefix.scss
 # // ├── sass/components/_heading-hero.scss
 # // └── svg/block-icons/hero-big-image.svg
