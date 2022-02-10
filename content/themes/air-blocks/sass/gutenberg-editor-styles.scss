@@ -59,13 +59,10 @@
 .editor-styles-wrapper {
   // Import typography related styles inside blocks
   @import 'layout/typography';
-
   // Import gravity forms inside Gutenberg editor
   @import 'features/gravity-forms';
   // Import slick inside Gutenberg editor
   @import 'features/slick';
-  // Import carousel inside Gutenberg editor
-  @import 'features/accordion';
 
   // Prevent horizontal scrolling
   overflow-x: hidden;
