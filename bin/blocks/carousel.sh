@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 15:32:22
+# @Last Modified time: 2022-02-10 15:44:32
 
 
 # // New files/Dependencies (this file will install them)::
@@ -18,6 +18,7 @@
 # // ├── js/src/front-end.js
 # // ├── sass/gutenberg/_blocks.scss
 # // ├── sass/global.scss
+# // ├── sass/gutenberg-editor-styles.scss
 # // ├── acf-json/
 # // └── functions.php
 
@@ -28,11 +29,19 @@ export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FI
 # SCSS features
 cp -nv ${AIRBLOCKS_THEME_PATH}/sass/features/_slick.scss ${PROJECT_THEME_PATH}/sass/features/
 
-# Import feature styles to global.scss
+# Import slick styles to global.scss
 sed -e "/\/\/ Global features/a\\
 @import 'features/slick';" < ${PROJECT_THEME_PATH}/sass/global.scss > ${PROJECT_THEME_PATH}/sass/global_with_changes.scss
 rm ${PROJECT_THEME_PATH}/sass/global.scss
 mv ${PROJECT_THEME_PATH}/sass/global_with_changes.scss ${PROJECT_THEME_PATH}/sass/global.scss
+
+# Import slick styles to gutenberg-editor-styles.scss
+sed -e "/\@import \'features\/gravity-forms\'\;/a\\
+§\
+  // Import slick inside Gutenberg editor
+  @import 'features/slick';§\\" < ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss | tr '§' '\n' > ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss
+rm ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
+mv ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
 
 # JS direct replaces
 LC_ALL=C sed -i '' -e "s;\/\/ import slick;import slick;" ${PROJECT_THEME_PATH}/js/src/front-end.js
