@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-08 16:03:52
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 10:55:41
+# @Last Modified time: 2022-02-10 14:40:45
 # Tasks after functions.php has been updated
 
 # Remove the file without any changes
@@ -40,3 +40,7 @@ cd ${PROJECTS_HOME}/${PROJECT_NAME}
 gulp js
 gulp devstyles
 gulp prodstyles
+
+# Activate block ACF fields
+echo "${BOLDYELLOW}Activating ACF fields for the block...${TXTRESET} "
+vendor/wp-cli/wp-cli/bin/wp eval "acf_import_field_group( json_decode( file_get_contents( '$BLOCK_ACF_JSON_PATH' ), true ) );"

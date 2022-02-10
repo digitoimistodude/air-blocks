@@ -5,6 +5,7 @@
 * Fix hero block labels in front end
 * newblock.sh block importer: Add accordion
 * newblock.sh block importer: Add carousel
+* New feature: Activates the block ACF fields automatically (no extra step with "Sync available" > Import)
 
 ### 1.0.3: 2021-02-08
 
