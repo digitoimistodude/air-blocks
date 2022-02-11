@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:14:27
+# @Last Modified time: 2022-02-11 12:19:23
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
@@ -27,9 +27,9 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
     \"fields\": [
         {
             \"key\": \"field_${RANDOMHASH_FIELD}\",
-            \"label\": \"Tekstisisältö\",
-            \"name\": \"content\",
-            \"type\": \"wysiwyg\",
+            \"label\": \"Title\",
+            \"name\": \"title\",
+            \"type\": \"text\",
             \"instructions\": \"\",
             \"required\": 0,
             \"conditional_logic\": 0,
@@ -39,10 +39,10 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
                 \"id\": \"\"
             },
             \"default_value\": \"\",
-            \"tabs\": \"all\",
-            \"toolbar\": \"full\",
-            \"media_upload\": 1,
-            \"delay\": 0
+            \"placeholder\": \"\",
+            \"prepend\": \"\",
+            \"append\": \"\",
+            \"maxlength\": \"\"
         }
     ],
     \"location\": [
@@ -63,7 +63,7 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
     \"active\": true,
     \"description\": \"\",
     \"show_in_rest\": 0,
-    \"modified\": 1641289198
+    \"modified\": 1644574693
 }" > ${BLOCK_ACF_JSON_PATH}
 
   # The block file
@@ -84,6 +84,12 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
 
 namespace Air_Light;
 
+if ( ! isset( $args ) ) {
+  $title = get_field( 'title' );
+} else {
+  $title = $args['title'];
+}
+
 if ( empty( \$title ) ) {
   maybe_show_error_block( 'A title is required' );
   return;
@@ -92,7 +98,12 @@ if ( empty( \$title ) ) {
 
 <section class=\"block block-example\">
   <div class=\"container\">
-   <!-- Your content -->
+
+  <h1>
+    <?php echo esc_html( $title ); ?>
+  </h1>
+
+  <!-- Your content -->
   </div>
 </section>" > ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php
 
