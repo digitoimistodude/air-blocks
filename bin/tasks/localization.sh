@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 11:54:08
+# @Last Modified time: 2022-02-11 12:07:01
 
 # Translate strings for block json (defined in the sh file of the selected block)
 
@@ -33,7 +33,7 @@ sed -i'' -e 's/\"title\"\: \"Lohko\: Kuvakaruselli\"\,/\"title\"\: \"Block\: Car
 s/\"label\"\: \"Kuvat/\"button_label\"\: \"Images/' ${BLOCK_ACF_JSON_PATH}
 
 # General ACF fields
-sed -i'' -e 's/\"Lohko\:/\"Block\:/' ${BLOCK_ACF_JSON_PATH}
+sed -i'' -e 's/Lohko\:/Block\:/' ${BLOCK_ACF_JSON_PATH}
 
 # Block: carousel, translate blocks for functions.php, make changes directly to the file
 sed -e 's/Kuvakaruselli/Carousel/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile

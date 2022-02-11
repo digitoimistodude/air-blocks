@@ -2,10 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:02:13
+# @Last Modified time: 2022-02-11 12:10:10
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
+export RANDOMHASH_FIELD=`echo $RANDOM | md5sum | head -c 13; echo;`
 export BLOCK_ACF_JSON_FILE="group_${RANDOMHASH}.json"
 export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
 
@@ -22,10 +23,10 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
     # Create ACF fields
     echo "{
     \"key\": \"group_${RANDOMHASH}\",
-    \"title\": \"\Lohko: ${BLOCK_UI_TITLE}\",
+    \"title\": \"Lohko: ${BLOCK_UI_TITLE}\",
     \"fields\": [
         {
-            \"key\": \"field_61d415d4bb6b7\",
+            \"key\": \"field_${RANDOMHASH_FIELD}\",
             \"label\": \"Tekstisisältö\",
             \"name\": \"content\",
             \"type\": \"wysiwyg\",
@@ -49,7 +50,7 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
             {
                 \"param\": \"block\",
                 \"operator\": \"==\",
-                \"value\": \"acf\/content\"
+                \"value\": \"acf\/${BLOCK_NAME}\"
             }
         ]
     ],
