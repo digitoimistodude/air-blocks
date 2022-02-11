@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:10:10
+# @Last Modified time: 2022-02-11 12:14:27
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
@@ -120,4 +120,4 @@ sed -e "/\'acf_blocks\' \=\> \[/a\\
       [|\
        'name' => '§',|\
        'title' => 'µ',|\
-      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' | sed "s|§|${BLOCK_NAME}|g" | sed "s|µ|${BLOCK_UI_TITLE}|g" > tmpfile
+      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' | sed "s|§|${BLOCK_NAME}|g" | sed "s|µ|${BLOCK_UI_TITLE}|g" > ${PROJECT_THEME_PATH}/tmpfile
