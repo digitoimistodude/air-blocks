@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-07 17:04:21
+# @Last Modified time: 2022-02-11 11:23:02
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -66,16 +66,42 @@ echo ""
 read -e BLOCK_NUMBER
 
 # Exit if not number
-REGNUMBERS='^[0-9]+$'
-if ! [[ $BLOCK_NUMBER =~ $REGNUMBERS ]] ; then
+REGNUMBERSANDQUESTION='^[0-9\\?]+$'
+if ! [[ $BLOCK_NUMBER =~ $REGNUMBERSANDQUESTION ]] ; then
    echo "
-${RED}Error: $BLOCK_NUMBER is not a number.${TXTRESET}
+${RED}Error: $BLOCK_NUMBER is not one of the choices.${TXTRESET}
 ";
    exit
 fi
 
-# Select block by number
-BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+REGNUMBERS='^[0-9]+$'
+if ! [[ $BLOCK_NUMBER =~ $REGNUMBERS ]] ; then
+
+  # Set new block to true
+  export IS_NEW_BLOCK="yes"
+
+  # Ask block name
+  echo "
+${BOLDYELLOW}New block name (kebab-case):${TXTRESET} "
+
+  # Read given project name
+  read -e BLOCK_NAME
+
+  # Ask block name
+  echo "
+${BOLDYELLOW}New block title shown in UI (this can be normal text like: Hero with small image):${TXTRESET} "
+
+  # Read given project name
+  read -e BLOCK_UI_TITLE
+
+else
+
+  # Set new block to true
+  export IS_NEW_BLOCK="no"
+
+  # Select block by number
+  export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+fi
 
 # Add extra line break
 echo ""
