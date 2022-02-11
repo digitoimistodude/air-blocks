@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 11:47:29
+# @Last Modified time: 2022-02-11 12:38:25
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -89,7 +89,7 @@ ${BOLDYELLOW}New block name (kebab-case):${TXTRESET} "
 
   # Ask block name
   echo "
-${BOLDYELLOW}New block title shown in UI (this can be normal text like: Hero with small image):${TXTRESET} "
+${BOLDYELLOW}New block title shown in UI (without \"Block:\" text, for example: Two columns):${TXTRESET} "
 
   # Read given project name
   read -e BLOCK_UI_TITLE
