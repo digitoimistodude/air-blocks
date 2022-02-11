@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 11:42:25
+# @Last Modified time: 2022-02-11 12:02:13
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
@@ -18,6 +18,52 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
     exit
   else
     echo "${YELLOW}Creating ${BLOCK_NAME} block assets...${TXTRESET}"
+
+    # Create ACF fields
+    echo "{
+    \"key\": \"group_${RANDOMHASH}\",
+    \"title\": \"\Lohko: ${BLOCK_UI_TITLE}\",
+    \"fields\": [
+        {
+            \"key\": \"field_61d415d4bb6b7\",
+            \"label\": \"Tekstisisältö\",
+            \"name\": \"content\",
+            \"type\": \"wysiwyg\",
+            \"instructions\": \"\",
+            \"required\": 0,
+            \"conditional_logic\": 0,
+            \"wrapper\": {
+                \"width\": \"\",
+                \"class\": \"\",
+                \"id\": \"\"
+            },
+            \"default_value\": \"\",
+            \"tabs\": \"all\",
+            \"toolbar\": \"full\",
+            \"media_upload\": 1,
+            \"delay\": 0
+        }
+    ],
+    \"location\": [
+        [
+            {
+                \"param\": \"block\",
+                \"operator\": \"==\",
+                \"value\": \"acf\/content\"
+            }
+        ]
+    ],
+    \"menu_order\": 0,
+    \"position\": \"normal\",
+    \"style\": \"default\",
+    \"label_placement\": \"top\",
+    \"instruction_placement\": \"label\",
+    \"hide_on_screen\": \"\",
+    \"active\": true,
+    \"description\": \"\",
+    \"show_in_rest\": 0,
+    \"modified\": 1641289198
+}" > ${BLOCK_ACF_JSON_PATH}
 
   # The block file
   echo "<?php
@@ -73,4 +119,4 @@ sed -e "/\'acf_blocks\' \=\> \[/a\\
       [|\
        'name' => '§',|\
        'title' => 'µ',|\
-      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' | tr '§' ${BLOCK_NAME} | tr 'µ' ${BLOCK_UI_TITLE} > ${PROJECT_THEME_PATH}/tmpfile
+      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' | sed "s|§|${BLOCK_NAME}|g" | sed "s|µ|${BLOCK_UI_TITLE}|g" > tmpfile
