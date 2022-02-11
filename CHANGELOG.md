@@ -1,8 +1,8 @@
-### [Unreleased]
+### 1.0.5: 2022-02-11
 
-* New feature: You can now add new empty blocks!
+* New feature: You can now add new empty starters for your new blocks
 
-### 1.0.4: 2021-02-10
+### 1.0.4: 2022-02-10
 
 * Fix 5.9 related WSOD
 * Disable air-helper media directory hook as it breaks things in production
@@ -11,7 +11,7 @@
 * newblock.sh block importer: Add carousel
 * New feature: Activates the block ACF fields automatically (no extra step with "Sync available" > Import)
 
-### 1.0.3: 2021-02-08
+### 1.0.3: 2022-02-08
 
 * Multiple bugfixes
 * New block: Content
