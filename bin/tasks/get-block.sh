@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 11:35:07
+# @Last Modified time: 2022-02-11 11:46:57
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -17,7 +17,7 @@ mkdir -p ${PROJECT_THEME_PATH}/template-parts/blocks
 # ACF related tasks
 source ${SCRIPTS_LOCATION}/tasks/acf.sh
 
-if ! [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
+if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
   source ${SCRIPTS_LOCATION}/tasks/create-empty-block.sh
 else
 

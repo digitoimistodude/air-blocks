@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 11:23:02
+# @Last Modified time: 2022-02-11 11:47:29
 
 # General vars
 ENV_FILE="${HOME}/.env_createproject"
@@ -102,9 +102,6 @@ else
   # Select block by number
   export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
 fi
-
-# Add extra line break
-echo ""
 
 # Ask project name
 echo "
