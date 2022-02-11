@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:19:23
+# @Last Modified time: 2022-02-11 12:23:27
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
@@ -84,10 +84,10 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
 
 namespace Air_Light;
 
-if ( ! isset( $args ) ) {
-  $title = get_field( 'title' );
+if ( ! isset( \$args ) ) {
+  \$title = get_field( 'title' );
 } else {
-  $title = $args['title'];
+  \$title = \$args['title'];
 }
 
 if ( empty( \$title ) ) {
@@ -100,7 +100,7 @@ if ( empty( \$title ) ) {
   <div class=\"container\">
 
   <h1>
-    <?php echo esc_html( $title ); ?>
+    <?php echo esc_html( \$title ); ?>
   </h1>
 
   <!-- Your content -->
