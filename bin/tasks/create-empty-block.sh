@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:23:24
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:23:27
+# @Last Modified time: 2022-02-15 11:13:45
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
@@ -71,7 +71,7 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
 /**
  * The template for ${BLOCK_NAME}
  *
- * Description of your block goes here.
+ * Description of your block called \"${BLOCK_NAME}\" goes here.
  *
  * @Author:		Roni Laukkarinen
  * @Date:   		2022-02-10 12:28:36
@@ -96,14 +96,14 @@ if ( empty( \$title ) ) {
 }
 ?>
 
-<section class=\"block block-example\">
+<section class=\"block block-${BLOCK_NAME}\">
   <div class=\"container\">
 
   <h1>
     <?php echo esc_html( \$title ); ?>
   </h1>
 
-  <!-- Your content -->
+  <!-- Start coding here -->
   </div>
 </section>" > ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php
 

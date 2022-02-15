@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Fix adding block class to new block
+
 ### 1.0.5: 2022-02-11
 
 * New feature: You can now add new empty starters for your new blocks
