@@ -7,16 +7,12 @@
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 13:18:44
- * @Last Modified by:   Tuomas Marttila
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-12-13 13:23:01
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-// Files (required):
-// ├── sass/gutenberg/blocks/_content-columns-50-50.scss
-// ├── svg/block-icons/content-columns-50-50.svg
 
 namespace Air_Light;
 

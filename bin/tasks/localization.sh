@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:07:01
+# @Last Modified time: 2022-02-16 14:49:49
 
 # Translate strings for block json (defined in the sh file of the selected block)
 
@@ -30,10 +30,17 @@ sed -e 's/Haitari/Accordion/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_TH
 
 # Block: carousel
 sed -i'' -e 's/\"title\"\: \"Lohko\: Kuvakaruselli\"\,/\"title\"\: \"Block\: Carousel\"\,/
-s/\"label\"\: \"Kuvat/\"button_label\"\: \"Images/' ${BLOCK_ACF_JSON_PATH}
+s/\"label\"\: \"Kuvat/\"label\"\: \"Images/' ${BLOCK_ACF_JSON_PATH}
 
 # General ACF fields
 sed -i'' -e 's/Lohko\:/Block\:/' ${BLOCK_ACF_JSON_PATH}
+
+# Block: content-columns-50-50
+sed -i'' -e 's/\"title\"\: \"Lohko\: Kaksi tekstisisältöpalstaa\"\,/\"title\"\: \"Block\: Two text content columns\"\,/
+s/\"label\"\: \"Oikeanpuoleinen otsikko/\"label\"\: \"Title on the right side/
+s/\"label\"\: \"Vasemmanpuoleinen tekstisisältö/\"label\"\: \"Content on the left side/
+s/\"label\"\: \"Oikeanpuoleinen tekstisisältö/\"label\"\: \"Content on the right side/
+s/\"label\"\: \"Vasemmanpuoleinen otsikko/\"label\"\: \"Title on the left side/' ${BLOCK_ACF_JSON_PATH}
 
 # Block: carousel, translate blocks for functions.php, make changes directly to the file
 sed -e 's/Kuvakaruselli/Carousel/' ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile

@@ -1,6 +1,7 @@
 ### [Unreleased]
 
 * Fix adding block class to new block
+* `newblock`: Add content-columns-50-50
 
 ### 1.0.5: 2022-02-11
 
@@ -11,8 +12,8 @@
 * Fix 5.9 related WSOD
 * Disable air-helper media directory hook as it breaks things in production
 * Fix hero block labels in front end
-* newblock.sh block importer: Add accordion
-* newblock.sh block importer: Add carousel
+* `newblock`: Add accordion
+* `newblock`: Add carousel
 * New feature: Activates the block ACF fields automatically (no extra step with "Sync available" > Import)
 
 ### 1.0.3: 2022-02-08
@@ -27,9 +28,9 @@
 * Check supported Air-light theme version when running block importer
 * Check if theme supports Gutenberg + ACF blocks
 * Major rehaul to newblock logic, add generic commands to get-block.sh
-* newblock.sh block importer: Register ACF block in functions.php
-* newblock.sh block importer: List available blocks
-* newblock.sh block importer: Localizations
+* `newblock`: Register ACF block in functions.php
+* `newblock`: List available blocks
+* `newblock`: Localizations
 * Change block selection to number based selection
 * Make lang selection consistent by number
 * Rename hero block to 'hero-full-height'
