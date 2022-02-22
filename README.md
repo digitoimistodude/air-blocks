@@ -13,7 +13,7 @@ Let us present to you a Gutenberg ACF Block library for renowned [Air-light](htt
 
 Currently this project is aimed for Dude staff only and is largely WIP but you may use it for your own purposes if you'd like. This is practically [Air Gutenberg blocks](https://github.com/digitoimistodude/air-light/wiki/Creating-your-own-Gutenberg-blocks-with-Air-light-and-Advanced-Custom-Fields) with automation and extra spice.
 
-1. Build like any other [dudestack](https://github.com/digitoimistodude/dudestack) + [air-light](https://github.com/digitoimistodude/air-light) based project ([Development team instructions in Finnish](https://handbook.dude.fi/wordpress-kehitys/projektin-aloitus#myohemmin-projektiin-mukana-tulevan-devaajan-tehtavat))
+1. Build like any other [dudestack](https://github.com/digitoimistodude/dudestack) + [air-light](https://github.com/digitoimistodude/air-light) based project
 2. Open Terminal, navigate to the bin folder under project root
 3. Run `bash newtheme.sh`
 4. Follow instructions
