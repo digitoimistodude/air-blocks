@@ -2,8 +2,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-08 16:03:52
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-22 12:35:21
+# @Last Modified time: 2022-02-22 13:44:35
 # Tasks after functions.php has been updated
+
+# Let's go to the project directory
+cd ${PROJECTS_HOME}/${PROJECT_NAME}
 
 # Remove the file without any changes
 rm ${PROJECT_THEME_PATH}/functions.php
