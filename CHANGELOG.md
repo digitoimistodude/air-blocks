@@ -1,7 +1,8 @@
-### [Unreleased]
+### 1.0.6: 2022-02-22
 
 * Fix adding block class to new block
 * `newblock`: Add content-columns-50-50
+* Add separate post-block tasks for empty-block, fix functions.php replacement task
 
 ### 1.0.5: 2022-02-11
 

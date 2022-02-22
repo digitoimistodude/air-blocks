@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-08 16:03:52
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-10 14:40:45
+# @Last Modified time: 2022-02-22 12:35:21
 # Tasks after functions.php has been updated
 
 # Remove the file without any changes
@@ -22,17 +22,17 @@ echo "${BOLDYELLOW}Importing ACF fields (json)...${TXTRESET} "
 if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
   # Run localization task
   source ${SCRIPTS_LOCATION}/tasks/localization.sh
+
+  # Tasks after functions.php has been updated, again (in localization.sh)
+  # Remove the file without any changes
+  rm ${PROJECT_THEME_PATH}/functions.php
+
+  # Rename the changed file to the official one
+  mv ${PROJECT_THEME_PATH}/tmpfile ${PROJECT_THEME_PATH}/functions.php
 fi
 
 # Just import the ACF fields file
 cp -nv ${BLOCK_ACF_JSON_PATH} ${PROJECT_THEME_PATH}/acf-json/
-
-# Tasks after functions.php has been updated, again (in localization.sh)
-# Remove the file without any changes
-rm ${PROJECT_THEME_PATH}/functions.php
-
-# Rename the changed file to the official one
-mv ${PROJECT_THEME_PATH}/tmpfile ${PROJECT_THEME_PATH}/functions.php
 
 # Run gulp for SCSS and JS once
 echo "${BOLDYELLOW}Running gulp tasks (requires npm packages to be installed previously)...${TXTRESET} "

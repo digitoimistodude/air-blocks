@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 11:46:57
+# @Last Modified time: 2022-02-22 12:37:03
 echo "${YELLOW}Checking block updates...${TXTRESET}"
 cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
@@ -58,4 +58,8 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
 fi
 
 # Tasks that should be run after block-specific tasks
-source ${SCRIPTS_LOCATION}/tasks/post-block.sh
+if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
+  source ${SCRIPTS_LOCATION}/tasks/post-block-empty-block.sh
+else
+  source ${SCRIPTS_LOCATION}/tasks/post-block.sh
+fi
