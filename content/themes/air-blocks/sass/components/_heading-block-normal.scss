@@ -1,7 +1,0 @@
-@mixin heading-block-normal() {
-  font-size: var(--font-size-28);
-}
-
-.heading-block-normal {
-  @include heading-block-normal();
-}

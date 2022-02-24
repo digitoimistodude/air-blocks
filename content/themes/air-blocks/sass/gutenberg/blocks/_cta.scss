@@ -1,6 +1,5 @@
 // NB! These needs to be set:
 // _font-size.scss: --font-size-28: 28px; + breakpoints
-// Components: heading-block-normal();
 
 // CTA block
 .block-cta {
@@ -36,7 +35,7 @@
   }
 
   h2 {
-    @include heading-block-normal();
+    font-size: var(--font-size-28);
     margin-bottom: 2rem;
   }
 

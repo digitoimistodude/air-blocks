@@ -1,6 +1,10 @@
 ### [Unreleased]
 
 * Add form block importer script
+* General fixes
+* Fix sed: functions.php: No such file or directory when trying to import existing block
+* Ensure that tmpfiles are deleted when they are no longer needed
+* Drop heading-block-small() and heading-block-normal() components to simplify the process
 
 ### 1.0.6: 2022-02-22
 

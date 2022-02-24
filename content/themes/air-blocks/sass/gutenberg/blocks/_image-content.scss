@@ -1,5 +1,5 @@
 // NB! These needs to be set:
-// Components: heading-block-normal();
+// _font-size.scss: --font-size-28: 28px; + breakpoints
 
 // Image content block
 .block-image-content {
@@ -32,7 +32,7 @@
   }
 
   h2 {
-    @include heading-block-normal();
+    font-size: var(--font-size-28);
     margin-bottom: 2rem;
   }
 

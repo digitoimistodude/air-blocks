@@ -1,6 +1,3 @@
-// NB! These needs to be set:
-// Components: heading-block-normal();
-
 // Form block
 .block-form {
   .container {
@@ -14,7 +11,7 @@
   }
 
   h2 {
-    @include heading-block-normal();
+    font-size: var(--font-size-28);
     margin-bottom: 1.5rem;
   }
 }
