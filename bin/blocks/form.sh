@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 17:22:18
+# @Last Modified time: 2022-02-24 17:25:24
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -13,7 +13,7 @@
 # // Changes to files/folders:
 # // ├── sass/gutenberg/_blocks.scss
 # // ├── acf-json/
-# // ├── sass/variables/_font-sizes.scss
+# // ├── sass/variables/_font-size.scss
 # // ├── inc/includes.php
 # // └── functions.php
 
@@ -25,11 +25,11 @@ export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FI
 if grep -q "font-size-28" ${ENV_FILE}; then
   echo ""
 else
-# Import font-size to _font-sizes.scss
+# Import font-size to _font-size.scss
 sed -e "/\/\/ Heading font sizes/a\\
-  --font-size-28: 28px;" < ${PROJECT_THEME_PATH}/sass/variables/_font-sizes.scss > ${PROJECT_THEME_PATH}/sass/variables/_font-sizes_with_changes.scss
-rm ${PROJECT_THEME_PATH}/sass/variables/_font-sizes.scss
-mv ${PROJECT_THEME_PATH}/sass/variables/_font-sizes_with_changes.scss ${PROJECT_THEME_PATH}/sass/variables/_font-sizes.scss
+  --font-size-28: 28px;" < ${PROJECT_THEME_PATH}/sass/variables/_font-size.scss > ${PROJECT_THEME_PATH}/sass/variables/_font-size_with_changes.scss
+rm ${PROJECT_THEME_PATH}/sass/variables/_font-size.scss
+mv ${PROJECT_THEME_PATH}/sass/variables/_font-size_with_changes.scss ${PROJECT_THEME_PATH}/sass/variables/_font-size.scss
 fi
 
 # Let's go to the project directory
@@ -137,7 +137,7 @@ echo "
 ${BOLDGREEN}
 .----------------------------------------------------------------- - -
 | NOTE: Remember to disable Gravity Forms default CSS: https://${PROJECT_NAME}.test/wp/wp-admin/admin.php?page=gf_settings
-| Also, tweak the font-sizes, especially variable --font-size-28 in _font-sizes.scss
+| Also, tweak the font-size, especially variable --font-size-28 in _font-size.scss
 | as a component or media queries if needed
 '------------------------------------------------------- - - -
 ${TXTRESET}
