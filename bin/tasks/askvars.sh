@@ -2,10 +2,10 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-11 12:38:25
+# @Last Modified time: 2022-02-24 16:20:55
 
 # General vars
-ENV_FILE="${HOME}/.env_createproject"
+export ENV_FILE="${HOME}/.env_createproject"
 
 # Do we ask for lang or not
 if grep -q "AIR_BLOCKS_LANG" ${ENV_FILE}; then
@@ -84,14 +84,14 @@ if ! [[ $BLOCK_NUMBER =~ $REGNUMBERS ]] ; then
   echo "
 ${BOLDYELLOW}New block name (kebab-case):${TXTRESET} "
 
-  # Read given project name
+  # Read given block name
   read -e BLOCK_NAME
 
   # Ask block name
   echo "
 ${BOLDYELLOW}New block title shown in UI (without \"Block:\" text, for example: Two columns):${TXTRESET} "
 
-  # Read given project name
+  # Read given block ui title
   read -e BLOCK_UI_TITLE
 
 else

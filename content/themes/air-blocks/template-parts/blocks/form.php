@@ -7,19 +7,12 @@
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 08:41:59
- * @Last Modified by:   Tuomas Marttila
+ * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2021-12-15 08:58:03
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-// Files (required):
-// ├── sass/gutenberg/blocks/_form.scss
-// ├── inc/includes/acf-field-gravity-forms.php
-// └── svg/block-icons/form.svg
-// include acf-field-gravity-forms.php to inc/includes.php
-// disable gravity forms default css
 
 namespace Air_Light;
 
