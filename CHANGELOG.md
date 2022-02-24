@@ -1,4 +1,4 @@
-### [Unreleased]
+### 1.0.7: 2022-02-24
 
 * Add form block importer script
 * General fixes
