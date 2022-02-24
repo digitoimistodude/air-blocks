@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 17:31:14
+# @Last Modified time: 2022-02-24 17:52:21
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -126,6 +126,12 @@ if ( class_exists( 'acf_field' ) ) {
   require get_theme_file_path( '/inc/includes/acf-field-gravity-forms.php' );
 }
 " >> ${PROJECT_THEME_PATH}/inc/includes.php
+fi
+
+# Block specific localizations
+if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
+  sed -i'' -e 's/\Lomake/\form/
+s/\"label\"\: \"Tekstin valinta/\"label\"\: \"Text choices/' ${PROJECT_THEME_PATH}/inc/includes/acf-field-gravity-forms.php
 fi
 
 # Register ACF block in functions.php
