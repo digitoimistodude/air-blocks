@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 17:25:24
+# @Last Modified time: 2022-02-24 17:28:32
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -97,18 +97,21 @@ sed -e "/\"repositories\"\: \[/a\\
 rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 
+# Let's go to the project directory
+cd ${PROJECTS_HOME}/${PROJECT_NAME}
+
 # Install composer plugins
 composer update
 composer install
-
-# Activate gravity forms
-./vendor/wp-cli/wp-cli/bin/wp plugin activate gravityforms
 
 # Import default form
 ./vendor/wp-cli/wp-cli/bin/wp gf form import ${BLOCKS_PATH_TEMP}/gf-feedback-form.json
 
 # Install Gravity Forms
 ./vendor/wp-cli/wp-cli/bin/wp gf install --key=${GF_LICENSE_KEY}
+
+# Activate gravity forms
+./vendor/wp-cli/wp-cli/bin/wp plugin activate gravityforms
 
 # Copy hook files
 cp -nv ${AIRBLOCKS_THEME_PATH}/inc/includes/acf-field-gravity-forms.php ${PROJECT_THEME_PATH}/inc/includes/
