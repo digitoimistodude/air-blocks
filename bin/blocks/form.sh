@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 16:57:18
+# @Last Modified time: 2022-02-24 16:58:26
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -22,7 +22,7 @@ export BLOCK_ACF_JSON_FILE="group_60acfb9d5db81.json"
 export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
 
 # Check if font-size is found
-if grep -q "--font-size-28" ${ENV_FILE}; then
+if grep -q "font-size-28" ${ENV_FILE}; then
   echo ""
 else
 # Import font-size to _font-sizes.scss
