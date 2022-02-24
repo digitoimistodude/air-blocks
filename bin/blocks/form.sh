@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 16:51:19
+# @Last Modified time: 2022-02-24 16:57:18
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -94,5 +94,11 @@ sed -e "/\'acf_blocks\' \=\> \[/a\\
       ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile
 
 echo "
-${BOLDGREEN}NOTE: Remember to disable Gravity Forms default CSS: https://${PROJECT_NAME}.test/wp/wp-admin/admin.php?page=gf_settings${TXTRESET}
+
+.----------------------------------------------------------------- - -
+| ${BOLDGREEN}NOTE: Remember to disable Gravity Forms default CSS: https://${PROJECT_NAME}.test/wp/wp-admin/admin.php?page=gf_settings${TXTRESET}
+| Also, tweak the font-sizes, especially variable --font-size-28 in _font-sizes.scss
+| as a component or media queries if needed
+'------------------------------------------------------- - - -
+
 "
