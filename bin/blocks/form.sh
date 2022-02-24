@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 16:58:26
+# @Last Modified time: 2022-02-24 17:22:18
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -49,7 +49,7 @@ composer require wpackagist-plugin/gravityformscli
 # Activate gravity forms CLI plugin
 ./vendor/wp-cli/wp-cli/bin/wp plugin activate gravityformscli
 
-# Do we ask for lang or not
+# Let's check if env exists
 if grep -q "GF_LICENSE_KEY" ${ENV_FILE}; then
   # If found
   # Get var from env
@@ -66,6 +66,46 @@ ${YELLOW}(Pro tip: Set up GF_LICENSE_KEY=key to ${ENV_FILE} if you do not want t
   read -e GF_LICENSE_KEY
   export GF_LICENSE_KEY
 fi
+
+# Let's check the project env
+if grep -q "WP_PLUGIN_GF_KEY" ${ENV_FILE_PROJECT}; then
+  echo ""
+else
+  # If not found
+  # Add to project env
+  echo "WP_PLUGIN_GF_KEY=${GF_LICENSE_KEY}" >> ${ENV_FILE_PROJECT}
+fi
+
+# Update composer.json repositories
+sed -e "/\"repositories\"\: \[/a\\
+    \{|\
+      \"type\": \"package\"\,|\
+      \"package\"\: \{|\
+        \"name\"\: \"gravityforms\/gravityforms\"\,|\
+        \"version\"\: \"2.5.14.3\"\,|\
+        \"\type\"\: \"wordpress-plugin\"\,|\
+        \"\dist\"\: \{|\
+          \"type\"\: \"zip\"\,|\
+          \"url\"\: \"https:\/\/www.gravityhelp.com\/wp-content\/plugins\/gravitymanager\/api.php\?op\=get_plugin\&slug=gravityforms\&key=\{\%WP_PLUGIN_GF_KEY\}\"|\
+        \}\,|\
+        \"require\"\: \{|\
+          \"composer/installers\"\: \"\^1.4\"\,|\
+          \"gotoandplay/gravityforms-composer-installer\"\: \"\^2.3\"|\
+        \}|\
+      \}|\
+    \},\\" < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
+rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+
+# Install composer plugins
+composer update
+composer install
+
+# Activate gravity forms
+./vendor/wp-cli/wp-cli/bin/wp plugin activate gravityforms
+
+# Import default form
+./vendor/wp-cli/wp-cli/bin/wp gf form import ${BLOCKS_PATH_TEMP}/gf-feedback-form.json
 
 # Install Gravity Forms
 ./vendor/wp-cli/wp-cli/bin/wp gf install --key=${GF_LICENSE_KEY}
@@ -94,11 +134,11 @@ sed -e "/\'acf_blocks\' \=\> \[/a\\
       ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile
 
 echo "
-
+${BOLDGREEN}
 .----------------------------------------------------------------- - -
-| ${BOLDGREEN}NOTE: Remember to disable Gravity Forms default CSS: https://${PROJECT_NAME}.test/wp/wp-admin/admin.php?page=gf_settings${TXTRESET}
+| NOTE: Remember to disable Gravity Forms default CSS: https://${PROJECT_NAME}.test/wp/wp-admin/admin.php?page=gf_settings
 | Also, tweak the font-sizes, especially variable --font-size-28 in _font-sizes.scss
 | as a component or media queries if needed
 '------------------------------------------------------- - - -
-
+${TXTRESET}
 "

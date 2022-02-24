@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:09:25
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 16:20:55
+# @Last Modified time: 2022-02-24 17:09:27
 
 # General vars
 export ENV_FILE="${HOME}/.env_createproject"
@@ -120,3 +120,6 @@ read -e THEME_NAME
 # Add these variables based on asked vars
 export PROJECT_PATH="${PROJECTS_HOME}/${PROJECT_NAME}"
 export PROJECT_THEME_PATH="${PROJECTS_HOME}/${PROJECT_NAME}/content/themes/${THEME_NAME}"
+
+# Env file for project
+export ENV_FILE_PROJECT="${PROJECT_PATH}/.env"
