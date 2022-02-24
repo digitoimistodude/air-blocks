@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:07:42
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-16 14:49:49
+# @Last Modified time: 2022-02-24 17:37:02
 
 # Translate strings for block json (defined in the sh file of the selected block)
 
@@ -34,6 +34,7 @@ s/\"label\"\: \"Kuvat/\"label\"\: \"Images/' ${BLOCK_ACF_JSON_PATH}
 
 # General ACF fields
 sed -i'' -e 's/Lohko\:/Block\:/' ${BLOCK_ACF_JSON_PATH}
+sed -i'' -e 's/\: Lomake/\: Form/' ${BLOCK_ACF_JSON_PATH}
 
 # Block: content-columns-50-50
 sed -i'' -e 's/\"title\"\: \"Lohko\: Kaksi tekstisisältöpalstaa\"\,/\"title\"\: \"Block\: Two text content columns\"\,/
