@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 17:52:21
+# @Last Modified time: 2022-02-25 10:48:37
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -73,7 +73,8 @@ if grep -q "WP_PLUGIN_GF_KEY" ${ENV_FILE_PROJECT}; then
 else
   # If not found
   # Add to project env
-  echo "WP_PLUGIN_GF_KEY=${GF_LICENSE_KEY}" >> ${ENV_FILE_PROJECT}
+  echo "
+WP_PLUGIN_GF_KEY=${GF_LICENSE_KEY}" >> ${ENV_FILE_PROJECT}
 fi
 
 # Update composer.json repositories
