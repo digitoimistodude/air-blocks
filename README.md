@@ -5,7 +5,7 @@ Let us present to you a Gutenberg ACF Block library for renowned [Air-light](htt
 
 ## Full featured automated block-importer
 
-It's that easy:
+One command. It's that easy. See [documentation](https://docs.airwptheme.com/air-blocks/block-library).
 
 ```shell
 newblock
@@ -13,7 +13,7 @@ newblock
 
 **Air-blocks** aims to be a fully automated block library with one command strategy just like [air-light](https://github.com/digitoimistodude/air-light) and [dudestack](https://github.com/digitoimistodude/dudestack) before it.
 
-## [Block library](https://blocks.airwptheme.com) | [Documentation](https://github.com/digitoimistodude/air-light/wiki#2-getting-started-in-theming-with-air-light)
+## [Block library](https://blocks.airwptheme.com) | [Documentation](https://docs.airwptheme.com/air-blocks/block-library)
 
 ![Screenshot](/content/themes/air-blocks/screenshot.png?raw=true "Screenshot")
 
