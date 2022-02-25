@@ -11,8 +11,6 @@ It's that easy:
 newblock
 ```
 
-![2022-02-25 11 15 44](https://user-images.githubusercontent.com/1534150/155688888-3ef33fc3-731d-4ea2-b4f0-dc47ee5017cd.gif)
-
 **Air-blocks** aims to be a fully automated block library with one command strategy just like [air-light](https://github.com/digitoimistodude/air-light) and [dudestack](https://github.com/digitoimistodude/dudestack) before it.
 
 ## [Block library](https://blocks.airwptheme.com) | [Documentation](https://github.com/digitoimistodude/air-light/wiki#2-getting-started-in-theming-with-air-light)
