@@ -1,7 +1,17 @@
 # Block library for Air-light
 ![based_on_air_version 8.1.8_](https://img.shields.io/badge/based_on_air_version-8.1.8_-brightgreen.svg?style=flat-square) [![GitHub release](https://img.shields.io/github/tag/digitoimistodude/air-blocks.svg?style=flat-square)](https://github.com/digitoimistodude/air-blocks/releases) ![GitHub contributors](https://img.shields.io/github/contributors/digitoimistodude/air-blocks.svg?style=flat-square)
 
-Let us present to you a Gutenberg ACF Block library for renowned [Air-light](https://github.com/digitoimistodude/air-light) WordPress starter theme. 
+Let us present to you a Gutenberg ACF Block library for renowned [Air-light](https://github.com/digitoimistodude/air-light) WordPress starter theme.
+
+## Full featured automated block-importer
+
+It's that easy:
+
+```shell
+newblock
+```
+
+![2022-02-25 11 15 44](https://user-images.githubusercontent.com/1534150/155688888-3ef33fc3-731d-4ea2-b4f0-dc47ee5017cd.gif)
 
 **Air-blocks** aims to be a fully automated block library with one command strategy just like [air-light](https://github.com/digitoimistodude/air-light) and [dudestack](https://github.com/digitoimistodude/dudestack) before it.
 
@@ -15,8 +25,8 @@ Currently this project is aimed for Dude staff only and is largely WIP but you m
 
 1. Build like any other [dudestack](https://github.com/digitoimistodude/dudestack) + [air-light](https://github.com/digitoimistodude/air-light) based project
 2. Open Terminal, navigate to the bin folder under project root
-3. Run `bash newtheme.sh`
+3. Run `bash newblock.sh`
 4. Follow instructions
-5. Run `newtheme`
+5. Run `newblock`
 
 I hope you enjoy our blocks!
