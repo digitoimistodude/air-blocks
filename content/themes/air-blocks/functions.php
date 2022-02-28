@@ -6,8 +6,8 @@
  * own files under /inc and just require here.
  *
  * @Date: 2019-10-15 12:30:02
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2022-02-08 10:04:09
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-02-28 14:17:27
  *
  * @package airblocks
  */
@@ -142,6 +142,7 @@ add_action( 'after_setup_theme', function() {
       [
         'name'  => 'form',
         'title' => 'Lomake',
+        'prevent_cache' => true,
       ],
       [
         'name'  => 'carousel',

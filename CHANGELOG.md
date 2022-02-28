@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Add 'prevent_cache' => true to form block
+
 ### 1.0.7: 2022-02-24
 
 * Add form block importer script

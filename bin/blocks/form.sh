@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-25 10:48:37
+# @Last Modified time: 2022-02-28 14:17:44
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -141,6 +141,7 @@ sed -e "/\'acf_blocks\' \=\> \[/a\\
       [|\
        'name' => 'form',|\
        'title' => 'Lomake',|\
+       'prevent_cache' => true,|\
       ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile
 
 echo "
