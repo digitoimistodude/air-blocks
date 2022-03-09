@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-08 16:03:52
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-24 16:59:54
+# @Last Modified time: 2022-03-09 12:06:34
 # Tasks after functions.php has been updated
 
 # Let's go to the project directory
@@ -25,12 +25,6 @@ echo "${BOLDYELLOW}Importing ACF fields (json)...${TXTRESET} "
 if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
   # Run localization task
   source ${SCRIPTS_LOCATION}/tasks/localization.sh
-
-  # Remove the file without any changes
-  rm ${PROJECT_THEME_PATH}/functions.php
-
-  # Rename the changed file to the official one
-  mv ${PROJECT_THEME_PATH}/tmpfile ${PROJECT_THEME_PATH}/functions.php
 fi
 
 # Just import the ACF fields file
