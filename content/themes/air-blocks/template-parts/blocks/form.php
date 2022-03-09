@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for form
+ * Form
  *
- * Description of the file called
- * form.
+ * A form block.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 08:41:59
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-15 08:58:03
+ * @Last Modified time: 2022-03-09 10:46:21
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

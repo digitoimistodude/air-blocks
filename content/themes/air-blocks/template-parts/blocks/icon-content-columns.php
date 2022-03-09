@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for icon-content-columns
+ * Icon and content columns
  *
- * Description of the file called
- * icon-content-columns.
+ * A blog for content columns with icons.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 15:55:55
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 15:56:06
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-03-09 10:47:19
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

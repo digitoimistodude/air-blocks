@@ -1,11 +1,16 @@
 <?php
 /**
+ * Call to Action (CTA)
+ *
+ * Block for call to action elements.
+ *
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 15:45:19
- * @Last Modified by:   Elias Kautto
- * @Last Modified time: 2022-01-13 14:27:21
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-03-09 10:46:14
  *
  * @package air-blocks
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 namespace Air_Light;

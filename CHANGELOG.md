@@ -1,6 +1,8 @@
 ### [Unreleased]
 
 * Add 'prevent_cache' => true to form block
+* Add file header descriptions to each block files
+* Add content block to importer
 
 ### 1.0.7: 2022-02-24
 

@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for content-columns-50-50
+ * Content columns 50%/50%
  *
- * Description of the file called
- * content-columns-50-50.
+ * A block that has content on the left and the right side, stacked on mobile.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 13:18:44
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-13 13:23:01
+ * @Last Modified time: 2022-03-09 10:45:36
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

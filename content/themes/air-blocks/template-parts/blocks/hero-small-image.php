@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for hero-small-image
+ * Hero with small image.
  *
- * Description of the file called
- * hero-small-image.
+ * A block for hero with small image.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2022-02-08 09:46:05
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-08 10:27:28
+ * @Last Modified time: 2022-03-09 10:47:03
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

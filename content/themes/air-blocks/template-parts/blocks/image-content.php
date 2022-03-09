@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for image-content
+ * Image and content
  *
- * Description of the file called
- * image-content.
+ * A block for image and content side by side.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-14 12:42:52
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-14 12:43:06
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-03-09 10:47:49
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -30,7 +29,6 @@ if ( empty( $image ) || empty( $content ) ) {
   maybe_show_error_block( 'Kuva ja tekstisisältö ovat pakollisia' );
   return;
 }
-
 ?>
 
 <section class="block block-image-content image-<?php echo esc_html( $image_side ) ?>">

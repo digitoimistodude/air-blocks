@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for hero-big-image
+ * Hero with big image.
  *
- * Description of the file called
- * hero-big-image.
+ * A hero variation with big image.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2022-02-08 09:45:56
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-08 10:27:15
+ * @Last Modified time: 2022-03-09 10:46:37
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

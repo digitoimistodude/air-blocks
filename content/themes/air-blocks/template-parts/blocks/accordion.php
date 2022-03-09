@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for accordion
+ * Accordion
  *
- * Description of the file called
- * accordion.
+ * Block for accordion elements.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2022-01-07 11:12:46
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-01-07 11:12:49
+ * @Last Modified time: 2022-03-09 10:45:11
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for hero-full-height
+ * Full height hero
  *
- * Description of the file called
- * hero-full-height.
+ * Hero with full height, optionally shows a video background.
  *
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-26 10:46:36
+ * @Last Modified time: 2022-03-09 10:46:50
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for title-content-columns
+ * Title and content
  *
- * Description of the file called
- * title-content-columns.
+ * A block that shows title and content in WYSIWYG, side by side in two columns
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 12:23:42
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 12:24:28
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-03-09 10:48:49
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

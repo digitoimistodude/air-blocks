@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for quote
+ * Quote
  *
- * Description of the file called
- * quote.
+ * Block for all kinds of quotes.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 15:10:07
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-13 15:11:51
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-03-09 10:47:56
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

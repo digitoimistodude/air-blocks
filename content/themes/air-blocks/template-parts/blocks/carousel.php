@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for carousel
+ * Carousel
  *
- * Description of the file called
- * carousel.
+ * Carousel block.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 10:20:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-12-15 10:24:29
+ * @Last Modified time: 2022-03-09 10:45:17
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for image-content-columns
+ * Image and content columns
  *
- * Description of the file called
- * image-content-columns.
+ * A column that shows an image and content.
  *
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-14 11:00:36
- * @Last Modified by:   Tuomas Marttila
- * @Last Modified time: 2021-12-14 11:04:51
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-03-09 10:47:34
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
