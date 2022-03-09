@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-28 14:17:27
+ * @Last Modified time: 2022-03-09 12:00:15
  *
  * @package airblocks
  */
@@ -101,7 +101,7 @@ add_action( 'after_setup_theme', function() {
     'acf_blocks' => [
       [
         'name' => 'hero-full-height',
-        'title' => 'Sivun yläosa korkea',
+        'title' => 'Sivun korkea yläosa',
       ],
       [
         'name' => 'hero-big-image',

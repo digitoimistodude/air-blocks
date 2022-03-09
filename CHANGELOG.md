@@ -3,6 +3,8 @@
 * Add 'prevent_cache' => true to form block
 * Add file header descriptions to each block files
 * Add content block to importer
+* Fix situation that produces extra files with -e suffix
+* Add localizations for all block titles
 
 ### 1.0.7: 2022-02-24
 

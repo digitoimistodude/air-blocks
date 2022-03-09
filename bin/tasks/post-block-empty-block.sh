@@ -28,5 +28,5 @@ vendor/wp-cli/wp-cli/bin/wp eval "acf_import_field_group( json_decode( file_get_
 if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
 
   # General ACF fields, make changes directly to the file
-  sed -i'' -e 's/Lohko\:/Block\:/' ${BLOCK_ACF_JSON_PATH}
+  sed -i '' -e 's/Lohko\:/Block\:/' ${BLOCK_ACF_JSON_PATH}
 fi
