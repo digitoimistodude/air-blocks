@@ -3,6 +3,12 @@
 
 Let us present to you a Gutenberg ACF Block library for renowned [Air-light](https://github.com/digitoimistodude/air-light) WordPress starter theme.
 
+## Prequisities
+
+* Advanced Custom Fields WordPress plugin activated in your project
+* Project powered by a working WP-CLI via [dudestack](https://github.com/digitoimistodude/dudestack)
+* Your terminal has the `md5sum` command available (install via `brew install coreutils`)
+
 ## Full featured automated block-importer
 
 One command. It's that easy. See [documentation](https://docs.airwptheme.com/air-blocks/block-library).
