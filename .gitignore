@@ -1,4 +1,5 @@
 # Dotfiles and directories
+test*
 .DS_Store
 .env
 .env*
