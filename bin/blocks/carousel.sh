@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-05-24 12:12:28
+# @Last Modified time: 2022-05-24 12:13:43
 
 # // New files/Dependencies (this file will install them)::
 # // ├── sass/gutenberg/blocks/_carousel.scss (automatic from get-block.sh)
@@ -39,7 +39,7 @@ rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
 
 # Other SVG icons needed by this block
-cp -nv ${AIRBLOCKS_THEME_PATH}/svg/slider-left-arrow ${PROJECT_THEME_PATH}/svg/
+cp -nv ${AIRBLOCKS_THEME_PATH}/svg/slider-left-arrow.svg ${PROJECT_THEME_PATH}/svg/
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/slider-right-arrow.svg ${PROJECT_THEME_PATH}/svg/
 
 # Register ACF block in functions.php
