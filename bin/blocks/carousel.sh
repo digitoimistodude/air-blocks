@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-05-24 12:13:43
+# @Last Modified time: 2022-05-24 13:29:32
 
 # // New files/Dependencies (this file will install them)::
 # // ├── sass/gutenberg/blocks/_carousel.scss (automatic from get-block.sh)
@@ -37,6 +37,24 @@ sed -e "/\initAnchors\(\)\;/a\\
 initCarousels();" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
+
+# Add carousel settings code to gutenberg-editor.js
+sed -e "/modules\/gutenberg-helpers\'\;/a\\
+import initCarousels from \'\.\/modules\/carousels\'\;\\" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
+rm ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
+mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
+
+# Init carousel inside initializeBlock function
+sed -e "/airblocks_LazyLoad.update();/a\\
+    initCarousels\(\)\;" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
+rm ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
+mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
+
+# Re-run to add another position
+sed -e "/airblocks_LazyLoad.update();/a\\
+  initCarousels\(\)\;" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
+rm ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
+mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 
 # Other SVG icons needed by this block
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/slider-left-arrow.svg ${PROJECT_THEME_PATH}/svg/

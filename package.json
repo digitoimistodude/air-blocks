@@ -1,6 +1,6 @@
 {
   "name": "airblocks",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "airblocks powered by dudestack + devpackages",
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "devDependencies": {

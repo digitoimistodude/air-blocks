@@ -1,3 +1,7 @@
+### 1.0.9: 2022-05-24
+
+* Fix swiper not initting in gutenberg editor js
+
 ### 1.0.8: 2022-05-24
 
 * Bump required version up to 8.4.2 because of the refactored JS in Air-light
