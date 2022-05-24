@@ -6,7 +6,7 @@
 echo "
 ${YELLOW}Checking if we have supported version of the theme...${TXTRESET} "
 
-export AIR_LIGHT_REQUIRED_VERSION="7.0.1"
+export AIR_LIGHT_REQUIRED_VERSION="8.4.2"
 export AIR_LIGHT_THEME_VERSION=$(cat ${PROJECT_THEME_PATH}/functions.php |grep AIR_LIGHT_VERSION |egrep -o '[0-9].*.[0-9]')
 
  if [ "$(printf '%s\n' "$AIR_LIGHT_REQUIRED_VERSION" "$AIR_LIGHT_THEME_VERSION" | sort -V | head -n1)" = "$AIR_LIGHT_REQUIRED_VERSION" ]; then

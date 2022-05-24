@@ -1,6 +1,8 @@
 ### 1.0.8: 2022-05-24
 
+* Bump required version up to 8.4.2 because of the refactored JS in Air-light
 * Replace slick with swiper in carousel block
+* Fix: Add missing file format .svg for carousel SVG
 * Deprecate slick-carousel as per air-light 8.4.7
 * Rewrite demo JS to be consistent with air-light after refactoring in v8.4.2
 * Add 'prevent_cache' => true to form block
