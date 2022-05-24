@@ -2,11 +2,12 @@
  * @Author: Tuomas Marttila
  * @Date:   2021-11-25 13:56:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-05-24 11:37:01
+ * @Last Modified time: 2022-05-24 12:44:02
  */
 /* eslint-disable camelcase, prefer-arrow-callback, no-unused-vars, no-undef, vars-on-top, no-var, func-names, max-len, import/no-unresolved */
 import LazyLoad from 'vanilla-lazyload';
 import { setFigureWidths, setLazyLoadedFigureWidth } from './modules/gutenberg-helpers';
+import initCarousels from './modules/carousels';
 
 // Declare the block you'd like to style.
 wp.blocks.registerBlockStyle('core/paragraph', {
@@ -36,10 +37,12 @@ window.addEventListener('load', function () {
    */
   var initializeBlock = function ($block) {
     airblocks_LazyLoad.update();
+    initCarousels();
   };
 
   // Initialize each block on page load (front end).
   airblocks_LazyLoad.update();
+  initCarousels();
 
   // Set non-lazyloaded figures width so captions in aligned images will be same width as image
   const figures = document.querySelectorAll('figure');
