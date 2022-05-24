@@ -1,5 +1,65 @@
+// General carousel/swiper styles
+@import 'swiper/swiper';
+
+button.swiper-actions,
+button.swiper-actions:focus,
+button.swiper-actions:hover,
+.wp-block .acf-block-preview button.swiper-actions,
+.wp-block .acf-block-preview button.swiper-actions:focus,
+.wp-block .acf-block-preview button.swiper-actions:hover {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-black);
+  padding: 0;
+}
+
+// stylelint-disable
+.site-main button.swiper-actions:hover {
+  opacity: .5;
+}
+
+.swiper-controls {
+  display: flex;
+  gap: 3.7rem;
+  margin-bottom: 6.4rem;
+  transform: translateX(-13px);
+}
+
+ul.swiper-wrapper {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.swiper-slide {
+  margin: 0;
+
+  // Use 100% and slidesPerView: 'auto', if you wan't a full width slider
+  width: auto;
+}
+
+.arrow-link.swiper-button-disabled[disabled]:hover,
+.arrow-link.swiper-button-disabled[disabled]:focus,
+.arrow-link.swiper-button-disabled[disabled] {
+  opacity: .2;
+
+  .arrow-link-arrow::before {
+    width: 70px;
+  }
+}
+
+// Carousel block styles
 .block-carousel {
-  .slider-slide img {
+
+  // Show overflowing content
+  overflow: visible;
+
+  .container,
+  .swiper-container {
+    overflow: visible;
+  }
+
+  img {
     border-radius: 6px;
     height: 500px;
 
@@ -10,38 +70,9 @@
     }
   }
 
-  .slider-slide {
-    padding: 0 40px 0 0;
-  }
-
-  .controls-buttons {
+  .swiper-controls {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 4rem;
   }
-
-  .slick-btn {
-    background-color: transparent;
-    border: 0;
-    color: var(--color-black);
-  }
-
-  // Show overflowing content
-  .container,
-  .slick-list,
-  .slider {
-    overflow: visible;
-  }
-
-  // Hide overflow to the left
-  // .slider::before {
-  //   background-color: var(--color-white);
-  //   bottom: 0;
-  //   content: '';
-  //   left: -100vw;
-  //   position: absolute;
-  //   top: 0;
-  //   width: 100vw;
-  //   z-index: 1;
-  // }
 }

@@ -55,7 +55,7 @@
     "moveto": "^1.8.2",
     "reframe.js": "^3.0.3",
     "sanitize.css": "git+https://github.com/csstools/sanitize.css.git",
-    "slick-carousel": "^1.8.1",
+    "swiper": "^8.1.5",
     "vanilla-lazyload": "^17.5",
     "what-input": "^5.2.10"
   }

@@ -1,5 +1,8 @@
-### [Unreleased]
+### 1.0.8: 2022-05-24
 
+* Replace slick with swiper in carousel block
+* Deprecate slick-carousel as per air-light 8.4.7
+* Rewrite demo JS to be consistent with air-light after refactoring in v8.4.2
 * Add 'prevent_cache' => true to form block
 * Add file header descriptions to each block files
 * Add content block to importer

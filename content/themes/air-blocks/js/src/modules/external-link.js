@@ -1,3 +1,10 @@
+/* eslint-disable no-param-reassign */
+/**
+ * @Author: Roni Laukkarinen
+ * @Date:   2021-09-01 11:55:37
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-05-24 11:47:29
+ */
 /**
  * Style external links
  */
@@ -40,13 +47,17 @@ function isLinkExternal(link, localDomains) {
 }
 
 /**
- * Try to get image alt texts from inside a link
- * to use in aria-label, when only elements inside
- * of link are images
- * @param {*} link DOM link element
- * @returns string
- */
+  * Try to get image alt texts from inside a link
+  * to use in aria-label, when only elements inside
+  * of link are images
+  * @param {*} link DOM link element
+  * @returns string
+  */
 export function getChildAltText(link) {
+  if (typeof link === 'undefined') {
+    return '';
+  }
+
   const children = [...link.children];
 
   if (children.length === 0) {
@@ -76,8 +87,8 @@ export function styleExternalLinks() {
     window.location.host,
   ];
 
-  if (typeof window.airblocks_externalLinkDomains !== 'undefined') {
-    localDomains = localDomains.concat(window.airblocks_externalLinkDomains);
+  if (typeof window.air_light_externalLinkDomains !== 'undefined') {
+    localDomains = localDomains.concat(window.air_light_externalLinkDomains);
   }
 
   const links = document.querySelectorAll('a');
@@ -90,5 +101,22 @@ export function styleExternalLinks() {
     const ariaLabel = externalLink.target === '_blank' ? `${textContent}: ${getLocalization('external_link')}, ${getLocalization('target_blank')}` : `${textContent}: ${getLocalization('external_link')}`;
     externalLink.setAttribute('aria-label', ariaLabel);
     externalLink.classList.add('is-external-link');
+  });
+}
+
+export function initExternalLinkLabels() {
+  // Add aria-labels to links without text or aria-labels and contain image with alt text
+  const links = [...document.querySelectorAll('a')];
+  // eslint-disable-next-line no-unused-vars
+  const linksWithImgChildren = links.forEach((link) => {
+    // If link already has text content or an aria label no need to add aria-label
+    if (link.textContent.trim() !== '' || link.ariaLabel) {
+      return;
+    }
+
+    const ariaLabel = getChildAltText(link);
+    if (ariaLabel !== '') {
+      link.ariaLabel = ariaLabel;
+    }
   });
 }
