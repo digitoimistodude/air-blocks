@@ -14,7 +14,7 @@ export AIR_LIGHT_THEME_VERSION=$(cat ${PROJECT_THEME_PATH}/functions.php |grep A
   echo " "
  else
   echo "
-${RED}The version of your theme '${THEME_NAME}' theme is ${WHITE}${AIR_LIGHT_THEME_VERSION}${RED}. Air-blocks require at least ${WHITE}${AIR_LIGHT_REQUIRED_VERSION}${RED}. Sorry. The newtheme script will now quit...${TXTRESET}
+${RED}The version of your theme '${THEME_NAME}' is ${WHITE}${AIR_LIGHT_THEME_VERSION}${RED}. Air-blocks require at least ${WHITE}${AIR_LIGHT_REQUIRED_VERSION}${RED}. Sorry. The newtheme script will now quit...${TXTRESET}
 "
   exit
  fi
