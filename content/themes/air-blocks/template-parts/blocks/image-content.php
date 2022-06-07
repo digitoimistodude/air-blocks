@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-14 12:42:52
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:47:49
+ * @Last Modified time: 2022-06-07 17:01:56
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -59,7 +59,7 @@ if ( empty( $image ) || empty( $content ) ) {
 
     <div class="col col-image">
       <div class="image has-lazyload">
-        <?php vanilla_lazyload_div( $image ); ?>
+        <?php native_lazyload_tag( $image ); ?>
       </div>
     </div>
 

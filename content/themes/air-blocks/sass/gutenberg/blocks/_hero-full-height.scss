@@ -14,6 +14,15 @@
   display: flex;
   height: calc(var(--vh, 1vh) * 100);
 
+  .image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
   &.block-hero-low {
     height: auto;
   }

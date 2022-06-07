@@ -1,3 +1,7 @@
+### 1.1.1: 2022-06-07
+
+* Change to native `loading="lazy"`
+
 ### 1.1.0: 2022-06-07
 
 * Make Swiper carousel more accessible

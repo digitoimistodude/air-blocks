@@ -7,7 +7,7 @@
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:46:50
+ * @Last Modified time: 2022-06-07 17:02:54
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -50,7 +50,9 @@ if ( empty( $title ) ) {
   <div class="shade" aria-hidden="true"></div>
   <div class="container">
 
-    <?php vanilla_lazyload_div( $bg_image ); ?>
+    <div class="image has-lazyload">
+      <?php native_lazyload_tag( $bg_image ); ?>
+    </div>
 
     <?php if ( ! empty( $video ) ) : ?>
       <video src="<?php echo esc_url( $video['url'] ); ?>" loop muted autoplay></video>

@@ -3,12 +3,11 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-05-24 11:36:18
+ * @Last Modified time: 2022-06-07 17:00:47
  */
 
 // Import modules (comment to disable)
 import MoveTo from 'moveto';
-import LazyLoad from 'vanilla-lazyload';
 import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
 import { styleExternalLinks, getChildAltText, initExternalLinkLabels } from './modules/external-link';
