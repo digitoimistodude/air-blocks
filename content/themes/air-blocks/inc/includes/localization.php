@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2019-12-03 11:03:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-09-02 10:43:53
+ * @Last Modified time: 2022-06-07 16:40:11
  *
  * @package airblocks
  */
@@ -46,7 +46,10 @@ function get_default_localization_strings( $language = 'en' ) {
       'Search'                                       => __( 'Search', 'airblocks' ),
       'Block missing required data'                  => __( 'Block missing required data', 'airblocks' ),
       'This error is shown only for logged in users' => __( 'This error is shown only for logged in users', 'airblocks' ),
-      'No results found for your search'                   => __( 'No results found for your search', 'airblocks' ),
+      'No results found for your search'             => __( 'No results found for your search', 'airblocks' ),
+      'Previous slide'                               => __( 'Previous slide', 'airblocks' ),
+      'Next slide'                                   => __( 'Next slide', 'airblocks' ),
+      'Last slide'                                   => __( 'Last slide', 'airblocks' ),
     ],
     'fi'  => [
       'Add a menu'                                   => 'Luo uusi valikko',
@@ -67,6 +70,9 @@ function get_default_localization_strings( $language = 'en' ) {
       'Block missing required data'                  => 'Lohkon pakollisia tietoja puuttuu',
       'This error is shown only for logged in users' => 'Tämä virhe näytetään vain kirjautuneille käyttäjille',
       'No results for your search'                   => 'Haullasi ei löytynyt tuloksia',
+      'Previous slide'                               => 'Edellinen dia',
+      'Next slide'                                   => 'Seuraava dia',
+      'Last slide'                                   => 'Viimeinen dia',
     ],
   ];
 

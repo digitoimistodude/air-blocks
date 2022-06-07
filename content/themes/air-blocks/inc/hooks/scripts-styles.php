@@ -5,7 +5,7 @@
  * @Author: Niku Hietanen
  * @Date: 2020-02-20 13:46:50
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-09-02 10:44:32
+ * @Last Modified time: 2022-06-07 16:39:17
  *
  * @package airblocks
  */
@@ -58,6 +58,9 @@ function enqueue_theme_scripts() {
     'collapse_toggle' => get_default_localization( 'Close main menu' ),
     'external_link'   => get_default_localization( 'External site' ),
     'target_blank'    => get_default_localization( 'opens in a new window' ),
+    'previous_slide'  => get_default_localization( 'Previous slide' ),
+    'next_slide'      => get_default_localization( 'Next slide' ),
+    'last_slide'      => get_default_localization( 'Last slide' ),
   ] );
 
   // Add domains/hosts to disable external link indicators

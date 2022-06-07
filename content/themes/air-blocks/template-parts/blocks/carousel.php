@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 10:20:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-05-24 11:53:01
+ * @Last Modified time: 2022-06-07 16:43:04
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -41,12 +41,10 @@ if ( empty( $images ) ) {
 
       <div class="swiper-controls" aria-hidden="true">
         <button class="swiper-actions swiper-button-prev">
-          <span class="screen-reader-text">Edellinen</span>
           <?php include get_theme_file_path( '/svg/slider-left-arrow.svg' ); ?>
         </button>
 
         <button class="swiper-actions swiper-button-next">
-          <span class="screen-reader-text">Seuraava</span>
           <?php include get_theme_file_path( '/svg/slider-right-arrow.svg' ); ?>
         </button>
       </div>
