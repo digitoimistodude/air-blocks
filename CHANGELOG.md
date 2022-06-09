@@ -1,3 +1,10 @@
+### 1.1.2: 2022-06-09
+
+* Improve carousel block accessibility: Add aria-hidden toggles
+* Add skip link to carousel block
+* Add support for multiple carousel blocks
+* Add support for carousel block with a scrollbar
+
 ### 1.1.1: 2022-06-07
 
 * Change to native `loading="lazy"`

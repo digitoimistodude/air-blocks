@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 10:20:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-07 16:43:04
+ * @Last Modified time: 2022-06-09 11:50:26
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -30,7 +30,7 @@ if ( empty( $images ) ) {
 
 ?>
 
-<section class="block block-carousel">
+<section class="block block-carousel has-unified-padding-if-stacked is-carousel">
   <div class="container">
 
     <h2 class="screen-reader-text">
@@ -39,7 +39,7 @@ if ( empty( $images ) ) {
 
     <div class="swiper-container">
 
-      <div class="swiper-controls" aria-hidden="true">
+      <div class="swiper-controls">
         <button class="swiper-actions swiper-button-prev">
           <?php include get_theme_file_path( '/svg/slider-left-arrow.svg' ); ?>
         </button>
@@ -49,7 +49,7 @@ if ( empty( $images ) ) {
         </button>
       </div>
 
-      <ul class="quotes swiper-wrapper">
+      <ul class="swiper-wrapper">
         <?php foreach ( $images as $image ) : ?>
           <li class="swiper-slide">
             <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>">

@@ -38,14 +38,10 @@ ul.swiper-wrapper {
   width: auto;
 }
 
-.arrow-link.swiper-button-disabled[disabled]:hover,
-.arrow-link.swiper-button-disabled[disabled]:focus,
-.arrow-link.swiper-button-disabled[disabled] {
+.swiper-button-disabled[disabled]:hover,
+.swiper-button-disabled[disabled]:focus,
+.swiper-button-disabled[disabled] {
   opacity: .2;
-
-  .arrow-link-arrow::before {
-    width: 70px;
-  }
 }
 
 // Carousel block styles
@@ -74,5 +70,27 @@ ul.swiper-wrapper {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 4rem;
+  }
+}
+
+.block.block-reset-styles {
+  background-color: unset;
+  background-image: unset;
+  border: unset;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.block.is-skip-link {
+  @extend .container;
+  height: 0;
+  overflow: visible;
+  padding-bottom: 0;
+  padding-top: 0;
+  position: relative;
+  z-index: 3;
+
+  .skip-link {
+    transform: translateY(-10rem);
   }
 }

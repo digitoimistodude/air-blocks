@@ -116,13 +116,23 @@ body,
     opacity: 1;
   }
 
+  .block.is-skip-link {
+    margin-left: 4.7rem;
+    max-width: 100%;
+    overflow: visible;
+    padding-left: 4.7rem;
+    z-index: 999;
+  }
+
   .block-carousel {
     overflow: visible;
     position: relative;
 
     .container {
+      padding-bottom: 54px;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 0;
     }
 
     .slider-slide img {

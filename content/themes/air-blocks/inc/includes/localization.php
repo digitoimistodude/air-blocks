@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2019-12-03 11:03:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-07 16:40:11
+ * @Last Modified time: 2022-06-09 11:41:27
  *
  * @package airblocks
  */
@@ -39,6 +39,7 @@ function get_default_localization_strings( $language = 'en' ) {
       'Close child menu'                             => __( 'Close child menu', 'airblocks' ),
       'Close child menu for'                         => __( 'Close child menu for', 'airblocks' ),
       'Skip to content'                              => __( 'Skip to content', 'airblocks' ),
+      'Skip over the carousel element'               => __( 'Skip over the carousel element', 'dude' ),
       'External site'                                => __( 'External site', 'airblocks' ),
       'opens in a new window'                        => __( 'opens in a new window', 'airblocks' ),
       'Page not found.'                              => __( 'Page not found.', 'airblocks' ),
@@ -62,6 +63,7 @@ function get_default_localization_strings( $language = 'en' ) {
       'Close child menu'                             => 'Sulje alavalikko',
       'Close child menu for'                         => 'Sulje alavalikko kohteelle',
       'Skip to content'                              => 'Siirry suoraan sisältöön',
+      'Skip over the carousel element'               => 'Hyppää karusellisisällön yli seuraavaan sisältöön',
       'External site'                                => 'Ulkoinen sivusto',
       'opens in a new window'                        => 'avautuu uuteen ikkunaan',
       'Page not found.'                              => 'Hups. Näyttää, ettei sivua löydy.',
