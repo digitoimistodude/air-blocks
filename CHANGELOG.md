@@ -1,3 +1,7 @@
+### 1.1.4: 2022-06-10
+
+* Fix an issue where carousel crashes if last item on the page is not a block but for example a footer instead
+
 ### 1.1.3: 2022-06-10
 
 * Do not add skip-link for carousels in editor view

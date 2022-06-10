@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2022-05-07 12:03:42
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-10 15:28:21
+ * @Last Modified time: 2022-06-10 16:10:06
  */
 import Swiper, {
   Navigation, Pagination, Scrollbar, A11y,
@@ -23,11 +23,11 @@ const initCarousels = () => {
     // Loop through all blocks
     for (let i = 0; i < allCarouselBlocks.length; i++) {
       // Get carousel block class nam (second, because first is 'block')
-      if (typeof allCarouselBlocks[i].classList[1] !== 'undefined' || allCarouselBlocks[i].classList[1] !== null) {
-        const carouselClass = allCarouselBlocks[i].classList[1];
-        const carouselBlock = allCarouselBlocks[i];
-        const nextBlock = carouselBlock.nextElementSibling;
+      const carouselClass = allCarouselBlocks[i].classList[1];
+      const carouselBlock = allCarouselBlocks[i];
+      const nextBlock = carouselBlock.nextElementSibling;
 
+      if (allCarouselBlocks[i].nextElementSibling) {
         // Set ID to next block
         const nextBlockId = `anchor-${carouselClass}`;
         nextBlock.setAttribute('id', nextBlockId);
