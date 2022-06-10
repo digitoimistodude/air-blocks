@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2022-05-07 12:03:42
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-09 11:42:50
+ * @Last Modified time: 2022-06-10 15:28:21
  */
 import Swiper, {
   Navigation, Pagination, Scrollbar, A11y,
@@ -16,32 +16,34 @@ const initCarousels = () => {
   // Init carousels
   const Carousels = document.querySelectorAll('.swiper-container');
 
-  // Add skip links
-  const allCarouselBlocks = document.querySelectorAll('.is-carousel');
+  // Add skip links if not in admin
+  if (!document.body.classList.contains('wp-admin')) {
+    const allCarouselBlocks = document.querySelectorAll('.is-carousel');
 
-  // Loop through all blocks
-  for (let i = 0; i < allCarouselBlocks.length; i++) {
-    // Get carousel block class nam (second, because first is 'block')
-    const carouselClass = allCarouselBlocks[i].classList[1];
-    const carouselBlock = allCarouselBlocks[i];
-    const nextBlock = carouselBlock.nextElementSibling;
+    // Loop through all blocks
+    for (let i = 0; i < allCarouselBlocks.length; i++) {
+      // Get carousel block class nam (second, because first is 'block')
+      if (typeof allCarouselBlocks[i].classList[1] !== 'undefined' || allCarouselBlocks[i].classList[1] !== null) {
+        const carouselClass = allCarouselBlocks[i].classList[1];
+        const carouselBlock = allCarouselBlocks[i];
+        const nextBlock = carouselBlock.nextElementSibling;
 
-    if (typeof nextBlock !== 'undefined' || nextBlock !== null) {
-      // Set ID to next block
-      const nextBlockId = `anchor-${carouselClass}`;
-      nextBlock.setAttribute('id', nextBlockId);
+        // Set ID to next block
+        const nextBlockId = `anchor-${carouselClass}`;
+        nextBlock.setAttribute('id', nextBlockId);
 
-      // Skip link markup
-      const skipLinkContent = `<a class="skip-link screen-reader-text js-trigger" href="#${nextBlockId}">${getLocalization('skip_slider')}</a>`;
+        // Skip link markup
+        const skipLinkContent = `<a class="skip-link screen-reader-text js-trigger" href="#${nextBlockId}">${getLocalization('skip_slider')}</a>`;
 
-      // Add skiplink right before container
-      const skipLinkWrapper = document.createElement('div');
-      skipLinkWrapper.classList.add('block');
-      skipLinkWrapper.classList.add('block-reset-styles');
-      skipLinkWrapper.classList.add('has-unified-padding-if-stacked');
-      skipLinkWrapper.classList.add('is-skip-link');
-      skipLinkWrapper.innerHTML = skipLinkContent;
-      carouselBlock.parentNode.insertBefore(skipLinkWrapper, carouselBlock);
+        // Add skiplink right before container
+        const skipLinkWrapper = document.createElement('div');
+        skipLinkWrapper.classList.add('block');
+        skipLinkWrapper.classList.add('block-reset-styles');
+        skipLinkWrapper.classList.add('has-unified-padding-if-stacked');
+        skipLinkWrapper.classList.add('is-skip-link');
+        skipLinkWrapper.innerHTML = skipLinkContent;
+        carouselBlock.parentNode.insertBefore(skipLinkWrapper, carouselBlock);
+      }
     }
   }
 

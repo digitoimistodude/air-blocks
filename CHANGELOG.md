@@ -1,3 +1,7 @@
+### 1.1.3: 2022-06-10
+
+* Do not add skip-link for carousels in editor view
+
 ### 1.1.2: 2022-06-09
 
 * Improve carousel block accessibility: Add aria-hidden toggles
