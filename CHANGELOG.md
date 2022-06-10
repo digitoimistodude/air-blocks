@@ -1,6 +1,7 @@
 ### 1.1.4: 2022-06-10
 
 * Fix an issue where carousel crashes if last item on the page is not a block but for example a footer instead
+* Update block library demo swiper version to 8.2.3
 
 ### 1.1.3: 2022-06-10
 
