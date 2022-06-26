@@ -1,3 +1,7 @@
+### 1.1.6: 2022-06-26
+
+* Add 88 block icons
+
 ### 1.1.5: 2022-06-26
 
 * Disable replaces that slow the script down
