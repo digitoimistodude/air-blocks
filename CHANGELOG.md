@@ -1,3 +1,8 @@
+### 1.1.5: 2022-06-26
+
+* Disable replaces that slow the script down
+* Use the same script version than the release (1.2.3 is 1.1.5 from now on)
+
 ### 1.1.4: 2022-06-10
 
 * Fix an issue where carousel crashes if last item on the page is not a block but for example a footer instead

@@ -3,11 +3,11 @@
 # @Author: Roni Laukkarinen
 # @Date:   2021-11-23 18:06:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-05-24 13:29:39
+# @Last Modified time: 2022-06-26 11:36:09
 
 # Script specific vars
 SCRIPT_LABEL='for macOS'
-SCRIPT_VERSION='1.2.2'
+SCRIPT_VERSION='1.1.5'
 
 # Vars needed for this file to function globally
 CURRENTFILE=`basename $0`
@@ -34,8 +34,8 @@ ${TXTRESET}"
 # Import required tasks
 source ${SCRIPTS_LOCATION}/tasks/imports.sh
 
-# Replace Air-light with your theme name and other seds
-source ${SCRIPTS_LOCATION}/tasks/replaces.sh
+# Replace Air-light and Air-blocks with your theme name
+# source ${SCRIPTS_LOCATION}/tasks/replaces.sh
 
 # The end
 source ${SCRIPTS_LOCATION}/tasks/footer.sh
