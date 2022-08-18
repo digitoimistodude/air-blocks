@@ -100,14 +100,14 @@ else
   echo "
 ${BOLDYELLOW}Rename block? (y/n):${TXTRESET} "
 
-  # Set renamed to true
-  export IS_RENAMED_BLOCK="yes"
-
   # Read answer y/n
   read -e RENAME_BLOCK
 
   # If we want to rename the block
   if [ "$RENAME_BLOCK" = "y" ]; then
+
+  # Set renamed to true
+  export IS_RENAMED_BLOCK="yes"
 
     # Ask new block name
     echo "
