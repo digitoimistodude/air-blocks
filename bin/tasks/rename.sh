@@ -12,7 +12,7 @@ sed -i '' -e "s;${BLOCK_NAME};${BLOCK_NAME_TO_RENAME_TO};" ${PROJECT_THEME_PATH}
 # NB! This replaces ALL titles in the functions.php, it should replace only the
 # current block title.
 # TODO: Figure out how to replace only the current block title.
-sed -i '' -e "s/'title' \=\> '${BLOCK_UI}',/'title' \=\> '${BLOCK_UI_TITLE_TO_RENAME_TO}',/" ${PROJECT_THEME_PATH}/functions.php
+sed -i '' -e "s/'title' \=\> '${BLOCK_UI_TITLE}',/'title' \=\> '${BLOCK_UI_TITLE_TO_RENAME_TO}',/" ${PROJECT_THEME_PATH}/functions.php
 
 # Renaming block UI name in ACF
 if [[ ${AIR_BLOCKS_LANG} = "fi" ]]; then
