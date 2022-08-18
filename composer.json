@@ -31,7 +31,15 @@
   "config": {
     "preferred-install": "dist",
     "generate-salts": true,
-    "secure-http": true
+    "secure-http": true,
+    "allow-plugins": {
+      "pivvenit/acf-pro-installer": true,
+      "ffraenz/private-composer-installer": true,
+      "gotoandplay/gravityforms-composer-installer": true,
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true,
+      "koodimonni/composer-dropin-installer": true
+    }
   },
   "autoload": {
     "psr-4": {

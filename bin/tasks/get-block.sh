@@ -23,7 +23,7 @@ else
 
   # All the typical tasks that we do in every single block
   # Checking if block already exists
-  if [[ -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php" && -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME_TO_RENAME_TO}.php" ]]; then
+  if [[ -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php" && -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME_TO_RENAME_TO}.php" ]] ; then
     echo "
 ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
   "
@@ -46,26 +46,21 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
     # Block icon
     mkdir -p ${PROJECT_THEME_PATH}/svg/block-icons
     cp -nv ${AIRBLOCKS_THEME_PATH}/svg/block-icons/${BLOCK_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/
-
-      if [[ $IS_RENAMED_BLOCK =~ "yes" ]] ; then
-        echo "${YELLOW}Renaming block...${TXTRESET}"
-        mv ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME_TO_RENAME_TO}.php
-        mv ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/${BLOCK_NAME}.scss ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/${BLOCK_NAME_TO_RENAME_TO}.scss
-        mv ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_NAME_TO_RENAME_TO}.svg
-      else
-        echo ""
-      fi
-
-    fi
   fi
 
   # Start block import script
   if [ -f "${SCRIPTS_LOCATION}/blocks/${BLOCK_NAME}.sh" ]; then
     source ${SCRIPTS_LOCATION}/blocks/${BLOCK_NAME}.sh
   else
-    echo "Block called $BLOCK_NAME does not exist (yet) in the importer script. Or perhaps you mistyped it?"
+    echo "
+${RED}Block called $BLOCK_NAME does not exist (yet) in the importer script. Or perhaps you mistyped it?"
     exit
   fi
+fi
+
+if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
+  # Run localization task
+  source ${SCRIPTS_LOCATION}/tasks/localization.sh
 fi
 
 # Tasks that should be run after block-specific tasks
@@ -73,4 +68,10 @@ if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
   source ${SCRIPTS_LOCATION}/tasks/post-block-empty-block.sh
 else
   source ${SCRIPTS_LOCATION}/tasks/post-block.sh
+fi
+
+# Check if renamed block
+if [[ $IS_RENAMED_BLOCK =~ "yes" ]]; then
+  # Run rename task
+  source ${SCRIPTS_LOCATION}/tasks/rename.sh
 fi

@@ -3,6 +3,12 @@
 # @Date:   2021-11-23 18:28:35
 # @Last Modified by:   Roni Laukkarinen
 # @Last Modified time: 2021-11-23 18:42:39
+
+# Check if renamed block
+if [[ $IS_RENAMED_BLOCK =~ "yes" ]]; then
+  export BLOCK_NAME=$BLOCK_NAME_TO_RENAME_TO
+fi
+
 echo ""
 echo "${BOLDGREEN}All done!${TXTRESET} Block created: ${BLOCK_NAME}"
 echo ""
