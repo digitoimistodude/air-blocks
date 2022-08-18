@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-05-24 13:29:32
+# @Last Modified time: 2022-08-18 15:10:37
 
 # // New files/Dependencies (this file will install them)::
 # // ├── sass/gutenberg/blocks/_carousel.scss (automatic from get-block.sh)
@@ -21,6 +21,7 @@
 # Block specific variables
 export BLOCK_ACF_JSON_FILE="group_61b9a58583b15.json"
 export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
+export BLOCK_UI_TITLE="Kuvakaruselli"
 
 # Install npm dependencies
 cd ${PROJECT_THEME_PATH}
@@ -60,10 +61,3 @@ mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/slider-left-arrow.svg ${PROJECT_THEME_PATH}/svg/
 cp -nv ${AIRBLOCKS_THEME_PATH}/svg/slider-right-arrow.svg ${PROJECT_THEME_PATH}/svg/
 
-# Register ACF block in functions.php
-# Please note: The title of the block will be translated in localization.sh if en is selected
-sed -e "/\'acf_blocks\' \=\> \[/a\\
-      [§\
-       'name' => 'carousel',§\
-       'title' => 'Kuvakaruselli',§\
-      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '§' '\n' > ${PROJECT_THEME_PATH}/tmpfile

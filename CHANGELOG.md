@@ -1,6 +1,8 @@
 ### 1.1.9: 2022-08-18
 
+* Improvements to renaming feature
 * Change default empty block title to h2
+* Globalize block title and name in functions to get-block.sh task
 
 ### 1.1.8: 2022-08-18
 

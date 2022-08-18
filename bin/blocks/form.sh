@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-03-09 11:10:11
+# @Last Modified time: 2022-08-18 15:12:19
 
 # // New files/Dependencies (this file will install them):
 # // ├── template-parts/blocks/form.php (automatic from get-block.sh)
@@ -20,6 +20,7 @@
 # Block specific variables
 export BLOCK_ACF_JSON_FILE="group_60acfb9d5db81.json"
 export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
+export BLOCK_UI_TITLE="Lomake"
 
 # Check if font-size is found
 if grep -q "font-size-28" ${ENV_FILE}; then
@@ -134,15 +135,6 @@ if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
   sed -i '' -e 's/\Lomake/\form/
 s/\"label\"\: \"Tekstin valinta/\"label\"\: \"Text choices/' ${PROJECT_THEME_PATH}/inc/includes/acf-field-gravity-forms.php
 fi
-
-# Register ACF block in functions.php
-# Please note: The title of the block will be translated in localization.sh if en is selected
-sed -e "/\'acf_blocks\' \=\> \[/a\\
-      [|\
-       'name' => 'form',|\
-       'title' => 'Lomake',|\
-       'prevent_cache' => true,|\
-      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile
 
 echo "
 ${BOLDGREEN}

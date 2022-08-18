@@ -58,11 +58,6 @@ ${RED}Block called $BLOCK_NAME does not exist (yet) in the importer script. Or p
   fi
 fi
 
-if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
-  # Run localization task
-  source ${SCRIPTS_LOCATION}/tasks/localization.sh
-fi
-
 # Tasks that should be run after block-specific tasks
 if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
   source ${SCRIPTS_LOCATION}/tasks/post-block-empty-block.sh

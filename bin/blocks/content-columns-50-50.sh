@@ -2,7 +2,7 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-16 14:44:59
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-02-16 14:45:37
+# @Last Modified time: 2022-08-18 15:11:04
 
 # // New files/Dependencies (this file will install them):
 # // ├── sass/gutenberg/blocks/_content-columns-50-50.scss (automatic from get-block.sh)
@@ -16,11 +16,4 @@
 # Block specific variables
 export BLOCK_ACF_JSON_FILE="group_61b729e270116.json"
 export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
-
-# Register ACF block in functions.php
-# Please note: The title of the block will be translated in localization.sh if en is selected
-sed -e "/\'acf_blocks\' \=\> \[/a\\
-      [|\
-       'name' => 'content-columns-50-50',|\
-       'title' => 'Kaksi tekstisisältöpalstaa',|\
-      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile
+export BLOCK_UI_TITLE="Kaksi tekstisisältöpalstaa"
