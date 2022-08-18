@@ -6,9 +6,10 @@ Let us present to you a Gutenberg ACF Block library for renowned [Air-light](htt
 ## Prequisities
 
 * [Homebrew](https://brew.sh/)
-* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/) WordPress plugin activated in your project
-* Project powered by a working WP-CLI via [dudestack](https://github.com/digitoimistodude/dudestack)
 * [md5hsa1sum](https://formulae.brew.sh/formula/md5sha1sum#default)
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/)
+* [WP-CLI](https://wp-cli.org/)
+* [dudestack](https://github.com/digitoimistodude/dudestack)
 
 ## Full featured automated block-importer
 
