@@ -1,3 +1,9 @@
+### 1.1.7: 2022-08-18
+
+* Ensure md5hsa1sum is installed
+* Update README
+* Consistency in version numbers
+
 ### 1.1.6: 2022-06-26
 
 * Add 88 block icons

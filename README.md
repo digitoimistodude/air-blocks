@@ -1,13 +1,14 @@
 # Block library for Air-light
-![based_on_air_version 8.1.8_](https://img.shields.io/badge/based_on_air_version-8.1.8_-brightgreen.svg?style=flat-square) [![GitHub release](https://img.shields.io/github/tag/digitoimistodude/air-blocks.svg?style=flat-square)](https://github.com/digitoimistodude/air-blocks/releases) ![GitHub contributors](https://img.shields.io/github/contributors/digitoimistodude/air-blocks.svg?style=flat-square)
+[![GitHub release](https://img.shields.io/github/tag/digitoimistodude/air-blocks.svg?style=flat-square)](https://github.com/digitoimistodude/air-blocks/releases) ![GitHub contributors](https://img.shields.io/github/contributors/digitoimistodude/air-blocks.svg?style=flat-square)
 
 Let us present to you a Gutenberg ACF Block library for renowned [Air-light](https://github.com/digitoimistodude/air-light) WordPress starter theme.
 
 ## Prequisities
 
-* Advanced Custom Fields WordPress plugin activated in your project
+* [Homebrew](https://brew.sh/)
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/) WordPress plugin activated in your project
 * Project powered by a working WP-CLI via [dudestack](https://github.com/digitoimistodude/dudestack)
-* Your terminal has the `md5sum` command available (install via `brew install coreutils`)
+* [md5hsa1sum](https://formulae.brew.sh/formula/md5sha1sum#default)
 
 ## Full featured automated block-importer
 
