@@ -1,3 +1,7 @@
+### 1.1.9: 2022-08-18
+
+* Change default empty block title to h2
+
 ### 1.1.8: 2022-08-18
 
 * Add support for renaming ready-made blocks

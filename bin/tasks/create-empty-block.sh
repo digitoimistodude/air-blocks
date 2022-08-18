@@ -102,9 +102,9 @@ if ( empty( \$title ) ) {
 <section class=\"block block-${BLOCK_NAME}\">
   <div class=\"container\">
 
-  <h1>
+  <h2>
     <?php echo esc_html( \$title ); ?>
-  </h1>
+  </h2>
 
   <!-- Start coding here -->
   </div>
