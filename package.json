@@ -1,7 +1,7 @@
 {
-  "name": "airblocks",
-  "version": "1.1.7",
-  "description": "airblocks powered by dudestack + devpackages",
+  "name": "air-blocks",
+  "version": "1.1.8",
+  "description": "Gutenberg block library powered by Air-light & dudestack.",
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "devDependencies": {
     "@babel/core": "^7.16.0",

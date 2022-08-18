@@ -1,3 +1,7 @@
+### 1.1.8: 2022-08-18
+
+* Add support for renaming ready-made blocks
+
 ### 1.1.7: 2022-08-18
 
 * Ensure md5hsa1sum is installed

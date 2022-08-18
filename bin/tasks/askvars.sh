@@ -96,11 +96,48 @@ ${BOLDYELLOW}New block title shown in UI (without \"Block:\" text, for example: 
 
 else
 
-  # Set new block to true
-  export IS_NEW_BLOCK="no"
+  # Ask block name
+  echo "
+${BOLDYELLOW}Rename block? (y/n):${TXTRESET} "
 
-  # Select block by number
-  export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+  # Set renamed to true
+  export IS_RENAMED_BLOCK="yes"
+
+  # Read answer y/n
+  read -e RENAME_BLOCK
+
+  # If we want to rename the block
+  if [ "$RENAME_BLOCK" = "y" ]; then
+
+    # Ask new block name
+    echo "
+${BOLDYELLOW}Rename block name to this block name (kebab-case):${TXTRESET} "
+
+    # Read given block name
+    read -e BLOCK_NAME_TO_RENAME_TO
+    export BLOCK_NAME_TO_RENAME_TO="${BLOCK_NAME_TO_RENAME_TO}"
+
+    # Ask new block name
+    echo "
+${BOLDYELLOW}Rename block title shown in UI (without \"Block:\" text, for example: Two columns):${TXTRESET} "
+
+    # Read given block ui title
+    read -e BLOCK_UI_TITLE_TO_RENAME_TO
+    export BLOCK_UI_TITLE_TO_RENAME_TO="${BLOCK_UI_TITLE_TO_RENAME_TO}"
+
+    # Select block by number
+    export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+
+  # If we use the global block name
+  else
+
+    # Set new block to true
+    export IS_NEW_BLOCK="no"
+
+    # Select block by number
+    export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+
+  fi
 fi
 
 # Ask project name
