@@ -2,9 +2,9 @@
 # @Author: Roni Laukkarinen
 # @Date:   2022-02-10 10:44:02
 # @Last Modified by:   Roni Laukkarinen
-# @Last Modified time: 2022-08-18 15:10:37
+# @Last Modified time: 2022-08-23 15:04:44
 
-# // New files/Dependencies (this file will install them)::
+# // New files/Dependencies (this file will install them):
 # // ├── sass/gutenberg/blocks/_carousel.scss (automatic from get-block.sh)
 # // ├── node_modules/swiper (from npm)
 # // ├── svg/slider-left-arrow.svg
@@ -26,6 +26,9 @@ export BLOCK_UI_TITLE="Kuvakaruselli"
 # Install npm dependencies
 cd ${PROJECT_THEME_PATH}
 npm install swiper --save
+
+# JavaScript dependencies
+cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/carousel.js ${PROJECT_THEME_PATH}/js/src/modules/carousel.js
 
 # Import js modules right after the last default js module in the front-end.js file
 sed -e "/\import\ backToTop\ from \'\.\/modules\/top\'\;/a\\

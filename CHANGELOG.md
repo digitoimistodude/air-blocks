@@ -1,6 +1,7 @@
-### [Unreleased]
+### 1.2.0: 2022-08-23
 
 * Change md5sum repo to coreutils
+* Fix carousel block JS dependencies
 
 ### 1.1.9: 2022-08-18
 
