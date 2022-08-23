@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Change md5sum repo to coreutils
+
 ### 1.1.9: 2022-08-18
 
 * Improvements to renaming feature

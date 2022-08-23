@@ -5,7 +5,7 @@
 # @Last Modified time: 2022-02-15 11:13:45
 
 # Install md5 if not installed
-brew install md5sha1sum
+brew install coreutils
 
 # Block specific variables
 export RANDOMHASH=`echo $RANDOM | md5sum | head -c 13; echo;`
