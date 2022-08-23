@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Add new icons, make icons more consistent
+
 ### 1.2.0: 2022-08-23
 
 * Change md5sum repo to coreutils
