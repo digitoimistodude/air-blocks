@@ -7,7 +7,7 @@
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-07 17:02:54
+ * @Last Modified time: 2022-08-24 13:36:10
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -55,7 +55,7 @@ if ( empty( $title ) ) {
     </div>
 
     <?php if ( ! empty( $video ) ) : ?>
-      <video src="<?php echo esc_url( $video['url'] ); ?>" loop muted autoplay></video>
+      <video src="<?php echo esc_url( $video['url'] ); ?>" loop muted autoplay playsinline></video>
     <?php endif; ?>
 
     <div class="content">

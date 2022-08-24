@@ -1,6 +1,7 @@
 ### [Unreleased]
 
 * Add new icons, make icons more consistent
+* Fix `<video>` autoplay for iPhone Safari
 
 ### 1.2.0: 2022-08-23
 
