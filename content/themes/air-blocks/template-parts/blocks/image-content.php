@@ -58,7 +58,7 @@ if ( empty( $image ) || empty( $content ) ) {
     </div>
 
     <div class="col col-image">
-      <div class="image has-lazyload">
+      <div class="image-background">
         <?php native_lazyload_tag( $image ); ?>
       </div>
     </div>

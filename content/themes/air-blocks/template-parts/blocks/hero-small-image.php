@@ -53,7 +53,7 @@ if ( empty( $title ) ) {
 <section class="block block-hero-small-image has-light-bg">
   <div class="container">
 
-    <div class="image has-lazyload" aria-hidden="true">
+    <div class="image-background" aria-hidden="true">
       <?php native_lazyload_tag( $image ); ?>
     </div>
 

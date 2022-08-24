@@ -5,9 +5,11 @@
 @import 'sanitize.css/reduce-motion';
 
 // Helpers
-@import 'helpers/aspect-ratio';
 @import 'helpers/animations';
-@import 'helpers/grid';
+@import 'helpers/aspect-ratio';
+@import 'helpers/box-model';
+@import 'helpers/clamp';
+@import 'helpers/images';
 @import 'helpers/typography';
 
 // Variables
@@ -38,7 +40,6 @@
 
 // Global features
 @import 'features/top';
-@import 'features/lazyload';
 @import 'features/gravity-forms';
 @import 'features/filtering';
 @import 'features/sticky-nav';

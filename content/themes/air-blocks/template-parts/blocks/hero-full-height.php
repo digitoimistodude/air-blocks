@@ -50,7 +50,7 @@ if ( empty( $title ) ) {
   <div class="shade" aria-hidden="true"></div>
   <div class="container">
 
-    <div class="image has-lazyload">
+    <div class="image-background">
       <?php native_lazyload_tag( $bg_image ); ?>
     </div>
 

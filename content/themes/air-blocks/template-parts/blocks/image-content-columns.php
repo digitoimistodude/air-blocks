@@ -34,7 +34,7 @@ if ( empty( $columns ) ) {
       <div class="col">
 
         <?php if ( ! empty( $column['image'] ) ) : ?>
-          <div class="image has-lazyload">
+          <div class="image-background">
             <?php native_lazyload_tag( $column['image'] ) ?>
           </div>
         <?php endif; ?>

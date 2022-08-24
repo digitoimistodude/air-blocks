@@ -1,7 +1,9 @@
-### [Unreleased]
+### 1.2.1: 2022-08-24
 
 * Add new icons, make icons more consistent
 * Fix hero with video block: `<video>` autoplay for iPhone Safari
+* SCSS: Change lazyload classes to image-background
+* Update Air-light base SCSS to 9.0.8
 
 ### 1.2.0: 2022-08-23
 
