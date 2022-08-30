@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2022-02-08 09:46:05
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:47:03
+ * @Last Modified time: 2022-08-30 15:54:39
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -53,7 +53,7 @@ if ( empty( $title ) ) {
 <section class="block block-hero-small-image has-light-bg">
   <div class="container">
 
-    <div class="image-background" aria-hidden="true">
+    <div class="image image-background" aria-hidden="true">
       <?php native_lazyload_tag( $image ); ?>
     </div>
 

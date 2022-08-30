@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Fix block classes for images
+
 ### 1.2.1: 2022-08-24
 
 * Add new icons, make icons more consistent

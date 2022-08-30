@@ -7,7 +7,7 @@
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-08-24 13:36:10
+ * @Last Modified time: 2022-08-30 15:54:36
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -50,7 +50,7 @@ if ( empty( $title ) ) {
   <div class="shade" aria-hidden="true"></div>
   <div class="container">
 
-    <div class="image-background">
+    <div class="image image-background">
       <?php native_lazyload_tag( $bg_image ); ?>
     </div>
 
