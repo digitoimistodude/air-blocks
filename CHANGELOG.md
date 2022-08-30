@@ -1,6 +1,8 @@
 ### [Unreleased]
 
 * Fix block classes for images
+* Update block icons
+* Add image-upsells-one-big-two-small icon
 
 ### 1.2.1: 2022-08-24
 
