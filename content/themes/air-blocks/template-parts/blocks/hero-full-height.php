@@ -7,7 +7,7 @@
  * @Author:		Elias Kautto
  * @Date:   		2021-11-10 16:02:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-08-30 15:54:36
+ * @Last Modified time: 2022-09-12 13:50:17
  *
  * @package airblocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -15,24 +15,16 @@
 
 namespace Air_Light;
 
-if ( ! isset( $args ) ) {
-  $upper_title = get_field( 'upper_title' );
-  $title = get_field( 'title' );
-  $content = get_field( 'content' );
-  $button = get_field( 'button' );
-  $video = get_field( 'video' );
-  $bg_image = get_field( 'bg_image' );
+// Fields
+$upper_title = get_field( 'upper_title' );
+$title = get_field( 'title' );
+$content = get_field( 'content' );
+$button = get_field( 'button' );
+$video = get_field( 'video' );
+$bg_image = get_field( 'bg_image' );
 
-  if ( empty( $bg_image ) ) {
-    $bg_image = get_post_thumbnail_id( get_the_ID() );
-  }
-} else {
-  $upper_title = $args['upper_title'];
-  $title = $args['title'];
-  $content = $args['content'];
-  $button = $args['button'];
-  $bg_image = $args['bg_image'];
-  $video = $args['video'];
+if ( empty( $bg_image ) ) {
+  $bg_image = get_post_thumbnail_id( get_the_ID() );
 }
 
 $style = 'low';

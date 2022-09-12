@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2022-01-07 11:12:46
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:45:11
+ * @Last Modified time: 2022-09-12 13:49:04
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -15,6 +15,7 @@
 
 namespace Air_Light;
 
+// Fields
 $accordion_items = get_field( 'accordion_items' );
 
 if ( empty( $accordion_items ) ) {

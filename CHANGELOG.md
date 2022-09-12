@@ -1,8 +1,10 @@
-### [Unreleased]
+### 1.2.2: 2022-09-12
 
+* Fix git pull didn't always go through - make sure self-updating always works
 * Fix block classes for images
 * Update block icons
 * Add image-upsells-one-big-two-small icon
+* Remove `$args` default from blocks making fields consistent
 
 ### 1.2.1: 2022-08-24
 

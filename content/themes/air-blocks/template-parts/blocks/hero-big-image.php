@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2022-02-08 09:45:56
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-08-30 15:54:33
+ * @Last Modified time: 2022-09-12 13:49:55
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -20,20 +20,14 @@
 
 namespace Air_Light;
 
-if ( ! isset( $args ) ) {
-  $title = get_field( 'title' );
-  $content = get_field( 'content' );
-  $link = get_field( 'link' );
-  $bg_image = get_field( 'bg_image' );
+// Fields
+$title = get_field( 'title' );
+$content = get_field( 'content' );
+$link = get_field( 'link' );
+$bg_image = get_field( 'bg_image' );
 
-  if ( empty( $bg_image ) ) {
-    $bg_image = get_post_thumbnail_id( get_the_ID() );
-  }
-} else {
-  $title = $args['title'];
-  $content = $args['content'];
-  $link = $args['link'];
-  $bg_image = $args['bg_image'];
+if ( empty( $bg_image ) ) {
+  $bg_image = get_post_thumbnail_id( get_the_ID() );
 }
 
 if ( empty( $title ) ) {

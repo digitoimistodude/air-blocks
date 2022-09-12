@@ -7,7 +7,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2021-08-24 15:45:19
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:46:14
+ * @Last Modified time: 2022-09-12 13:49:30
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -17,15 +17,10 @@ namespace Air_Light;
 
 use function WP_CLI\Utils\maybe_require;
 
-if ( ! isset( $args ) ) {
-  $title = get_field( 'title' );
-  $content = get_field( 'content' );
-  $link = get_field( 'link' );
-} else {
-  $title = $args['title'];
-  $content = $args['content'];
-  $link = $args['link'];
-}
+// Fields
+$title = get_field( 'title' );
+$content = get_field( 'content' );
+$link = get_field( 'link' );
 
 if ( empty( $title ) ) {
   maybe_show_error_block( 'Otsikko on pakollinen' );

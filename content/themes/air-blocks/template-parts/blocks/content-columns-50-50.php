@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 13:18:44
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:45:36
+ * @Last Modified time: 2022-09-12 13:49:13
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -15,6 +15,7 @@
 
 namespace Air_Light;
 
+// Fields
 $title_left = get_field( 'title_left' );
 $content_left = get_field( 'content_left' );
 $title_right = get_field( 'title_right' );

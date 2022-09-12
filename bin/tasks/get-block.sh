@@ -8,7 +8,14 @@ cd $HOME
 git clone https://github.com/digitoimistodude/air-blocks $BLOCKS_PATH_TEMP
 cd $BLOCKS_PATH_TEMP
 git stash
+git clean -fxd
+if ! git pull
+then
+  echo "${RED}Error: git pull failed! Cannot get updates. Make sure you don't have modifications in $BLOCKS_PATH_TEMP.${TXTRESET}"
+  exit
+fi
 git pull
+
 echo "${YELLOW}Copying block files to the theme folder of the project: ${PROJECTS_HOME}/${PROJECT_NAME}/content/themes/${THEME_NAME}${TXTRESET}"
 
 # Create blocks directory if it does not exist

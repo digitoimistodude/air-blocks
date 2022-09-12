@@ -7,7 +7,7 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-15 08:41:59
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 10:46:21
+ * @Last Modified time: 2022-09-12 13:49:42
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -20,6 +20,7 @@ if ( ! function_exists( 'gravity_form' ) ) {
   return;
 }
 
+// Fields
 $type = get_field( 'type' );
 $form = intval( get_field( 'form' ) );
 
