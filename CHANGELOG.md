@@ -1,6 +1,7 @@
 ### 1.2.3: 2022-09-13
 
 * Modularize check-updates as task
+* Simplify get-block task by modularizing create-predefined-block as task
 
 ### 1.2.2: 2022-09-12
 
