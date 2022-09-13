@@ -1,3 +1,7 @@
+### 1.2.3: 2022-09-13
+
+* Modularize check-updates as task
+
 ### 1.2.2: 2022-09-12
 
 * Fix git pull didn't always go through - make sure self-updating always works
