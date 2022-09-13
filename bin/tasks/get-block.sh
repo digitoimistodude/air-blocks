@@ -33,3 +33,6 @@ if [[ $IS_RENAMED_BLOCK =~ "yes" ]]; then
   # Run rename task
   source ${SCRIPTS_LOCATION}/tasks/rename.sh
 fi
+
+# Ensure file permissions for ACF folder
+source ${SCRIPTS_LOCATION}/tasks/permissions.sh
