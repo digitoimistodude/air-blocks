@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2019-12-03 11:03:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-09 11:41:27
+ * @Last Modified time: 2022-11-23 13:48:00
  *
  * @package airblocks
  */
@@ -39,7 +39,7 @@ function get_default_localization_strings( $language = 'en' ) {
       'Close child menu'                             => __( 'Close child menu', 'airblocks' ),
       'Close child menu for'                         => __( 'Close child menu for', 'airblocks' ),
       'Skip to content'                              => __( 'Skip to content', 'airblocks' ),
-      'Skip over the carousel element'               => __( 'Skip over the carousel element', 'dude' ),
+      'Skip over the carousel element'               => __( 'Skip over the carousel element', 'airblocks' ),
       'External site'                                => __( 'External site', 'airblocks' ),
       'opens in a new window'                        => __( 'opens in a new window', 'airblocks' ),
       'Page not found.'                              => __( 'Page not found.', 'airblocks' ),
