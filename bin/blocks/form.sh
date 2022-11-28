@@ -136,6 +136,18 @@ if [[ ${AIR_BLOCKS_LANG} = "en" ]]; then
 s/\"label\"\: \"Tekstin valinta/\"label\"\: \"Text choices/' ${PROJECT_THEME_PATH}/inc/includes/acf-field-gravity-forms.php
 fi
 
+# Deactivate gravity forms CLI plugin
+./vendor/wp-cli/wp-cli/bin/wp plugin deactivate gravityformscli
+
+# Uninstall gravity forms CLI plugin
+./vendor/wp-cli/wp-cli/bin/wp plugin uninstall gravityformscli
+
+# Let's ensure we're in the project directory
+cd ${PROJECTS_HOME}/${PROJECT_NAME}
+
+# Remove WP-CLI plugin for Gravity Forms from composer.json
+composer remove wpackagist-plugin/gravityformscli
+
 echo "
 ${BOLDGREEN}
 .----------------------------------------------------------------- - -

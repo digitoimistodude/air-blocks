@@ -1,3 +1,7 @@
+### 1.2.4: 2022-11-28
+
+* Ensure gravityformscli is only used for creating the form block, remove plugin after the form is created
+
 ### 1.2.3: 2022-09-13
 
 * Modularize check-updates as task
