@@ -87,11 +87,8 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
 
 namespace Air_Light;
 
-if ( ! isset( \$args ) ) {
-  \$title = get_field( 'title' );
-} else {
-  \$title = \$args['title'];
-}
+// Fields
+\$title = get_field( 'title' );
 
 if ( empty( \$title ) ) {
   maybe_show_error_block( 'A title is required' );
