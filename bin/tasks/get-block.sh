@@ -5,12 +5,6 @@
 # @Last Modified time: 2022-02-22 12:37:03
 echo "${YELLOW}Copying block files to the theme folder of the project: ${PROJECTS_HOME}/${PROJECT_NAME}/content/themes/${THEME_NAME}${TXTRESET}"
 
-# Create blocks directory if it does not exist
-mkdir -p ${PROJECT_THEME_PATH}/template-parts/blocks
-
-# ACF related tasks
-source ${SCRIPTS_LOCATION}/tasks/acf.sh
-
 if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
   source ${SCRIPTS_LOCATION}/tasks/create-empty-block.sh
 else
