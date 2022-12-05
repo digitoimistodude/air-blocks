@@ -11,6 +11,7 @@
 * Fix focus outline regarding the lack of what-input in air-light 9.2.2
 * Check if block is registered with the same name in functions.php and bail if so
 * Move ACF checks to check-dependencies.sh file from acf.sh
+* Make accordion.js support accordions with same labels
 
 ### 1.2.6: 2022-12-05
 
