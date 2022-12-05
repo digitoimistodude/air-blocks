@@ -13,10 +13,10 @@ export RANDOMHASH_FIELD=`echo $RANDOM | md5sum | head -c 13; echo;`
 export BLOCK_ACF_JSON_FILE="group_${RANDOMHASH}.json"
 export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
 
-  # All the typical tasks that we do in every single block
-  # Checking if block already exists
-  if [ -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php" ]; then
-    echo "
+# All the typical tasks that we do in every single block
+# Checking if block already exists
+if [ -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php" ]; then
+echo "
 ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
   "
     exit
