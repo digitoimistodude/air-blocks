@@ -1,6 +1,7 @@
 ### [Unreleased]
 
 * Add missing exit
+* Show success messages for checks
 
 ### 1.2.6: 2022-12-05
 
