@@ -51,7 +51,7 @@ mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/
 
 # Update composer.json require
 sed -e "/require/a\\
-    \"advanced-custom-fields-pro/advanced-custom-fields-pro\"\: \"\*\"\," < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
+    \"advanced-custom-fields/advanced-custom-fields-pro\"\: \"\*\"\," < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
 rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 
