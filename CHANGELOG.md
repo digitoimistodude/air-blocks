@@ -2,6 +2,7 @@
 
 * Add missing exit
 * Show success messages for checks
+* Fix color output in success message
 
 ### 1.2.6: 2022-12-05
 
