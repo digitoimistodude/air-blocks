@@ -8,7 +8,6 @@
 # // ├── sass/gutenberg/blocks/_hero-full-height.scss (automatic from get-block.sh)
 # // ├── js/src/modules/100vh.js
 # // ├── sass/components/_prefix.scss
-# // ├── sass/components/_heading-hero.scss
 # // └── svg/block-icons/hero-big-image.svg
 
 # // Changes to files/folders:
@@ -40,8 +39,6 @@ mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/
 
 # Style component dependencies
 cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_prefix.scss ${PROJECT_THEME_PATH}/sass/components/
-# Heading hero is in the theme but let's just leave it here as a "dependency" for now just in case
-#cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_heading-hero.scss ${PROJECT_THEME_PATH}/sass/components/
 
 # Import components right after the last default component in the _components.scss file
 sed -e "/\@import \'link\'\;/a\\

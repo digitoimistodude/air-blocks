@@ -77,7 +77,7 @@
   }
 
   h1 {
-    @include heading-hero();
+    font-size: clamp-calc($container-mobile, 1600px, 32px, 52px);
   }
 
   .content-wrapper {

@@ -1,4 +1,4 @@
-### [Unreleased]
+### 1.3.0: 2022-12-05
 
 * Add missing exit
 * Show success messages for checks
@@ -14,6 +14,7 @@
 * Make accordion.js support accordions with same labels
 * Consistent naming for JS modules, use singular everywhere
 * Create checks for keys, bail if not given
+* Use clamp in hero heading font size instead of dummy component
 
 ### 1.2.6: 2022-12-05
 
