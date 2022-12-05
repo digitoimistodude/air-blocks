@@ -2,12 +2,12 @@
  * @Author: Tuomas Marttila
  * @Date:   2021-11-25 13:56:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-05-24 12:44:02
+ * @Last Modified time: 2022-12-05 18:57:26
  */
 /* eslint-disable camelcase, prefer-arrow-callback, no-unused-vars, no-undef, vars-on-top, no-var, func-names, max-len, import/no-unresolved */
 import LazyLoad from 'vanilla-lazyload';
 import { setFigureWidths, setLazyLoadedFigureWidth } from './modules/gutenberg-helpers';
-import initCarousels from './modules/carousels';
+import initCarousel from './modules/carousel';
 
 // Declare the block you'd like to style.
 wp.blocks.registerBlockStyle('core/paragraph', {
@@ -36,13 +36,11 @@ window.addEventListener('load', function () {
    * @source https://www.advancedcustomfields.com/resources/acf_register_block_type/
    */
   var initializeBlock = function ($block) {
-    airblocks_LazyLoad.update();
-    initCarousels();
+    initCarousel();
   };
 
   // Initialize each block on page load (front end).
-  airblocks_LazyLoad.update();
-  initCarousels();
+  initCarousel();
 
   // Set non-lazyloaded figures width so captions in aligned images will be same width as image
   const figures = document.querySelectorAll('figure');
