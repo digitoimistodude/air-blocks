@@ -28,7 +28,13 @@ cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/100vh.js ${PROJECT_THEME_PATH}/js/
 
 # Import js modules right after the last default js module in the front-end.js file
 sed -e "/\/\/ Import modules/a\\
-import './modules/100vh';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
+import init100vh from './modules/100vh';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
+rm ${PROJECT_THEME_PATH}/js/src/front-end.js
+mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
+
+# Init 100vh module inside DOMContentLoaded
+sed -e "/\DOMContentLoaded/a\\
+  init100vh();" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
 

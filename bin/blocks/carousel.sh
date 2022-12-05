@@ -37,7 +37,7 @@ rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
 
 # Init carousel code inside DOMContentLoaded
-sed -e "/\initAnchors\(\)\;/a\\
+sed -e "/\DOMContentLoaded/a\\
 initCarousels();" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js

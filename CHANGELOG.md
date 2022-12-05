@@ -5,6 +5,9 @@
 * Fix color output in success message
 * Install and activate ACF if not existing
 * Make imports more reliable and not depending on existing script on air-light
+* Make DOMContentLoaded exploit more reliable
+* Change hero-full-height and accordion JS modules to a new format
+* Fix accordion.js module import
 
 ### 1.2.6: 2022-12-05
 
