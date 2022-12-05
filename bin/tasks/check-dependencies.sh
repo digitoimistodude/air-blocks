@@ -45,7 +45,6 @@ sed -e "/\"repositories\"\: \[/a\\
     \{|\
       \"type\": \"composer\"\,|\
       \"url\"\: \"https:\/\/pivvenit.github.io\/acf-composer-bridge\/composer\/v3\/wordpress-plugin\/\"|\
-      \}|\
     \},\\" < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
 rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
