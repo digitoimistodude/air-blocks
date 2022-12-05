@@ -4,6 +4,7 @@
 * Show success messages for checks
 * Fix color output in success message
 * Install and activate ACF if not existing
+* Make imports more reliable and not depending on existing script on air-light
 
 ### 1.2.6: 2022-12-05
 

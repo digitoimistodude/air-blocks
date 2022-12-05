@@ -27,12 +27,12 @@ export BLOCK_UI_TITLE="Haitari"
 cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/accordion.js ${PROJECT_THEME_PATH}/js/src/modules/accordion.js
 
 # Import js modules right after the last default js module in the front-end.js file
-sed -e "/\import \'what-input\'\;/a\\
+sed -e "/\/\/ Import modules/a\\
 import './modules/accordion';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
 
-# Import styles to gutenberg-editor-styles.scss
+# Import styles to gutenberg-editor-styles.scss right after gravity forms import
 sed -e "/\@import \'features\/gravity-forms\'\;/a\\
 §\
   \/\/ Import accordion inside Gutenberg editor just to make sure§\

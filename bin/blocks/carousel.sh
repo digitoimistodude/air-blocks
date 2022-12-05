@@ -30,8 +30,8 @@ npm install swiper --save
 # JavaScript dependencies
 cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/carousel.js ${PROJECT_THEME_PATH}/js/src/modules/carousel.js
 
-# Import js modules right after the last default js module in the front-end.js file
-sed -e "/\import\ backToTop\ from \'\.\/modules\/top\'\;/a\\
+# Import js modules
+sed -e "/\/\/ Import modules/a\\
 import initCarousels from './modules/carousels';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
