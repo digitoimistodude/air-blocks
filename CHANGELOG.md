@@ -1,3 +1,9 @@
+### 1.2.6: 2022-12-05
+
+* Move checks to imports from get-block
+* Make check task names consistent
+* Add check-dependencies task, check if ACF exists
+
 ### 1.2.5: 2022-12-02
 
 * Remove `$args` from empty block

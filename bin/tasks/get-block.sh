@@ -3,10 +3,6 @@
 # @Date:   2021-11-23 18:11:41
 # @Last Modified by:   Roni Laukkarinen
 # @Last Modified time: 2022-02-22 12:37:03
-
-# Check updates
-source ${SCRIPTS_LOCATION}/tasks/check-updates.sh
-
 echo "${YELLOW}Copying block files to the theme folder of the project: ${PROJECTS_HOME}/${PROJECT_NAME}/content/themes/${THEME_NAME}${TXTRESET}"
 
 # Create blocks directory if it does not exist

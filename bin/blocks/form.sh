@@ -50,7 +50,7 @@ composer require wpackagist-plugin/gravityformscli
 # Activate gravity forms CLI plugin
 ./vendor/wp-cli/wp-cli/bin/wp plugin activate gravityformscli
 
-# Let's check if env exists
+# Let's check if env value exists for Gravity Forms
 if grep -q "GF_LICENSE_KEY" ${ENV_FILE}; then
   # If found
   # Get var from env
