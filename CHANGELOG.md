@@ -3,6 +3,7 @@
 * Add missing exit
 * Show success messages for checks
 * Fix color output in success message
+* Install and activate ACF if not existing
 
 ### 1.2.6: 2022-12-05
 
