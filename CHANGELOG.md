@@ -8,6 +8,7 @@
 * Make DOMContentLoaded exploit more reliable
 * Change hero-full-height and accordion JS modules to a new format
 * Fix accordion.js module import
+* Fix focus outline regarding the lack of what-input in air-light 9.2.2
 
 ### 1.2.6: 2022-12-05
 
