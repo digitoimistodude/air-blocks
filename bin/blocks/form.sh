@@ -23,8 +23,8 @@ export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FI
 export BLOCK_UI_TITLE="Lomake"
 
 # Check if font-size is found
-if grep -q "font-size-28" ${ENV_FILE}; then
-  echo ""
+if grep -q "font-size-28" ${PROJECT_THEME_PATH}/sass/variables/_font-size.scss; then
+  echo " "
 else
 # Import font-size to _font-size.scss
 sed -e "/\/\/ Heading font sizes/a\\
