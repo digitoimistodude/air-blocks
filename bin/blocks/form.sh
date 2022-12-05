@@ -66,6 +66,12 @@ ${YELLOW}(Pro tip: Set up GF_LICENSE_KEY=key to ${ENV_FILE} if you do not want t
   # Read given key
   read -e GF_LICENSE_KEY
   export GF_LICENSE_KEY
+
+  if [[ -z $GF_LICENSE_KEY ]]; then
+    echo "${RED}No key given. The newtheme script will now quit...${TXTRESET}
+"
+    exit
+  fi
 fi
 
 # Let's check the project env

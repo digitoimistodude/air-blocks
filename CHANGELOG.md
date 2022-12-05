@@ -13,6 +13,7 @@
 * Move ACF checks to check-dependencies.sh file from acf.sh
 * Make accordion.js support accordions with same labels
 * Consistent naming for JS modules, use singular everywhere
+* Create checks for keys, bail if not given
 
 ### 1.2.6: 2022-12-05
 
