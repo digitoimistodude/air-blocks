@@ -32,31 +32,31 @@ cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/carousel.js ${PROJECT_THEME_PATH}/
 
 # Import js modules
 sed -e "/\/\/ Import modules/a\\
-import initCarousels from './modules/carousels';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
+import initCarousel from './modules/carousel';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
 
 # Init carousel code inside DOMContentLoaded
 sed -e "/\DOMContentLoaded/a\\
-initCarousels();" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
+initCarousel();" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/front-end.js
 mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
 
 # Add carousel settings code to gutenberg-editor.js
 sed -e "/modules\/gutenberg-helpers\'\;/a\\
-import initCarousels from \'\.\/modules\/carousels\'\;\\" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
+import initCarousel from \'\.\/modules\/carousel\'\;\\" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 
 # Init carousel inside initializeBlock function
 sed -e "/airblocks_LazyLoad.update();/a\\
-    initCarousels\(\)\;" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
+    initCarousel\(\)\;" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 
 # Re-run to add another position
 sed -e "/airblocks_LazyLoad.update();/a\\
-  initCarousels\(\)\;" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
+  initCarousel\(\)\;" < ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js | tr '§' '\n' > ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js
 rm ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 mv ${PROJECT_THEME_PATH}/js/src/gutenberg-editor-changes.js ${PROJECT_THEME_PATH}/js/src/gutenberg-editor.js
 

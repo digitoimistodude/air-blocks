@@ -12,6 +12,7 @@
 * Check if block is registered with the same name in functions.php and bail if so
 * Move ACF checks to check-dependencies.sh file from acf.sh
 * Make accordion.js support accordions with same labels
+* Consistent naming for JS modules, use singular everywhere
 
 ### 1.2.6: 2022-12-05
 

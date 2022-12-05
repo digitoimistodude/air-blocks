@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2022-05-07 12:03:42
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-06-10 16:10:06
+ * @Last Modified time: 2022-12-05 18:55:23
  */
 import Swiper, {
   Navigation, Pagination, Scrollbar, A11y,
@@ -12,7 +12,7 @@ import getLocalization from './localization';
 
 Swiper.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const initCarousels = () => {
+const initCarousel = () => {
   // Init carousels
   const Carousels = document.querySelectorAll('.swiper-container');
 
@@ -131,4 +131,4 @@ const initCarousels = () => {
   }
 };
 
-export default initCarousels;
+export default initCarousel;

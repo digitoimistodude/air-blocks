@@ -2,7 +2,7 @@
  * @Author: Tuomas Marttila
  * @Date:   2021-11-11 10:22:26
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-12-05 17:24:20
+ * @Last Modified time: 2022-12-05 18:55:11
  */
 /* eslint-disable */
 /*
@@ -14,7 +14,7 @@
 * @source https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html
 */
 
-const initAccordions = () => {
+const initAccordion = () => {
 
   Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach((accordion) => {
     // Allow for multiple accordion sections to be expanded at the same time
@@ -135,4 +135,4 @@ const initAccordions = () => {
   });
 };
 
-export default initAccordions;
+export default initAccordion;
