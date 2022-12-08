@@ -7,17 +7,17 @@
 
 # Register ACF block in functions.php
 # Please note: The title of the block will be translated in localization.sh if en is selected
-if [[ ${BLOCK_NAME} = "form" ]]; then
+if [[ ${BLOCK_SLUG} = "form" ]]; then
   sed -e "/\'acf_blocks\' \=\> \[/a\\
         [|\
-         'name' => '${BLOCK_NAME}',|\
+         'name' => '${BLOCK_SLUG}',|\
          'title' => '${BLOCK_UI_TITLE}',|\
          'prevent_cache' => true,|\
         ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' > ${PROJECT_THEME_PATH}/tmpfile
 else
   sed -e "/\'acf_blocks\' \=\> \[/a\\
         [§\
-         'name' => '${BLOCK_NAME}',§\
+         'name' => '${BLOCK_SLUG}',§\
          'title' => '${BLOCK_UI_TITLE}',§\
         ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '§' '\n' > ${PROJECT_THEME_PATH}/tmpfile
 fi

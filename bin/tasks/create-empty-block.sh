@@ -15,13 +15,13 @@ export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FI
 
 # All the typical tasks that we do in every single block
 # Checking if block already exists
-if [ -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php" ]; then
+if [ -f "${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_SLUG}.php" ]; then
 echo "
 ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
   "
     exit
   else
-    echo "${YELLOW}Creating ${BLOCK_NAME} block assets...${TXTRESET}"
+    echo "${YELLOW}Creating ${BLOCK_SLUG} block assets...${TXTRESET}"
 
     # Create ACF fields
     echo "{
@@ -53,7 +53,7 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
             {
                 \"param\": \"block\",
                 \"operator\": \"==\",
-                \"value\": \"acf\/${BLOCK_NAME}\"
+                \"value\": \"acf\/${BLOCK_SLUG}\"
             }
         ]
     ],
@@ -72,9 +72,9 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
   # The block file
   echo "<?php
 /**
- * The template for ${BLOCK_NAME}
+ * The template for ${BLOCK_SLUG}
  *
- * Description of your block called \"${BLOCK_NAME}\" goes here.
+ * Description of your block called \"${BLOCK_SLUG}\" goes here.
  *
  * @Author:		Roni Laukkarinen
  * @Date:   		2022-02-10 12:28:36
@@ -96,7 +96,7 @@ if ( empty( \$title ) ) {
 }
 ?>
 
-<section class=\"block block-${BLOCK_NAME}\">
+<section class=\"block block-${BLOCK_SLUG}\">
   <div class=\"container\">
 
   <h2>
@@ -105,16 +105,16 @@ if ( empty( \$title ) ) {
 
   <!-- Start coding here -->
   </div>
-</section>" > ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php
+</section>" > ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_SLUG}.php
 
   # Styles for block
-  echo ".block-${BLOCK_NAME} {
+  echo ".block-${BLOCK_SLUG} {
   // Your block styles here
-}" > ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_NAME}.scss
+}" > ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_SLUG}.scss
 
   # Import block styles to _blocks.scss
   sed -e "/\/\/ ACF blocks/a\\
-  @import 'gutenberg/blocks/${BLOCK_NAME}';" < ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss > ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss
+  @import 'gutenberg/blocks/${BLOCK_SLUG}';" < ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss > ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss
   rm ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
   mv ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
 
@@ -122,7 +122,7 @@ if ( empty( \$title ) ) {
   mkdir -p ${PROJECT_THEME_PATH}/svg/block-icons
 
   # There is no block icon so we can't copy it, but let's keep this as a placeholder if we get some default in the future
-  #cp -nv ${AIRBLOCKS_THEME_PATH}/svg/block-icons/${BLOCK_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/
+  #cp -nv ${AIRBLOCKS_THEME_PATH}/svg/block-icons/${BLOCK_SLUG}.svg ${PROJECT_THEME_PATH}/svg/block-icons/
 fi
 
 # Register ACF block in functions.php
@@ -131,4 +131,4 @@ sed -e "/\'acf_blocks\' \=\> \[/a\\
       [|\
        'name' => '§',|\
        'title' => 'µ',|\
-      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' | sed "s|§|${BLOCK_NAME}|g" | sed "s|µ|${BLOCK_UI_TITLE}|g" > ${PROJECT_THEME_PATH}/tmpfile
+      ],\\" < ${PROJECT_THEME_PATH}/functions.php | tr '|' '\n' | sed "s|§|${BLOCK_SLUG}|g" | sed "s|µ|${BLOCK_UI_TITLE}|g" > ${PROJECT_THEME_PATH}/tmpfile

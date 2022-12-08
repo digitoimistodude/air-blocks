@@ -85,7 +85,7 @@ if ! [[ $BLOCK_NUMBER =~ $REGNUMBERS ]] ; then
 ${BOLDYELLOW}New block name (kebab-case):${TXTRESET} "
 
   # Read given block name
-  read -e BLOCK_NAME
+  read -e BLOCK_SLUG
 
   # Ask block name
   echo "
@@ -114,8 +114,8 @@ ${BOLDYELLOW}Rename block? (y/n):${TXTRESET} "
 ${BOLDYELLOW}Rename block name to this block name (kebab-case):${TXTRESET} "
 
     # Read given block name
-    read -e BLOCK_NAME_TO_RENAME_TO
-    export BLOCK_NAME_TO_RENAME_TO="${BLOCK_NAME_TO_RENAME_TO}"
+    read -e BLOCK_SLUG_TO_RENAME_TO
+    export BLOCK_SLUG_TO_RENAME_TO="${BLOCK_SLUG_TO_RENAME_TO}"
 
     # Ask new block name
     echo "
@@ -126,7 +126,7 @@ ${BOLDYELLOW}Rename block title shown in UI (without \"Block:\" text, for exampl
     export BLOCK_UI_TITLE_TO_RENAME_TO="${BLOCK_UI_TITLE_TO_RENAME_TO}"
 
     # Select block by number
-    export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+    export BLOCK_SLUG=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
 
   # If we use the global block name
   else
@@ -135,7 +135,7 @@ ${BOLDYELLOW}Rename block title shown in UI (without \"Block:\" text, for exampl
     export IS_NEW_BLOCK="no"
 
     # Select block by number
-    export BLOCK_NAME=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
+    export BLOCK_SLUG=`ls -1 "${SCRIPTS_LOCATION}/blocks" | sed -n ${BLOCK_NUMBER}p | sed -e 's/\.sh$//'`
 
   fi
 fi

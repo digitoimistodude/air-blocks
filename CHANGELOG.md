@@ -2,6 +2,7 @@
 
 * Change `"media_upload": 0` to all WYSIWYG fields by default
 * Add checks for ACF composer package, fix endlessly adding plugin
+* Change `BLOCK_NAME` variable to `BLOCK_SLUG` for consistency
 
 ### 1.3.1: 2022-12-08
 

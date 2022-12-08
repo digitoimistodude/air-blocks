@@ -6,11 +6,11 @@
 
 # Check if renamed block
 if [[ $IS_RENAMED_BLOCK =~ "yes" ]]; then
-  export BLOCK_NAME=$BLOCK_NAME_TO_RENAME_TO
+  export BLOCK_SLUG=$BLOCK_SLUG_TO_RENAME_TO
 fi
 
 echo ""
-echo "${BOLDGREEN}All done!${TXTRESET} Block created: ${BLOCK_NAME}"
+echo "${BOLDGREEN}All done!${TXTRESET} Block created: ${BLOCK_SLUG}"
 echo ""
 echo "Front end: https://${PROJECT_NAME}.test"
 echo "WP-admin:  https://${PROJECT_NAME}.test/wp/wp-login.php"

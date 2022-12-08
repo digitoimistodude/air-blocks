@@ -1,12 +1,12 @@
 #!/bin/bash
-echo "${YELLOW}Renaming block to '${BLOCK_NAME_TO_RENAME_TO}'...${TXTRESET}"
-mv ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME}.php ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_NAME_TO_RENAME_TO}.php
-mv ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_NAME}.scss ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_NAME_TO_RENAME_TO}.scss
-mv ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_NAME}.svg ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_NAME_TO_RENAME_TO}.svg
+echo "${YELLOW}Renaming block to '${BLOCK_SLUG_TO_RENAME_TO}'...${TXTRESET}"
+mv ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_SLUG}.php ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_SLUG_TO_RENAME_TO}.php
+mv ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_SLUG}.scss ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_SLUG_TO_RENAME_TO}.scss
+mv ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_SLUG}.svg ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_SLUG_TO_RENAME_TO}.svg
 
 # Renaming block names in files
-sed -i '' -e "s;${BLOCK_NAME};${BLOCK_NAME_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
-sed -i '' -e "s;${BLOCK_NAME};${BLOCK_NAME_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/functions.php
+sed -i '' -e "s;${BLOCK_SLUG};${BLOCK_SLUG_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
+sed -i '' -e "s;${BLOCK_SLUG};${BLOCK_SLUG_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/functions.php
 
 # Renaming block UI label
 # NB! This replaces ALL titles in the functions.php, it should replace only the
