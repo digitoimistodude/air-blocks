@@ -30,7 +30,7 @@ ${RED}Block already exists. The newtheme script will now quit...${TXTRESET}
     \"fields\": [
         {
             \"key\": \"field_${RANDOMHASH_FIELD}\",
-            \"label\": \"Title\",
+            \"label\": \"Otsikko\",
             \"name\": \"title\",
             \"type\": \"text\",
             \"instructions\": \"\",

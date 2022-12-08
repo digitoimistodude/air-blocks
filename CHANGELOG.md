@@ -1,3 +1,8 @@
+### [Unreleased]
+
+* Fix empty block translations
+* Fix block ACF field activation order in empty block task
+
 ### 1.3.0: 2022-12-05
 
 * Add missing exit
