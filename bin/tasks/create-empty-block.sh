@@ -99,11 +99,11 @@ if ( empty( \$title ) ) {
 <section class=\"block block-${BLOCK_SLUG}\">
   <div class=\"container\">
 
-  <h2>
-    <?php echo esc_html( \$title ); ?>
-  </h2>
+    <h2>
+      <?php echo esc_html( \$title ); ?>
+    </h2>
 
-  <!-- Start coding here -->
+    <!-- Start coding here -->
   </div>
 </section>" > ${PROJECT_THEME_PATH}/template-parts/blocks/${BLOCK_SLUG}.php
 

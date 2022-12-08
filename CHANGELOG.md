@@ -1,3 +1,7 @@
+### 1.3.3: 2022-12-08
+
+* Fix the most important thing, indentation in empty block (kudos to @EliasKau)
+
 ### 1.3.2: 2022-12-08
 
 * Change `"media_upload": 0` to all WYSIWYG fields by default
