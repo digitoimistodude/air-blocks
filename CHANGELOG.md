@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Change `"media_upload": 0` to all WYSIWYG fields by default
+
 ### 1.3.1: 2022-12-08
 
 * Fix empty block translations
