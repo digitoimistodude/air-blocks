@@ -6,12 +6,11 @@ mv ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_SLUG}.svg ${PROJECT_THEME_PATH}
 
 # Renaming block names in files
 sed -i '' -e "s;${BLOCK_SLUG};${BLOCK_SLUG_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
-sed -i '' -e "s;${BLOCK_SLUG};${BLOCK_SLUG_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/functions.php
+
+# Rename only block slug in functions.php
+sed -i '' -e "s;'name' => '${BLOCK_SLUG}';'name' => '${BLOCK_SLUG_TO_RENAME_TO}';" ${PROJECT_THEME_PATH}/functions.php
 
 # Renaming block UI label
-# NB! This replaces ALL titles in the functions.php, it should replace only the
-# current block title.
-# TODO: Figure out how to replace only the current block title.
 sed -i '' -e "s/'title' \=\> '${BLOCK_UI_TITLE}',/'title' \=\> '${BLOCK_UI_TITLE_TO_RENAME_TO}',/" ${PROJECT_THEME_PATH}/functions.php
 
 # Renaming block UI name in ACF
