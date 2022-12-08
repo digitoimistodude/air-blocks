@@ -1,7 +1,8 @@
-### [Unreleased]
+### 1.3.1: 2022-12-08
 
 * Fix empty block translations
 * Fix block ACF field activation order in empty block task
+* Use md5sha1sum instead of coreutils
 
 ### 1.3.0: 2022-12-05
 
