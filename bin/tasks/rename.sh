@@ -5,7 +5,7 @@ mv ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_SLUG}.scss ${PROJECT_THE
 mv ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_SLUG}.svg ${PROJECT_THEME_PATH}/svg/block-icons/${BLOCK_SLUG_TO_RENAME_TO}.svg
 
 # Renaming block names in files
-sed -i '' -e "s;${BLOCK_SLUG};${BLOCK_SLUG_TO_RENAME_TO};" ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
+sed -i '' -e "s;@import 'gutenberg/blocks/${BLOCK_SLUG}';@import 'gutenberg/blocks/${BLOCK_SLUG_TO_RENAME_TO}';" ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
 
 # Rename only block slug in functions.php
 sed -i '' -e "s;'name' => '${BLOCK_SLUG}';'name' => '${BLOCK_SLUG_TO_RENAME_TO}';" ${PROJECT_THEME_PATH}/functions.php
