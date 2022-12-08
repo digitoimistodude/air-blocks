@@ -8,7 +8,7 @@ ${RED}Found exactly the same block name registered in functions.php... The scrip
   exit
 else
   # If not found, continue
-  echo " "
+  echo "${GREEN}✓ Block name OK.${TXTRESET}" 1>&2
 fi
 
 # Let's ensure we have acf-json folder
@@ -35,7 +35,7 @@ fi
 if grep -q "ACF_PRO_KEY" ${ENV_FILE}; then
   # If found
   # Get var from env
-  echo "${GREEN}✓ ACF_PRO_KEY found, let's continue.${TXTRESET}" 1>&2
+  echo "${GREEN}✓ ACF_PRO_KEY found globally.${TXTRESET}" 1>&2
   export ACF_PRO_KEY=$(grep ACF_PRO_KEY $ENV_FILE | cut -d '=' -f2)
 else
   # If not found
@@ -58,7 +58,7 @@ fi
 
 # Let's check the project env
 if grep -q "ACF_PRO_KEY" ${ENV_FILE_PROJECT}; then
-  echo ""
+  echo "${GREEN}✓ ACF_PRO_KEY found in project .env.${TXTRESET}" 1>&2
 else
   # If not found
   # Add to project env
@@ -66,27 +66,44 @@ else
 ACF_PRO_KEY=${ACF_PRO_KEY}" >> ${ENV_FILE_PROJECT}
 fi
 
-# Update composer.json repositories
-sed -e "/\"repositories\"\: \[/a\\
-    \{|\
-      \"type\": \"composer\"\,|\
-      \"url\"\: \"https:\/\/pivvenit.github.io\/acf-composer-bridge\/composer\/v3\/wordpress-plugin\/\"|\
-    \},\\" < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
-rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
-mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+# Let's check if acf-composer-bridge is found in composer.json
+if grep -q "acf-composer-bridge" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
+  echo "${GREEN}✓ acf-composer-bridge already set up.${TXTRESET}" 1>&2
+else
+  # If not found
+  echo "${BOLDYELLOW}Adding acf-composer-bridge to composer.json...${TXTRESET}" 1>&2
 
-# Update composer.json require
-sed -e "/\"require\"/a\\
-    \"advanced-custom-fields/advanced-custom-fields-pro\"\: \"\*\"\," < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
-rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
-mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+  # Update composer.json repositories
+  sed -e "/\"repositories\"\: \[/a\\
+      \{|\
+        \"type\": \"composer\"\,|\
+        \"url\"\: \"https:\/\/pivvenit.github.io\/acf-composer-bridge\/composer\/v3\/wordpress-plugin\/\"|\
+      \},\\" < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
+  rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+  mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+fi
 
-# Let's go to the project directory
-cd ${PROJECTS_HOME}/${PROJECT_NAME}
+# Let's check if advanced-custom-fields-pro is found in composer.json
+if grep -q "advanced-custom-fields-pro" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
+  echo "${GREEN}✓ advanced-custom-fields-pro already set up.${TXTRESET}" 1>&2
+else
+  # If not found
+  echo "${BOLDYELLOW}Adding advanced-custom-fields-pro to composer.json require...${TXTRESET}" 1>&2
 
-# Install composer plugins
-composer update
-composer install
+  # Update composer.json require
+  sed -e "/\"require\"/a\\
+      \"advanced-custom-fields/advanced-custom-fields-pro\"\: \"\*\"\," < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
+  rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
+  mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 
-# Activate ACF plugin
-./vendor/wp-cli/wp-cli/bin/wp plugin activate advanced-custom-fields-pro
+  # Let's go to the project directory
+  cd ${PROJECTS_HOME}/${PROJECT_NAME}
+
+  # Install composer plugins
+  composer update
+  composer install
+
+  # Activate ACF plugin
+  ./vendor/wp-cli/wp-cli/bin/wp plugin activate advanced-custom-fields-pro
+
+fi

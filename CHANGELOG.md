@@ -1,6 +1,7 @@
 ### [Unreleased]
 
 * Change `"media_upload": 0` to all WYSIWYG fields by default
+* Add checks for ACF composer package, fix endlessly adding plugin
 
 ### 1.3.1: 2022-12-08
 
