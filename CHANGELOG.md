@@ -1,3 +1,7 @@
+### 1.3.4: 2022-12-09
+
+* Support accordion panels with same labels and ids
+
 ### 1.3.3: 2022-12-08
 
 * Fix the most important thing, indentation in empty block (kudos to @EliasKau)

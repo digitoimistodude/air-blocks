@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-vars, no-shadow, default-case */
 /**
- * @Author: Tuomas Marttila
- * @Date:   2021-11-11 10:22:26
+ * @Author: Roni Laukkarinen
+ * @Date:   2022-12-05 14:29:04
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-12-05 18:55:11
+ * @Last Modified time: 2022-12-09 15:02:06
  */
-/* eslint-disable */
 /*
 * This content is licensed according to the W3C Software License at
 * https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -14,33 +14,42 @@
 * @source https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html
 */
 
-const initAccordion = () => {
-
+const initAccordions = () => {
   Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach((accordion) => {
     // Allow for multiple accordion sections to be expanded at the same time
     const allowMultiple = accordion.hasAttribute('data-allow-multiple');
+
     // Allow for each toggle to both open and close individually
     const allowToggle = (allowMultiple) || accordion.hasAttribute('data-allow-toggle');
 
     // Create the array of toggle elements for the accordion group
     const triggers = Array.prototype.slice.call(accordion.querySelectorAll('.accordion-trigger'));
-    const panels = Array.prototype.slice.call(accordion.querySelectorAll('.accordion-panel'));
 
     accordion.addEventListener('click', (event) => {
       const { target } = event;
 
-      if (target.classList.contains('accordion-trigger')) {
+      // Get the panel of this accordion
+      const panel = target.parentNode.nextElementSibling;
 
+      if (target.classList.contains('accordion-trigger')) {
         // Check if the current toggle is expanded.
+        // eslint-disable-next-line eqeqeq
         const isExpanded = target.getAttribute('aria-expanded') == 'true';
         const active = accordion.querySelector('[aria-expanded="true"]');
+
+        // Get the value of aria-controls (which is an ID)
+        const controls = target.getAttribute('aria-controls');
 
         // without allowMultiple, close the open accordion
         if (!allowMultiple && active && active !== target) {
           // Set the expanded state on the triggering element
           active.setAttribute('aria-expanded', 'false');
+
           // Hide the accordion sections, using aria-controls to specify the desired section
-          document.getElementById(active.getAttribute('aria-controls')).setAttribute('hidden', '');
+          if (controls === active.getAttribute('aria-controls')) {
+            // Hide the active panel
+            active.parentNode.nextElementSibling.setAttribute('hidden', '');
+          }
 
           // When toggling is not allowed, clean up disabled state
           if (!allowToggle) {
@@ -51,8 +60,11 @@ const initAccordion = () => {
         if (!isExpanded) {
           // Set the expanded state on the triggering element
           target.setAttribute('aria-expanded', 'true');
-          // Hide the accordion sections, using aria-controls to specify the desired section
-          document.getElementById(target.getAttribute('aria-controls')).removeAttribute('hidden');
+
+          // Show the accordion sections, using aria-controls to specify the desired section
+          if (controls === target.getAttribute('aria-controls')) {
+            panel.removeAttribute('hidden');
+          }
 
           // If toggling is not allowed, set disabled state on trigger
           if (!allowToggle) {
@@ -61,8 +73,9 @@ const initAccordion = () => {
         } else if (allowToggle && isExpanded) {
           // Set the expanded state on the triggering element
           target.setAttribute('aria-expanded', 'false');
+
           // Hide the accordion sections, using aria-controls to specify the desired section
-          document.getElementById(target.getAttribute('aria-controls')).setAttribute('hidden', '');
+          panel.setAttribute('hidden', '');
         }
 
         event.preventDefault();
@@ -74,6 +87,7 @@ const initAccordion = () => {
       const { target } = event;
       const key = event.which.toString();
 
+      // eslint-disable-next-line eqeqeq
       const isExpanded = target.getAttribute('aria-expanded') == 'true';
       const allowToggle = (allowMultiple) || accordion.hasAttribute('data-allow-toggle');
 
@@ -135,4 +149,4 @@ const initAccordion = () => {
   });
 };
 
-export default initAccordion;
+export default initAccordions;
