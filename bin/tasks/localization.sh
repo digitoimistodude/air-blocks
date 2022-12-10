@@ -9,7 +9,7 @@ sed -i '' -e 's/\"title\"\: \"Lohko\: Sivun korkea yläosa\"\,/\"title\"\: \"Blo
 s/\"label\"\: \"Taustakuva\"\,/\"label\"\: \"Background image\"\,/
 s/\"label\"\: \"Taustavideo/\"label\"\: \"Background video/
 s/\"label\"\: \"Yläotsikko\"\,/\"label\"\: \"Upper title\"\,/
-s/\"instructions\"\: \"Jos kenttä on jätetty tyhjäksi\, tilalla näytetään murupolku\.\"\,/\"instructions\"\: \"If field is left out empty\, will show breadcrumbs in place\.\"\,/
+s/\"instructions\"\: \"Jos kenttä on jätetty tyhjäksi\, tilalla ei näytetä mitään\.\"\,/\"instructions\"\: \"If field is left out empty\, will show nothing.\.\"\,/
 s/\"label\"\: \"Otsikko\"\,/\"label\"\: \"Heading\"\,/
 s/\"label\"\: \"Tekstisisältö\"\,/\"label\"\: \"Content\"\,/
 s/\"label\"\: \"Nappi\"\,/\"label\"\: \"Button\"\,/
