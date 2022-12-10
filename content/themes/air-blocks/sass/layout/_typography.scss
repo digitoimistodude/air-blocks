@@ -16,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-weight: var(--font-weight-paragraphs);
-  text-rendering: geometricPrecision;
+  text-rendering: geometricprecision;
 }
 
 // Defaults
@@ -40,7 +40,7 @@ table,
 tr,
 %default {
   font-size: var(--font-size-paragraphs);
-  line-height: var(--line-height-paragraphs);
+  line-height: var(--line-height-paragraph);
 }
 
 // Heading defaults
