@@ -19,4 +19,5 @@ export LOCAL_IP=$(ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep 
 export YEAR=$(date +%y)
 export CURRENTFILE=`basename $0`
 export BLOCKS_PATH_TEMP="${HOME}/air-blocks"
+export BLOCKS_PATH="${HOME}/Projects/air-blocks"
 export AIRBLOCKS_THEME_PATH="${BLOCKS_PATH_TEMP}/content/themes/air-blocks"

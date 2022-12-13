@@ -2,6 +2,7 @@
 
 * Fix instruction text for prefix
 * Fix --line-height-paragraph variable name
+* Fix auto-updating task
 
 ### 1.3.4: 2022-12-09
 
