@@ -7,7 +7,7 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-11-18 15:12:35
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-08 18:30:11
+ * @Last Modified time: 2022-12-13 14:42:01
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -52,7 +52,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_theme_scripts' );
 
 // NB! If you use ajax functionality in Gravity Forms, remove this line
 // to prevent Uncaught ReferenceError: jQuery is not defined
-add_action( 'wp_default_scripts', __NAMESPACE__ . '\move_jquery_into_footer' );
+// add_action( 'wp_default_scripts', __NAMESPACE__ . '\move_jquery_into_footer' );
 
 /**
  * Gutenberg associated hooks
