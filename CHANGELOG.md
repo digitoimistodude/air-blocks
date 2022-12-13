@@ -1,4 +1,4 @@
-### [Unreleased]
+### 1.3.5: 2022-12-13
 
 * Fix instruction text for prefix
 * Fix --line-height-paragraph variable name
