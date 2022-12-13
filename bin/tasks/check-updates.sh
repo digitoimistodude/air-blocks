@@ -19,8 +19,6 @@ fi
 if [ -d "$BLOCKS_PATH" ]; then
   echo "${YELLOW}Folder $BLOCKS_PATH exists, checking for updates...${TXTRESET}"
   cd $BLOCKS_PATH
-  git stash
-  git clean -fxd
   if ! git pull
   then
     echo "${RED}Error: git pull failed! Cannot get updates. Make sure you don't have modifications in $BLOCKS_PATH.${TXTRESET}"
