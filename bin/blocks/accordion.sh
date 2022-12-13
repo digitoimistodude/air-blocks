@@ -7,8 +7,6 @@
 # // New files/Dependencies (this file will install them):
 # // ├── sass/gutenberg/blocks/_accordion.scss (automatic from get-block.sh)
 # // ├── js/src/modules/accordion.js
-# // ├── svg/minus.svg
-# // ├── svg/plus.svg
 # // └── svg/block-icons/accordion.svg
 
 # // Changes to files/folders:
@@ -45,7 +43,3 @@ sed -e "/\@import \'features\/gravity-forms\'\;/a\\
   \@import \'gutenberg\/blocks\/accordion\'\;\\" < ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss | tr '§' '\n' > ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss
 rm ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
 mv ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
-
-# Other SVG icons needed by this block
-cp -nv ${AIRBLOCKS_THEME_PATH}/svg/minus.svg ${PROJECT_THEME_PATH}/svg/
-cp -nv ${AIRBLOCKS_THEME_PATH}/svg/plus.svg ${PROJECT_THEME_PATH}/svg/

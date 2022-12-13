@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Use inline SVG instead of SVG files in accordion block
+
 ### 1.3.5: 2022-12-13
 
 * Fix instruction text for prefix

@@ -48,7 +48,7 @@ button.accordion-trigger {
 }
 
 .accordion-icon {
-  background-image: url('../../svg/plus.svg');
+  background-image: url('data:image/svg+xml, %3Csvg class="icon-plus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11zM12 6v12M18 12H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A');
   background-repeat: no-repeat;
   background-size: 20px 20px;
   display: inline-flex;
@@ -64,7 +64,7 @@ button.accordion-trigger {
 }
 
 .accordion-trigger[aria-expanded="true"] .accordion-icon {
-  background-image: url('../../svg/minus.svg');
+  background-image: url('data:image/svg+xml, %3Csvg class="icon-minus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11zM18 12H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A');
 }
 
 .accordion-panel > div {
