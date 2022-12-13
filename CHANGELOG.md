@@ -1,6 +1,7 @@
-### [Unreleased]
+### 1.3.6: 2022-12-13
 
 * Use inline SVG instead of SVG files in accordion block
+* Revert accordion block change in accordion.js because it breaks the block on click events (NB! Accordion should not have panels with exactly the same headings)
 
 ### 1.3.5: 2022-12-13
 
