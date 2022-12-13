@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "${YELLOW}Checking block updates and auto-updating...${TXTRESET}"
 if [ -d "$BLOCKS_PATH_TEMP" ]; then
-  cd $BLOCKS_PATH
+  cd $BLOCKS_PATH_TEMP
   git stash
   git clean -fxd
   if ! git pull
