@@ -56,7 +56,7 @@
     "max-empty-lines": 1,
     "unit-case": "lower",
     "selector-pseudo-class-case": "lower",
-    "value-keyword-case": "lower",
+    "value-keyword-case": null,
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-quotes": "always",
     "selector-combinator-space-after": "always",

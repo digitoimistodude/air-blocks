@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-09 12:00:15
+ * @Last Modified time: 2022-12-18 21:17:47
  *
  * @package airblocks
  */
@@ -136,8 +136,8 @@ add_action( 'after_setup_theme', function() {
         'title' => 'Tekstipalstat kuvilla',
       ],
       [
-        'name'  => 'image-content',
-        'title' => 'Kuva ja tekstisisältö vierekkäin',
+        'name'  => 'content-image',
+        'title' => 'Kuva ja tekstisisältö',
       ],
       [
         'name'  => 'form',

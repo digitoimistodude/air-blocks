@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* `newblock`: Add `content-image` block
+
 ### 1.3.6: 2022-12-13
 
 * Use inline SVG instead of SVG files in accordion block

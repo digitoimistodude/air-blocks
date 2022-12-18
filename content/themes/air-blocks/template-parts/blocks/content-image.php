@@ -7,15 +7,11 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-14 12:42:52
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-09-12 13:51:03
+ * @Last Modified time: 2022-12-18 21:37:33
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-// Files (required):
-// ├── sass/gutenberg/blocks/_image-content.scss
-// └── svg/block-icons/image-content.svg
 
 namespace Air_Light;
 
@@ -32,7 +28,7 @@ if ( empty( $image ) || empty( $content ) ) {
 }
 ?>
 
-<section class="block block-image-content image-<?php echo esc_html( $image_side ) ?>">
+<section class="block block-content-image image-<?php echo esc_html( $image_side ) ?>">
   <div class="container">
 
     <div class="col col-content">

@@ -1,0 +1,19 @@
+#!/bin/bash
+# @Author: Roni Laukkarinen
+# @Date:   2022-08-18 15:11:23
+# @Last Modified by:   Roni Laukkarinen
+# @Last Modified time: 2022-08-18 15:11:23
+
+# // New files/Dependencies (this file will install them):
+# // ├── sass/gutenberg/blocks/_content-image.scss (automatic from get-block.sh)
+# // └── svg/block-icons/content-image.svg (automatic from get-block.sh)
+
+# // Changes to files/folders:
+# // ├── sass/gutenberg/_blocks.scss
+# // ├── acf-json/
+# // └── functions.php
+
+# Block specific variables
+export BLOCK_ACF_JSON_FILE="group_6125fdad4349c.json"
+export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FILE}"
+export BLOCK_UI_TITLE="Kuva ja tekstisisältö"
