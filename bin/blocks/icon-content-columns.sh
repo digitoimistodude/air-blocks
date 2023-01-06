@@ -33,11 +33,11 @@ cp -nv "${AIRBLOCKS_THEME_PATH}/inc/hooks/admin/acf-dynamic-icon-select.php" "${
 if ! grep -q "acf-dynamic-icon-select" "${PROJECT_THEME_PATH}/functions.php"; then
   echo "Adding acf-dynamic-icon-select to functions.php"
   echo "
-  /**
-   * Dynamic svg icon select
-   */
-  require get_theme_file_path( 'inc/hooks/admin/acf-dynamic-icon-select.php' );
-  add_filter( 'acf/load_field/type=select', __NAMESPACE__ . '\acf_dynamic_select_for_icon' );
-  add_action( 'acf/input/admin_head', __NAMESPACE__ . '\improved_acf_svg_selector_ui_styles' );
-  " >> "${PROJECT_THEME_PATH}/functions.php"
+/**
+  * Dynamic svg icon select
+*/
+require get_theme_file_path( 'inc/hooks/admin/acf-dynamic-icon-select.php' );
+add_filter( 'acf/load_field/type=select', __NAMESPACE__ . '\acf_dynamic_select_for_icon' );
+add_action( 'acf/input/admin_head', __NAMESPACE__ . '\improved_acf_svg_selector_ui_styles' );
+" >> "${PROJECT_THEME_PATH}/functions.php"
 fi
