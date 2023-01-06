@@ -27,7 +27,7 @@ export BLOCK_UI_TITLE="Tekstipalstat kuvakkeilla"
 mkdir -p "${PROJECT_THEME_PATH}/inc/hooks/admin"
 
 # Copy inc/hooks/admin/acf-dynamic-icon-select.php
-cp -nv "${AIRBLOCKS_THEME_PATH}/blocks/icon-content-columns/inc/hooks/admin/acf-dynamic-icon-select.php" "${PROJECT_THEME_PATH}/inc/hooks/admin/acf-dynamic-icon-select.php"
+cp -nv "${AIRBLOCKS_THEME_PATH}/inc/hooks/admin/acf-dynamic-icon-select.php" "${PROJECT_THEME_PATH}/inc/hooks/admin/acf-dynamic-icon-select.php"
 
 # If acf-dynamic-icon-select is not found in functions.php, add it in the bottom
 if ! grep -q "acf-dynamic-icon-select" "${PROJECT_THEME_PATH}/functions.php"; then
