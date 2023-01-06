@@ -7,7 +7,7 @@
  *
  * @Date: 2019-10-15 12:30:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-12-18 21:17:47
+ * @Last Modified time: 2023-01-06 22:03:52
  *
  * @package airblocks
  */
@@ -129,7 +129,7 @@ add_action( 'after_setup_theme', function() {
       ],
       [
         'name'  => 'icon-content-columns',
-        'title' => 'Tekstipalstat ikoneilla',
+        'title' => 'Tekstipalstat kuvakkeilla',
       ],
       [
         'name'  => 'image-content-columns',

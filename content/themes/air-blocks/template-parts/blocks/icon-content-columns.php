@@ -7,21 +7,11 @@
  * @Author:		Tuomas Marttila
  * @Date:   		2021-12-13 15:55:55
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-09-12 13:50:48
+ * @Last Modified time: 2023-01-06 22:02:23
  *
  * @package air-blocks
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
-
-// Files (required):
-// ├── inc/hooks/admin/acf-dynamic-icon-select.php
-// ├── sass/gutenberg/blocks/_icon-content-columns.scss
-// ├── svg/block-icons/icon-content-columns.svg
-// ├── svg/foruser/block.svg
-// ├── svg/foruser/cloud.svg
-// └── svg/foruser/database.svg
-
-// Remember to include acf-dynamic-icon-select to inc/hooks.php
 
 namespace Air_Light;
 

@@ -1,6 +1,7 @@
 ### [Unreleased]
 
 * `newblock`: Add `content-image` block
+* `newblock`: Add `icon-content-columns` block
 
 ### 1.3.6: 2022-12-13
 

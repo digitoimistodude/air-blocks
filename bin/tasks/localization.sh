@@ -41,7 +41,7 @@ sed -i '' -e 's/Tekstisisältö/Content/' ${PROJECT_THEME_PATH}/functions.php
 sed -i '' -e 's/Haitari/Accordion/' ${PROJECT_THEME_PATH}/functions.php
 sed -i '' -e 's/Kuva ja tekstisisältö/Image and content/' ${PROJECT_THEME_PATH}/functions.php
 sed -i '' -e 's/Tekstipalstat kuvilla/Content columns with images/' ${PROJECT_THEME_PATH}/functions.php
-sed -i '' -e 's/Tekstipalstat ikoneilla/Content columns with icons/' ${PROJECT_THEME_PATH}/functions.php
+sed -i '' -e 's/Tekstipalstat kuvakkeilla/Content columns with icons/' ${PROJECT_THEME_PATH}/functions.php
 sed -i '' -e 's/Lainaus/Quote/' ${PROJECT_THEME_PATH}/functions.php
 sed -i '' -e 's/Kaksi tekstisisältöpalstaa/Two text columns/' ${PROJECT_THEME_PATH}/functions.php
 sed -i '' -e 's/Otsikko ja tekstisisältö palstoissa/Title and content columns/' ${PROJECT_THEME_PATH}/functions.php
