@@ -23,7 +23,7 @@
       "sub_fields": [
         {
           "key": "field_61b74f6b61c43",
-          "label": "Ikoni",
+          "label": "Kuvake",
           "name": "icon_svg",
           "type": "select",
           "instructions": "",
