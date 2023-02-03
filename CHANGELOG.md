@@ -1,3 +1,7 @@
+### 1.3.8rc: 2023-02-03
+
+* Add block icon for social-wall
+
 ### 1.3.7: 2023-01-06
 
 * `newblock`: Add `content-image` block
