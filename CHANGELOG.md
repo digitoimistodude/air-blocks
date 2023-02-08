@@ -1,6 +1,7 @@
-### 1.3.8rc: 2023-02-03
+### 1.3.8: 2023-02-08
 
 * Add block icon for social-wall
+* Fix js error with swiper element for carousel.js
 
 ### 1.3.7: 2023-01-06
 

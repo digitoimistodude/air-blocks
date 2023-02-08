@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2022-05-07 12:03:42
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-12-05 18:55:23
+ * @Last Modified time: 2023-02-08 11:48:41
  */
 import Swiper, {
   Navigation, Pagination, Scrollbar, A11y,
@@ -74,7 +74,7 @@ const initCarousel = () => {
 
       on: {
         init() {
-          const swiperElement = this.$el[0];
+          const swiperElement = this.el;
           const activeSlide = swiperElement.querySelectorAll('.swiper-slide-active')[0];
           const allSlides = swiperElement.querySelectorAll('.swiper-slide');
 
@@ -88,7 +88,7 @@ const initCarousel = () => {
         },
         slideChangeTransitionEnd() {
           // Run the same thing when slide changes
-          const swiperElement = this.$el[0];
+          const swiperElement = this.el;
           const activeSlide = swiperElement.querySelectorAll('.swiper-slide-active')[0];
           const allSlides = swiperElement.querySelectorAll('.swiper-slide');
 

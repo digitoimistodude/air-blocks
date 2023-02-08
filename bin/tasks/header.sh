@@ -4,9 +4,9 @@
 # @Last Modified by:   Roni Laukkarinen
 # @Last Modified time: 2021-11-23 18:31:26
 # Note about running directly as we can't prevent people running this via sh or bash pre-cmd
-echo "-----------------------------------------------------"
+echo "----------------------------------------------------"
 echo "newblock start script ${SCRIPT_LABEL}, v${SCRIPT_VERSION}"
-echo "-----------------------------------------------------"
+echo "----------------------------------------------------"
 echo ""
 if [ ! -f /usr/local/bin/newblock ]; then
 echo "${TXTRESET}${TXTBOLD}ACTION REQUIRED:${TXTRESET}${WHITE} Link this file to system level and start from there with this oneliner:${TXTRESET}"
