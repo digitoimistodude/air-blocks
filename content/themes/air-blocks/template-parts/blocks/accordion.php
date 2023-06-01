@@ -33,7 +33,7 @@ if ( empty( $accordion_items ) ) {
   <div class="container">
     <div class="accordion" data-allow-toggle>
       <?php foreach ( $accordion_items as $accordion_item ) : ?>
-        <?php $key = sanitize_title( $accordion_item['title'] ); ?>
+        <?php $key = sanitize_title( $accordion_item['title'] . '-' . $accordion_item['key'] ); ?>
         <div class="accordion-item">
         <h3>
           <button
