@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Make the accordion key unique this #1 (Thanks @shaunsantacruz!)
+
 ### 1.3.8: 2023-02-08
 
 * Add block icon for social-wall
