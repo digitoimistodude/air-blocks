@@ -1,6 +1,6 @@
-### [Unreleased]
+### 1.3.9: 2023-09-12
 
-* Make the accordion key unique this #1 (Thanks @shaunsantacruz!)
+* Make the accordion key unique #1 (Thanks @shaunsantacruz!)
 
 ### 1.3.8: 2023-02-08
 
