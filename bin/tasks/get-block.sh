@@ -6,14 +6,22 @@
 echo "${YELLOW}Copying block files to the theme folder of the project: ${PROJECTS_HOME}/${PROJECT_NAME}/content/themes/${THEME_NAME}${TXTRESET}"
 
 if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
-  source ${SCRIPTS_LOCATION}/tasks/create-empty-block.sh
+  if [[ $IS_AIR_BLOCK =~ "yes" ]] ; then
+    source ${SCRIPTS_LOCATION}/tasks/create-empty-air-block.sh
+  else
+    source ${SCRIPTS_LOCATION}/tasks/create-empty-block.sh
+  fi
 else
   source ${SCRIPTS_LOCATION}/tasks/create-predefined-block.sh
 fi
 
 # Tasks that should be run after block-specific tasks
 if [[ $IS_NEW_BLOCK =~ "yes" ]] ; then
-  source ${SCRIPTS_LOCATION}/tasks/post-block-empty-block.sh
+  if [[ $IS_AIR_BLOCK =~ "yes" ]] ; then
+    source ${SCRIPTS_LOCATION}/tasks/post-block-empty-air-block.sh
+  else
+    source ${SCRIPTS_LOCATION}/tasks/post-block-empty-block.sh
+  fi
 else
   source ${SCRIPTS_LOCATION}/tasks/post-block.sh
 fi

@@ -10,4 +10,5 @@ ${BOLDGREEN}Available blocks:${TXTRESET} "
 
 # List available blocks and remove white space from the start and .sh extension from the end
 ls -1 "${SCRIPTS_LOCATION}/blocks" | nl | awk '{$1=$1};1' | sed -e 's/\.sh$//'
-echo "? create new empty block"
+echo "? create new empty block (ACF)"
+echo "+ create new empty block (air-blocks-buildtool)"

@@ -66,7 +66,7 @@ echo ""
 read -e BLOCK_NUMBER
 
 # Exit if not number
-REGNUMBERSANDQUESTION='^[0-9\\?]+$'
+REGNUMBERSANDQUESTION='^[0-9\\+\\?]+$'
 if ! [[ $BLOCK_NUMBER =~ $REGNUMBERSANDQUESTION ]] ; then
    echo "
 ${RED}Error: $BLOCK_NUMBER is not one of the choices.${TXTRESET}
@@ -80,6 +80,10 @@ if ! [[ $BLOCK_NUMBER =~ $REGNUMBERS ]] ; then
   # Set new block to true
   export IS_NEW_BLOCK="yes"
 
+  if [[ $BLOCK_NUMBER = "+" ]] ; then
+    export IS_AIR_BLOCK="yes"
+  fi
+  
   # Ask block name
   echo "
 ${BOLDYELLOW}New block name (kebab-case):${TXTRESET} "

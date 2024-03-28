@@ -19,7 +19,9 @@ source ${SCRIPTS_LOCATION}/tasks/check-updates.sh
 source ${SCRIPTS_LOCATION}/tasks/check-version.sh
 
 # Check if ACF etc. are installed
-source ${SCRIPTS_LOCATION}/tasks/check-dependencies.sh
+if ! [[ $IS_AIR_BLOCK =~ "yes" ]] ; then
+  source ${SCRIPTS_LOCATION}/tasks/check-dependencies.sh
+fi
 
 # Get the block and copy it over to your project
 source ${SCRIPTS_LOCATION}/tasks/get-block.sh
