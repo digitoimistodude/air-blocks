@@ -84,7 +84,7 @@ else
 fi
 
 # Let's check if advanced-custom-fields-pro is found in composer.json
-if grep -q "advanced-custom-fields-pro" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
+if grep -q "wpengine" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
   echo "${GREEN}✓ advanced-custom-fields-pro already set up.${TXTRESET}" 1>&2
 else
   # If not found
@@ -92,7 +92,7 @@ else
 
   # Update composer.json require
   sed -e "/\"require\"/a\\
-      \"advanced-custom-fields/advanced-custom-fields-pro\"\: \"\*\"\," < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
+      \"wpengine/advanced-custom-fields-pro\"\: \"\*\"\," < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
   rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
   mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 

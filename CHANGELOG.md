@@ -1,6 +1,7 @@
 ### 1.4.0: 2024-08-08
 
 * Update phpcs.xml rules
+* Change to the official connect.advancedcustomfields.com composer repository instead of deprecated pivvenit.github.io
 
 ### 1.3.9: 2023-09-12
 

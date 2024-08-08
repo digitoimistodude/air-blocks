@@ -63,7 +63,7 @@
     },
     {
       "type": "composer",
-      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
+      "url": "https://connect.advancedcustomfields.com"
     },
     {
       "type": "package",
@@ -101,7 +101,7 @@
     "wpackagist-plugin/gravity-forms-wcag-20-form-fields": "*",
     "wpackagist-plugin/disable-media-pages": "*",
     "gravityforms/gravityforms": "*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    "wpengine/advanced-custom-fields-pro": "*"
   },
   "require-dev": {
     "rarst/wps": "*",
