@@ -1,3 +1,7 @@
+### 1.4.0: 2024-08-08
+
+* Update phpcs.xml rules
+
 ### 1.3.9: 2023-09-12
 
 * Make the accordion key unique #1 (Thanks @shaunsantacruz!)
