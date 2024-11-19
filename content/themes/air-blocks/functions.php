@@ -216,3 +216,13 @@ require get_theme_file_path( '/inc/template-tags.php' );
 // Run theme setup
 add_action( 'init', __NAMESPACE__ . '\theme_setup' );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\build_theme_support' );
+
+/**
+ * Disable "Email delivery is not active or configured. Please contact your agency to fix this issue." notice
+ */
+add_filter( 'air_helper_mail_delivery', '__return_false' );
+
+/**
+ * Disable Air Helper change uploads path
+ */
+add_filter( 'air_helper_change_uploads_path', '__return_false' );
