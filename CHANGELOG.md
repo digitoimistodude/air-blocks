@@ -1,3 +1,7 @@
+### 1.5.0: 2025-09-03
+
+* Fix check-dependencies script for new ACF repo
+
 ### 1.4.0: 2024-08-08
 
 * Update phpcs.xml rules

@@ -66,29 +66,29 @@ else
 ACF_PRO_KEY=${ACF_PRO_KEY}" >> ${ENV_FILE_PROJECT}
 fi
 
-# Let's check if acf-composer-bridge is found in composer.json
-if grep -q "acf-composer-bridge" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
-  echo "${GREEN}✓ acf-composer-bridge already set up.${TXTRESET}" 1>&2
+# Let's check if ACF Connect repository is found in composer.json
+if grep -q "connect.advancedcustomfields.com" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
+  echo "${GREEN}✓ ACF Connect repository already set up.${TXTRESET}" 1>&2
 else
   # If not found
-  echo "${BOLDYELLOW}Adding acf-composer-bridge to composer.json...${TXTRESET}" 1>&2
+  echo "${BOLDYELLOW}Adding ACF Connect repository to composer.json...${TXTRESET}" 1>&2
 
   # Update composer.json repositories
   sed -e "/\"repositories\"\: \[/a\\
       \{|\
         \"type\": \"composer\"\,|\
-        \"url\"\: \"https:\/\/pivvenit.github.io\/acf-composer-bridge\/composer\/v3\/wordpress-plugin\/\"|\
+        \"url\"\: \"https:\/\/connect.advancedcustomfields.com\"|\
       \},\\" < ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json | tr '|' '\n' > ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json
   rm ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
   mv ${PROJECTS_HOME}/${PROJECT_NAME}/composer_with_changes.json ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json
 fi
 
-# Let's check if advanced-custom-fields-pro is found in composer.json
-if grep -q "wpengine" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
-  echo "${GREEN}✓ advanced-custom-fields-pro already set up.${TXTRESET}" 1>&2
+# Let's check if wpengine/advanced-custom-fields-pro is found in composer.json
+if grep -q "wpengine/advanced-custom-fields-pro" ${PROJECTS_HOME}/${PROJECT_NAME}/composer.json; then
+  echo "${GREEN}✓ wpengine/advanced-custom-fields-pro already set up.${TXTRESET}" 1>&2
 else
   # If not found
-  echo "${BOLDYELLOW}Adding advanced-custom-fields-pro to composer.json require...${TXTRESET}" 1>&2
+  echo "${BOLDYELLOW}Adding wpengine/advanced-custom-fields-pro to composer.json require...${TXTRESET}" 1>&2
 
   # Update composer.json require
   sed -e "/\"require\"/a\\
