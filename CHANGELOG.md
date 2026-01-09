@@ -1,3 +1,9 @@
+### 1.6.0: 2026-01-09
+
+* Compatibility with air-light 9.7.0 Parcel build system, Ref: DEV-678
+* Update asset paths for new `assets/src/` structure, Refs: DEV-678, DEV-444
+* Add block to `allowed_blocks` automatically when creating new block, Ref: DEV-424
+
 ### 1.5.0: 2025-09-03
 
 * Fix check-dependencies script for new ACF repo

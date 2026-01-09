@@ -1,6 +1,6 @@
 {
   "name": "air-blocks",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Gutenberg block library powered by Air-light & dudestack.",
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "devDependencies": {
