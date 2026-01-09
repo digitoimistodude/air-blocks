@@ -31,6 +31,13 @@ rm ${PROJECT_THEME_PATH}/functions.php
 # Rename the changed file to the official one
 mv ${PROJECT_THEME_PATH}/tmpfile ${PROJECT_THEME_PATH}/functions.php
 
+# Add block to allowed_blocks for pages
+echo "${BOLDYELLOW}Adding block to allowed_blocks...${TXTRESET} "
+sed -e "/'page' => \[/a\\
+        'acf/${BLOCK_SLUG}'," < ${PROJECT_THEME_PATH}/functions.php > ${PROJECT_THEME_PATH}/tmpfile
+rm ${PROJECT_THEME_PATH}/functions.php
+mv ${PROJECT_THEME_PATH}/tmpfile ${PROJECT_THEME_PATH}/functions.php
+
 # Run required things after the block/<block>.sh
 # (like localization.sh that needs to be run after the <block>.sh
 # because it gets variables from that file)
