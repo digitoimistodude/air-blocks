@@ -21,10 +21,10 @@ export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FI
 export BLOCK_UI_TITLE="Sivun yläosa isolla taustakuvalla"
 
 # Style component dependencies
-cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_content-box.scss ${PROJECT_THEME_PATH}/sass/components/
+cp -nv ${AIRBLOCKS_THEME_PATH}/sass/components/_content-box.scss ${PROJECT_THEME_PATH}/assets/src/sass/components/
 
 # Import components right after the last default component in the _components.scss file
 sed -e "/\@import \'link\'\;/a\\
-@import 'content-box';" < ${PROJECT_THEME_PATH}/sass/components/_components.scss > ${PROJECT_THEME_PATH}/sass/components/_components_with_changes.scss
-rm ${PROJECT_THEME_PATH}/sass/components/_components.scss
-mv ${PROJECT_THEME_PATH}/sass/components/_components_with_changes.scss ${PROJECT_THEME_PATH}/sass/components/_components.scss
+@import 'content-box';" < ${PROJECT_THEME_PATH}/assets/src/sass/components/_components.scss > ${PROJECT_THEME_PATH}/assets/src/sass/components/_components_with_changes.scss
+rm ${PROJECT_THEME_PATH}/assets/src/sass/components/_components.scss
+mv ${PROJECT_THEME_PATH}/assets/src/sass/components/_components_with_changes.scss ${PROJECT_THEME_PATH}/assets/src/sass/components/_components.scss

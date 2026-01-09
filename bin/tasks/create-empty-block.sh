@@ -110,13 +110,13 @@ if ( empty( \$title ) ) {
   # Styles for block
   echo ".block-${BLOCK_SLUG} {
   // Your block styles here
-}" > ${PROJECT_THEME_PATH}/sass/gutenberg/blocks/_${BLOCK_SLUG}.scss
+}" > ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg/blocks/_${BLOCK_SLUG}.scss
 
   # Import block styles to _blocks.scss
   sed -e "/\/\/ ACF blocks/a\\
-  @import 'gutenberg/blocks/${BLOCK_SLUG}';" < ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss > ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss
-  rm ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
-  mv ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks_with_changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg/_blocks.scss
+  @import 'gutenberg/blocks/${BLOCK_SLUG}';" < ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg/_blocks.scss > ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg/_blocks_with_changes.scss
+  rm ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg/_blocks.scss
+  mv ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg/_blocks_with_changes.scss ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg/_blocks.scss
 
   # Block icon
   mkdir -p ${PROJECT_THEME_PATH}/svg/block-icons

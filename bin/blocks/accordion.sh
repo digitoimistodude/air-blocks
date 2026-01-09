@@ -22,24 +22,24 @@ export BLOCK_ACF_JSON_PATH="${AIRBLOCKS_THEME_PATH}/acf-json/${BLOCK_ACF_JSON_FI
 export BLOCK_UI_TITLE="Haitari"
 
 # JavaScript dependencies
-cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/accordion.js ${PROJECT_THEME_PATH}/js/src/modules/accordion.js
+cp -nv ${AIRBLOCKS_THEME_PATH}/js/src/modules/accordion.js ${PROJECT_THEME_PATH}/assets/src/js/modules/accordion.js
 
 # Import js modules right after the last default js module in the front-end.js file
 sed -e "/\/\/ Import modules/a\\
-import initAccordion from './modules/accordion';" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
-rm ${PROJECT_THEME_PATH}/js/src/front-end.js
-mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
+import initAccordion from './modules/accordion';" < ${PROJECT_THEME_PATH}/assets/src/js/front-end.js > ${PROJECT_THEME_PATH}/assets/src/js/front-end-with-changes.js
+rm ${PROJECT_THEME_PATH}/assets/src/js/front-end.js
+mv ${PROJECT_THEME_PATH}/assets/src/js/front-end-with-changes.js ${PROJECT_THEME_PATH}/assets/src/js/front-end.js
 
 # Init accordion code inside DOMContentLoaded
 sed -e "/\DOMContentLoaded/a\\
-  initAccordion();" < ${PROJECT_THEME_PATH}/js/src/front-end.js > ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js
-rm ${PROJECT_THEME_PATH}/js/src/front-end.js
-mv ${PROJECT_THEME_PATH}/js/src/front-end-with-changes.js ${PROJECT_THEME_PATH}/js/src/front-end.js
+  initAccordion();" < ${PROJECT_THEME_PATH}/assets/src/js/front-end.js > ${PROJECT_THEME_PATH}/assets/src/js/front-end-with-changes.js
+rm ${PROJECT_THEME_PATH}/assets/src/js/front-end.js
+mv ${PROJECT_THEME_PATH}/assets/src/js/front-end-with-changes.js ${PROJECT_THEME_PATH}/assets/src/js/front-end.js
 
 # Import styles to gutenberg-editor-styles.scss right after gravity forms import
 sed -e "/\@import \'features\/gravity-forms\'\;/a\\
 §\
   \/\/ Import accordion inside Gutenberg editor just to make sure§\
-  \@import \'gutenberg\/blocks\/accordion\'\;\\" < ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss | tr '§' '\n' > ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss
-rm ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
-mv ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles-with-changes.scss ${PROJECT_THEME_PATH}/sass/gutenberg-editor-styles.scss
+  \@import \'gutenberg\/blocks\/accordion\'\;\\" < ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg-editor-styles.scss | tr '§' '\n' > ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg-editor-styles-with-changes.scss
+rm ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg-editor-styles.scss
+mv ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg-editor-styles-with-changes.scss ${PROJECT_THEME_PATH}/assets/src/sass/gutenberg-editor-styles.scss
