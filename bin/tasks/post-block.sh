@@ -47,12 +47,10 @@ fi
 # Just import the ACF fields file
 cp -nv ${BLOCK_ACF_JSON_PATH} ${PROJECT_THEME_PATH}/acf-json/
 
-# Run gulp for SCSS and JS once
-echo "${BOLDYELLOW}Running gulp tasks (requires npm packages to be installed previously)...${TXTRESET} "
+# Run build tasks
+echo "${BOLDYELLOW}Running build tasks (requires npm packages to be installed previously)...${TXTRESET} "
 cd ${PROJECTS_HOME}/${PROJECT_NAME}
-gulp js
-gulp devstyles
-gulp prodstyles
+npm run build
 
 # Activate block ACF fields
 echo "${BOLDYELLOW}Activating ACF fields for the block...${TXTRESET} "
