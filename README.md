@@ -1,3 +1,6 @@
+> [!NOTE]
+> **Please note:** As of January 28, 2026, we've decided to move to native core block variations and original WordPress Gutenberg blocks using [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts). We will no longer make further improvements to this repository. The new block library is not publicly available yet, as we're focusing on building a solid foundation for custom client blocks and determining the best way to open source everything, if possible. Core blocks and variations can be built directly with [air-light](https://github.com/digitoimistodude/air-light).
+
 # Block library for Air-light
 [![GitHub release](https://img.shields.io/github/tag/digitoimistodude/air-blocks.svg?style=flat-square)](https://github.com/digitoimistodude/air-blocks/releases) ![GitHub contributors](https://img.shields.io/github/contributors/digitoimistodude/air-blocks.svg?style=flat-square)
 
