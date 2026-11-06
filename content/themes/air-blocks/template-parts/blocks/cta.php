@@ -48,7 +48,6 @@ if ( empty( $link ) || ! array_key_exists( 'url', $link ) ) {
       <p class="button-wrapper">
         <a class="button" href="<?php echo esc_url( $link['url'] ) ?>">
           <?php echo esc_html( $link['title'] ) ?>
-          <?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?>
         </a>
       </p>
 
